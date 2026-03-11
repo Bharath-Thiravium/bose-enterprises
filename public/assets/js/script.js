@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
   initSliders();
   initSkills();
   initNavbarShadow();
+  initCursor();
 });
 
 function initScrollAnimations() {
@@ -136,4 +137,30 @@ function initNavbarShadow() {
   }
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
+}
+
+function initCursor() {
+  var cursor = document.createElement('div');
+  cursor.className = 'be-cursor';
+  cursor.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="8"/><line x1="12" y1="4" x2="12" y2="2"/><line x1="12" y1="22" x2="12" y2="20"/><line x1="4" y1="12" x2="2" y2="12"/><line x1="22" y1="12" x2="20" y2="12"/><circle cx="12" cy="12" r="3" class="be-cursor-pulse"/></svg>';
+  document.body.appendChild(cursor);
+
+  var mouseX = 0;
+  var mouseY = 0;
+
+  document.addEventListener('mousemove', function (e) {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    cursor.style.left = mouseX + 'px';
+    cursor.style.top = mouseY + 'px';
+    cursor.style.opacity = '1';
+  }, { passive: true });
+
+  document.addEventListener('mouseleave', function () {
+    cursor.style.opacity = '0';
+  });
+
+  document.addEventListener('mouseenter', function () {
+    cursor.style.opacity = '1';
+  });
 }
