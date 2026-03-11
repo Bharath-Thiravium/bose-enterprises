@@ -41,7 +41,8 @@ $page_keywords = isset($page_keywords) ? $page_keywords : 'solar EPC contractor 
     <link rel="stylesheet" href="<?php echo APP_URL; ?>/public/assets/css/style.css?v=<?php echo time(); ?>">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="<?php echo APP_URL; ?>/public/assets/favicon.ico">
+    <link rel="icon" type="image/jpeg" href="<?php echo APP_URL; ?>/public/assets/img/logo.jpeg">
+    <link rel="apple-touch-icon" href="<?php echo APP_URL; ?>/public/assets/img/logo.jpeg">
     
     <!-- Preconnect to external resources -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
