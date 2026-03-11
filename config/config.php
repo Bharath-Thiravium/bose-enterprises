@@ -3,8 +3,7 @@
 
 // App Settings
 define('APP_NAME', 'Bose Enterprises');
-// Note: this project folder contains a space, so URLs should use %20.
-define('APP_URL', 'http://localhost/BE/Bose%20Enterprises');
+define('APP_URL', 'http://localhost/BE');
 define('APP_ENV', 'development');
 
 // Path Constants
