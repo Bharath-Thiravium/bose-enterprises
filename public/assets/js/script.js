@@ -5,6 +5,7 @@
 
 document.addEventListener('DOMContentLoaded', function () {
   initScrollAnimations();
+  assignRandomHoverAnimations();
   initSliders();
   initSkills();
   initNavbarShadow();
@@ -15,7 +16,8 @@ function initScrollAnimations() {
   var animated = document.querySelectorAll('[data-be-animate]');
   if (!animated.length) return;
 
-  // Optional staggering: parent with data-be-stagger defines ms step between children.
+  var animationPool = ['fadeInUp', 'fadeInDown', 'fadeInLeft', 'fadeInRight', 'scaleRotate', 'slideRotate', 'elasticBounce', 'flipIn', 'zoomSlide', 'tiltShift', 'slideSkew'];
+
   document.querySelectorAll('[data-be-stagger]').forEach(function (parent) {
     var step = parseInt(parent.getAttribute('data-be-stagger'), 10);
     if (!Number.isFinite(step) || step < 0) return;
@@ -29,7 +31,10 @@ function initScrollAnimations() {
     entries.forEach(function (entry) {
       if (!entry.isIntersecting) return;
       var el = entry.target;
-      var anim = el.getAttribute('data-be-animate') || 'fadeInUp';
+      var anim = el.getAttribute('data-be-animate');
+      if (!anim) {
+        anim = animationPool[Math.floor(Math.random() * animationPool.length)];
+      }
       el.classList.add('be-inview', 'be-anim--' + anim);
       observer.unobserve(el);
     });
@@ -37,6 +42,15 @@ function initScrollAnimations() {
 
   animated.forEach(function (el) {
     observer.observe(el);
+  });
+}
+
+function assignRandomHoverAnimations() {
+  var hoverAnimations = ['wobble', 'swing', 'bounce'];
+  var cards = document.querySelectorAll('.be-card, .be-client-card');
+  cards.forEach(function (card) {
+    var randomAnim = hoverAnimations[Math.floor(Math.random() * hoverAnimations.length)];
+    card.classList.add('anim-' + randomAnim);
   });
 }
 

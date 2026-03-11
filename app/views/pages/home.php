@@ -210,7 +210,7 @@ include __DIR__ . '/../components/partials/header/navbar.php';
             </div>
 
             <div class="row g-4" data-be-stagger="120">
-                <div class="col-lg-4 col-md-6" data-be-animate="fadeInUp">
+                <div class="col-lg-4 col-md-6">
                     <div class="be-team-card">
                         <div class="be-team-card__num">01</div>
                         <div class="be-team-card__avatar"><i class="fa-solid fa-user-tie"></i></div>
@@ -219,7 +219,7 @@ include __DIR__ . '/../components/partials/header/navbar.php';
                         <p class="be-team-card__meta">22+ years | MBA</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6" data-be-animate="fadeInUp">
+                <div class="col-lg-4 col-md-6">
                     <div class="be-team-card">
                         <div class="be-team-card__num">02</div>
                         <div class="be-team-card__avatar"><i class="fa-solid fa-user-tie"></i></div>
@@ -228,7 +228,7 @@ include __DIR__ . '/../components/partials/header/navbar.php';
                         <p class="be-team-card__meta">14+ years | B.E. Electrical</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6" data-be-animate="fadeInUp">
+                <div class="col-lg-4 col-md-6">
                     <div class="be-team-card">
                         <div class="be-team-card__num">03</div>
                         <div class="be-team-card__avatar"><i class="fa-solid fa-user-tie"></i></div>
@@ -237,7 +237,7 @@ include __DIR__ . '/../components/partials/header/navbar.php';
                         <p class="be-team-card__meta">12+ years | B.E. Civil</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6" data-be-animate="fadeInUp">
+                <div class="col-lg-4 col-md-6">
                     <div class="be-team-card">
                         <div class="be-team-card__num">04</div>
                         <div class="be-team-card__avatar"><i class="fa-solid fa-user-tie"></i></div>
@@ -246,7 +246,7 @@ include __DIR__ . '/../components/partials/header/navbar.php';
                         <p class="be-team-card__meta">12+ years | B.E. Electrical</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6" data-be-animate="fadeInUp">
+                <div class="col-lg-4 col-md-6">
                     <div class="be-team-card">
                         <div class="be-team-card__num">05</div>
                         <div class="be-team-card__avatar"><i class="fa-solid fa-user-tie"></i></div>
@@ -255,7 +255,7 @@ include __DIR__ . '/../components/partials/header/navbar.php';
                         <p class="be-team-card__meta">7+ years | B.E. Civil</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6" data-be-animate="fadeInUp">
+                <div class="col-lg-4 col-md-6">
                     <div class="be-team-card">
                         <div class="be-team-card__num">06</div>
                         <div class="be-team-card__avatar"><i class="fa-solid fa-user-tie"></i></div>
