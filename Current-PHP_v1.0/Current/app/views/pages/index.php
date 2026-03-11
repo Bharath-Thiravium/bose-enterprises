@@ -2,16 +2,16 @@
 <html lang="en">
 
 <head>
-  <?php include('partials/title-meta.php'); ?>
+  <?php include(__DIR__ . '/../components/partials/title-meta.php'); ?>
 
-  <?php include('partials/head-css.php'); ?>
+  <?php include(__DIR__ . '/../components/partials/head-css.php'); ?>
 </head>
 
 <body class="homepage1-body tg-heading-subheading animation-style3">
 
-  <?php include('partials/loader.php'); ?>
+  <?php include(__DIR__ . '/../components/partials/loader.php'); ?>
 
-  <?php include('partials/header/navbar.php'); ?>
+  <?php include(__DIR__ . '/../header/navbar.php'); ?>
 
   <!--===== HERO AREA STARTS =======-->
   <div class="slider-header-carousel owl-carousel">
@@ -1373,11 +1373,11 @@
   </div>
   <!--===== BLOG AREA ENDS =======-->
 
-  <?php include('partials/cta.php'); ?>
+  <?php include(__DIR__ . '/../components/partials/cta.php'); ?>
 
-  <?php include('partials/footer.php'); ?>
+  <?php include(__DIR__ . '/../components/partials/footer.php'); ?>
 
-  <?php include('partials/footer-scripts.php'); ?>
+  <?php include(__DIR__ . '/../components/partials/footer-scripts.php'); ?>
 
 </body>
 

@@ -50,21 +50,27 @@ nums.unshift(newNum);
 }
 $this.data('counterup-nums', nums);
 $this.text('0');
-// Updates the number until we're done
-var f = function() {
-$this.text($this.data('counterup-nums').shift());
- if ($this.data('counterup-nums').length) {
-setTimeout($this.data('counterup-func'),delay);
-} else {
-delete $this.data('counterup-nums');
-$this.data('counterup-nums', null);
-$this.data('counterup-func', null);
-}
-};
-$this.data('counterup-func', f);
-// Start the count up
-setTimeout($this.data('counterup-func'),delay);
-};
+ // Updates the number until we're done
+ var f = function() {
+ var nums = $this.data('counterup-nums');
+ if (!Array.isArray(nums) || nums.length === 0) {
+ $this.removeData('counterup-nums');
+ $this.removeData('counterup-func');
+ return;
+ }
+
+ $this.text(nums.shift());
+ if (nums.length) {
+ setTimeout(f, delay);
+ } else {
+ $this.removeData('counterup-nums');
+ $this.removeData('counterup-func');
+ }
+ };
+ $this.data('counterup-func', f);
+ // Start the count up
+ setTimeout(f, delay);
+ };
 // Perform counts when the element gets into view
 $this.waypoint(counterUpper, { offset: '100%', triggerOnce: true });
 });

@@ -3,9 +3,9 @@
 
 <head>
   <?php $logo2 = true;
-  include('partials/title-meta.php'); ?>
+  include(__DIR__ . '/../components/partials/title-meta.php'); ?>
 
-  <?php include('partials/head-css.php'); ?>
+  <?php include(__DIR__ . '/../components/partials/head-css.php'); ?>
 </head>
 
 <body class="homepage2-body tg-heading-subheading animation-style3">
@@ -14,10 +14,10 @@
   $loader = 'preloader3';
   $logo4 = true;
   $progress = 'pagination2';
-  include('partials/loader.php');
+  include(__DIR__ . '/../components/partials/loader.php');
   ?>
 
-  <?php include('partials/header/navbar3.php'); ?>
+  <?php include(__DIR__ . '/../components/partials/header/navbar3.php'); ?>
 
   <!--===== HERO AREA STARTS =======-->
   <div class="hero2-section-area" style="background-image: url(assets/img/bg/header-bg1.png); background-size: cover; background-repeat: no-repeat; background-position: center;">
@@ -1028,7 +1028,7 @@
   </div>
   <!--===== FOOTER AREA ENDS =======-->
 
-  <?php include('partials/footer-scripts.php'); ?>
+  <?php include(__DIR__ . '/../components/partials/footer-scripts.php'); ?>
 
 </body>
 
