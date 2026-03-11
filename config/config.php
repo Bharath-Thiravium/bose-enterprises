@@ -1,10 +1,16 @@
 <?php
 // Bose Enterprises Configuration
 
+// Detect environment and set APP_URL dynamically
+$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https://' : 'http://';
+$host = $_SERVER['HTTP_HOST'];
+$base_path = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/');
+$app_url = $protocol . $host . $base_path;
+
 // App Settings
 define('APP_NAME', 'Bose Enterprises');
-define('APP_URL', 'http://localhost/BE');
-define('APP_ENV', 'development');
+define('APP_URL', $app_url);
+define('APP_ENV', getenv('APP_ENV') ?: 'development');
 
 // Path Constants
 define('BASE_PATH', dirname(dirname(__FILE__)));
