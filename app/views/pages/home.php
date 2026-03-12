@@ -8,6 +8,7 @@ include __DIR__ . '/../components/partials/header/navbar.php';
 <main class="main-content">
     <!-- Hero -->
     <section class="be-hero">
+        <div class="be-hero__bg"></div>
         <div class="container">
             <div class="row align-items-center g-4">
                 <div class="col-lg-6" data-be-animate="fadeInUp">
