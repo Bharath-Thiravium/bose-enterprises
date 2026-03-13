@@ -29,7 +29,7 @@ $services = [
                 <p class="mb-3">Our mission is to deliver high-quality solar infrastructure solutions by ensuring safety, technical excellence, and timely project completion while providing maximum value and satisfaction to our customers.</p>
                 <div class="d-flex align-items-center gap-3">
                     <a class="be-social be-social--footer" href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a class="be-social be-social--footer" href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a class="be-social be-social--footer" href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
                     <a class="be-social be-social--footer" href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
                     <a class="be-social be-social--footer" href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
                 </div>

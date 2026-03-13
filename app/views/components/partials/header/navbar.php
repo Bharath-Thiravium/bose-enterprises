@@ -31,7 +31,7 @@ $navItems = [
                 </div>
                 <div class="d-flex align-items-center gap-3">
                     <a class="be-social" href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a class="be-social" href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a class="be-social" href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
                     <a class="be-social" href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
                     <a class="be-social" href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
                 </div>
