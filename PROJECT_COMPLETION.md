@@ -9,7 +9,7 @@
 | Item | Status | Details |
 |------|--------|---------|
 | **Website Name** | ✅ Complete | BOSE ENTERPRISES |
-| **Industry** | ✅ Complete | Solar EPC & Infrastructure |
+| **Industry** | ✅ Complete | Solar Installation and Commisioning Contractor  |
 | **Pages Created** | ✅ Complete | 5 main pages + components |
 | **Services Listed** | ✅ Complete | 6 comprehensive services |
 | **Team Members** | ✅ Complete | 6 leadership professionals |

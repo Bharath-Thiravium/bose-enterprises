@@ -3,7 +3,7 @@
 ## Project Overview
 
 **Website Name:** BOSE ENTERPRISES  
-**Industry:** Solar EPC & Infrastructure Services  
+**Industry:** Solar Installation and Commisioning Contractor  Services  
 **Established:** 2019  
 **Location:** South India  
 **Website URL:** `http://localhost/BE/Bose Enterprises/`
@@ -145,7 +145,7 @@ Ongoing maintenance, monitoring, and optimization to ensure peak performance and
 ## SEO Optimization
 
 ### Meta Tags
-- **Title:** BOSE ENTERPRISES | Solar EPC & Infrastructure Company
+- **Title:** BOSE ENTERPRISES | Solar Installation and Commisioning Contractor  Company
 - **Description:** BOSE ENTERPRISES is a leading solar infrastructure and EPC service provider specializing in solar farm construction, electrical installation, and commissioning services across India.
 - **Keywords:** solar EPC contractor India, solar farm construction, solar infrastructure company, solar power installation India, solar engineering company
 
@@ -226,7 +226,7 @@ Bose Enterprises/
 ## Contact Information
 
 **Company Name:** BOSE ENTERPRISES  
-**Industry:** Solar EPC & Infrastructure  
+**Industry:** Solar Installation and Commisioning Contractor   
 **Email:** info@bose-enterprises.in  
 **Phone:** +91 (555) 000-0000  
 **Location:** South India

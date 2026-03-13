@@ -1,6 +1,6 @@
 <?php
 $page_title = 'Home';
-$page_description = 'BOSE ENTERPRISES | Solar EPC & Infrastructure Company - Specializing in solar farm construction, electrical installation, and commissioning services across India.';
+$page_description = 'BOSE ENTERPRISES | Solar Installation and Commisioning Contractor  Company - Specializing in solar farm construction, electrical installation, and commissioning services across India.';
 include __DIR__ . '/../components/partials/head-meta.php';
 include __DIR__ . '/../components/partials/header/navbar.php';
 ?>
@@ -8,8 +8,18 @@ include __DIR__ . '/../components/partials/header/navbar.php';
 <main class="main-content">
     <!-- Hero -->
     <section class="be-hero">
-        <div class="be-hero__bg"></div>
-        <div class="container">
+        <!-- Video Background -->
+        <div class="be-hero__video-bg">
+            <video autoplay muted loop playsinline preload="auto" id="heroVideo">
+                <source src="<?php echo APP_URL; ?>/public/videos/solar-background.mp4" type="video/mp4">
+            </video>
+        </div>
+        
+        <!-- Dark Overlay -->
+        <div class="be-hero__overlay"></div>
+        
+        <!-- Hero Content -->
+        <div class="container be-hero__content">
             <div class="row align-items-center g-4">
                 <div class="col-lg-6" data-be-animate="fadeInUp">
                     <p class="be-kicker">Solar EPC &amp; Infrastructure Services</p>
@@ -33,19 +43,21 @@ include __DIR__ . '/../components/partials/header/navbar.php';
                 <div class="col-lg-6" data-be-animate="fadeInRight">
                     <div class="be-hero__media">
                         <div class="be-media-card">
-                            <div class="be-media-card__img" role="img" aria-label="Solar Power Plant"></div>
+                            <img class="be-media-card__img" src="<?php echo APP_URL; ?>/public/assets/img/solar-hero.jpg" alt="Solar Power Plant" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
                             <div class="be-media-card__caption">
                                 <strong>Safety-first execution</strong>
                                 <span>Quality systems, clear reporting, reliable delivery</span>
                             </div>
                         </div>
-                        <div class="be-float-card be-float-card--a">
-                            <span class="be-float-card__num">2019</span>
-                            <span class="be-float-card__text">Established</span>
-                        </div>
-                        <div class="be-float-card be-float-card--b">
-                            <span class="be-float-card__num">22+</span>
-                            <span class="be-float-card__text">Years leadership experience</span>
+                        <div class="d-flex gap-3 justify-content-center">
+                            <div class="be-float-card be-float-card--a">
+                                <span class="be-float-card__num">2019</span>
+                                <span class="be-float-card__text">Established</span>
+                            </div>
+                            <div class="be-float-card be-float-card--b">
+                                <span class="be-float-card__num">22+</span>
+                                <span class="be-float-card__text">Years leadership experience</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -62,8 +74,16 @@ include __DIR__ . '/../components/partials/header/navbar.php';
                 <p class="be-section__sub">Established in 2019, BOSE ENTERPRISES is a growing solar professional company in South India specializing in complete solar power project solutions and infrastructure development.</p>
             </div>
 
-            <div class="row align-items-center g-4">
+            <!-- Mission & Values -->
+            <div class="row align-items-center g-4 mb-5">
                 <div class="col-lg-6" data-be-animate="fadeInLeft">
+                    <picture class="about-image-wrapper">
+                        <source srcset="<?php echo APP_URL; ?>/public/assets/img/about-1.jpg?w=500&h=600&fit=crop&q=80&fm=webp" type="image/webp">
+                        <source srcset="<?php echo APP_URL; ?>/public/assets/img/about-1.jpg?w=500&h=600&fit=crop&q=80" type="image/jpeg">
+                        <img src="<?php echo APP_URL; ?>/public/assets/img/about-1.jpg" alt="Solar Infrastructure" loading="lazy" class="about-image">
+                    </picture>
+                </div>
+                <div class="col-lg-6" data-be-animate="fadeInRight">
                     <div class="be-panel">
                         <h3 class="be-panel__title">Our Mission</h3>
                         <p class="mb-0">"Our mission is to deliver high-quality solar infrastructure solutions by ensuring safety, technical excellence, and timely project completion while providing maximum value and satisfaction to our customers."</p>
@@ -76,30 +96,50 @@ include __DIR__ . '/../components/partials/header/navbar.php';
                         <div class="be-bullet"><i class="fa-solid fa-handshake"></i><span>Customer satisfaction</span></div>
                     </div>
                 </div>
+            </div>
 
-                <div class="col-lg-6" data-be-animate="fadeInRight">
-                    <div class="be-stats">
-                        <div class="be-stat">
-                            <div class="be-stat__value">2019</div>
-                            <div class="be-stat__label">Established</div>
-                        </div>
-                        <div class="be-stat">
-                            <div class="be-stat__value">South India</div>
-                            <div class="be-stat__label">Primary footprint</div>
-                        </div>
-                        <div class="be-stat">
-                            <div class="be-stat__value">Solar EPC</div>
-                            <div class="be-stat__label">Core expertise</div>
-                        </div>
-                        <div class="be-stat">
-                            <div class="be-stat__value">Infrastructure</div>
-                            <div class="be-stat__label">Civil + electrical works</div>
-                        </div>
-                    </div>
-                    <div class="mt-4">
-                        <a href="<?php echo APP_URL; ?>?page=about" class="btn btn-outline-primary btn-lg">Learn More</a>
+            <!-- Stats Grid -->
+            <div class="row g-4" data-be-stagger="100">
+                <div class="col-lg-4 col-md-6" data-be-animate="fadeInUp">
+                    <div class="be-stat">
+                        <div class="be-stat__value">2019</div>
+                        <div class="be-stat__label">Established</div>
                     </div>
                 </div>
+                <div class="col-lg-4 col-md-6" data-be-animate="fadeInUp">
+                    <div class="be-stat">
+                        <div class="be-stat__value">South India</div>
+                        <div class="be-stat__label">Primary footprint</div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-be-animate="fadeInUp">
+                    <div class="be-stat">
+                        <div class="be-stat__value">Solar EPC</div>
+                        <div class="be-stat__label">Core expertise</div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-be-animate="fadeInUp">
+                    <div class="be-stat">
+                        <div class="be-stat__value">Infrastructure</div>
+                        <div class="be-stat__label">Civil + electrical works</div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-be-animate="fadeInUp">
+                    <div class="be-stat">
+                        <div class="be-stat__value">Plot16/17, NS nagar</div>
+                        <div class="be-stat__label">Dindigul - 624005</div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-be-animate="fadeInUp">
+                    <div class="be-stat">
+                        <div class="be-stat__value">22+ Years</div>
+                        <div class="be-stat__label">Leadership experience</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <a href="<?php echo APP_URL; ?>?page=about" class="btn btn-outline-primary btn-lg">Learn More About Us</a>
             </div>
         </div>
     </section>
@@ -125,36 +165,42 @@ include __DIR__ . '/../components/partials/header/navbar.php';
                 <div class="be-slider__track" data-be-slider-track>
                     <article class="be-card be-card--service">
                         <div class="be-card__num">01</div>
+                        <img src="<?php echo APP_URL; ?>/public/assets/img/service-1.jpg" alt="Solar EPC" class="be-card__img" style="width: 100%; height: 200px; object-fit: cover; margin: -1.35rem -1.35rem 1rem -1.35rem; border-radius: 16px 16px 0 0;">
                         <div class="be-card__icon"><i class="fa-solid fa-solar-panel"></i></div>
                         <h3 class="be-card__title">Solar EPC &amp; Turnkey Solutions</h3>
                         <p class="be-card__text">Design, engineering, procurement, installation, testing, and commissioning for ground-mounted solar farms and rooftop solar systems.</p>
                     </article>
                     <article class="be-card be-card--service">
                         <div class="be-card__num">02</div>
+                        <img src="<?php echo APP_URL; ?>/public/assets/img/service-2.jpg" alt="Civil Works" class="be-card__img" style="width: 100%; height: 200px; object-fit: cover; margin: -1.35rem -1.35rem 1rem -1.35rem; border-radius: 16px 16px 0 0;">
                         <div class="be-card__icon"><i class="fa-solid fa-helmet-safety"></i></div>
                         <h3 class="be-card__title">Solar Farm Civil Works</h3>
                         <p class="be-card__text">Roads, drains, compound walls, fencing, inverter foundations, transformer foundations, and switchyard civil infrastructure.</p>
                     </article>
                     <article class="be-card be-card--service">
                         <div class="be-card__num">03</div>
+                        <img src="<?php echo APP_URL; ?>/public/assets/img/service-3.jpg" alt="Electrical Works" class="be-card__img" style="width: 100%; height: 200px; object-fit: cover; margin: -1.35rem -1.35rem 1rem -1.35rem; border-radius: 16px 16px 0 0;">
                         <div class="be-card__icon"><i class="fa-solid fa-plug-circle-bolt"></i></div>
                         <h3 class="be-card__title">Electrical Installation Works</h3>
                         <p class="be-card__text">UG/PG cable laying, terminations, earthing systems, panel erection, LA installation, and compliant electrical execution.</p>
                     </article>
                     <article class="be-card be-card--service">
                         <div class="be-card__num">04</div>
+                        <img src="<?php echo APP_URL; ?>/public/assets/img/service-4.jpg" alt="AC Electrical" class="be-card__img" style="width: 100%; height: 200px; object-fit: cover; margin: -1.35rem -1.35rem 1rem -1.35rem; border-radius: 16px 16px 0 0;">
                         <div class="be-card__icon"><i class="fa-solid fa-bolt"></i></div>
                         <h3 class="be-card__title">AC Side Electrical Works</h3>
                         <p class="be-card__text">Transformer installation, HT cable laying, cable tray works, oil filtration, equipment testing, and commissioning support.</p>
                     </article>
                     <article class="be-card be-card--service">
                         <div class="be-card__num">05</div>
+                        <img src="<?php echo APP_URL; ?>/public/assets/img/project-1.jpg" alt="Plant Installation" class="be-card__img" style="width: 100%; height: 200px; object-fit: cover; margin: -1.35rem -1.35rem 1rem -1.35rem; border-radius: 16px 16px 0 0;">
                         <div class="be-card__icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
                         <h3 class="be-card__title">Solar Plant Installation</h3>
                         <p class="be-card__text">MMS structures, PV modules, inverters, and plant equipment installation with alignment checks and quality inspections.</p>
                     </article>
                     <article class="be-card be-card--service">
                         <div class="be-card__num">06</div>
+                        <img src="<?php echo APP_URL; ?>/public/assets/img/project-2.jpg" alt="O&M" class="be-card__img" style="width: 100%; height: 200px; object-fit: cover; margin: -1.35rem -1.35rem 1rem -1.35rem; border-radius: 16px 16px 0 0;">
                         <div class="be-card__icon"><i class="fa-solid fa-screwdriver"></i></div>
                         <h3 class="be-card__title">Operation &amp; Maintenance</h3>
                         <p class="be-card__text">Inspection, testing, preventive maintenance, and performance optimization to keep plants operating efficiently.</p>

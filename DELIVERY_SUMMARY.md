@@ -229,7 +229,7 @@ Create: New PHP file in `app/views/pages/`
 ## 📞 Company Information
 
 **BOSE ENTERPRISES**
-- Industry: Solar EPC & Infrastructure Services
+- Industry: Solar Installation and Commisioning Contractor  Services
 - Established: 2019
 - Location: South India
 - Email: info@bose-enterprises.in

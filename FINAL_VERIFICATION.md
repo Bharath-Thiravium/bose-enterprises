@@ -273,7 +273,7 @@
 
 ### Company Information
 - ✅ Company name: BOSE ENTERPRISES
-- ✅ Industry: Solar EPC & Infrastructure
+- ✅ Industry: Solar Installation and Commisioning Contractor 
 - ✅ Established: 2019
 - ✅ Location: South India
 - ✅ Email: info@bose-enterprises.in

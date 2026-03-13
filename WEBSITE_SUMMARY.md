@@ -148,7 +148,7 @@ A professional, modern corporate website has been successfully created for **BOS
 ## 🔍 SEO Optimization
 
 ### Meta Tags
-- **Title:** BOSE ENTERPRISES | Solar EPC & Infrastructure Company
+- **Title:** BOSE ENTERPRISES | Solar Installation and Commisioning Contractor  Company
 - **Description:** BOSE ENTERPRISES is a leading solar infrastructure and EPC service provider specializing in solar farm construction, electrical installation, and commissioning services across India.
 - **Keywords:** solar EPC contractor India, solar farm construction, solar infrastructure company, solar power installation India, solar engineering company
 
