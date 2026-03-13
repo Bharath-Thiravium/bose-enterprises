@@ -4,27 +4,41 @@ $page_description = 'BOSE ENTERPRISES Gallery - View our solar projects and infr
 include __DIR__ . '/../components/partials/head-meta.php';
 include __DIR__ . '/../components/partials/header/navbar.php';
 
-$gallery_path = __DIR__ . '/../../../../gallery/Images';
-$web_path = APP_URL . '/gallery/Images';
+$web_path = APP_URL . '/public/images/gallery';
 
-$images = [];
+$images = [
+    
+    'image6.jpg',
+    'image7.jpg',
+    'image8.jpg',
+    'image9.jpg',
+    'image10.jpg',
+    'image11.jpg',
+    'image12.jpg',
+    'image13.jpg',
+    'image14.jpg',
+    'image15.jpg',
+    'image16.jpg',
+    'image17.jpg',
+    'image18.jpg',
+    'image19.jpg',
+    'image20.jpg',
+    'image21.jpg',
+    'image22.jpg',
+    'image23.jpg',
+    'image24.jpg',
+    'image25.jpg',
+     'image26.jpg',
+      'image27.jpg',
+       'image28.jpg',
+       'image29.jpg',
+      
 
-if (is_dir($gallery_path)) {
-    $files = scandir($gallery_path);
 
-    foreach ($files as $file) {
-        if ($file === '.' || $file === '..') {
-            continue;
-        }
+];
 
-        if (preg_match('/\.(jpg|jpeg|png|gif|webp)$/i', $file)) {
-            $images[] = $file;
-        }
-    }
-}
-
-sort($images);
 ?>
+
 
 <main class="main-content">
     <section class="be-section be-section--light">
@@ -43,6 +57,7 @@ sort($images);
                                 src="<?php echo htmlspecialchars($web_path . '/' . rawurlencode($image), ENT_QUOTES, 'UTF-8'); ?>"
                                 alt="Solar Project"
                                 loading="lazy"
+                                style="width: 100%; height: 300px; object-fit: cover;"
                             >
                         </div>
                     <?php endforeach; ?>
@@ -58,3 +73,4 @@ sort($images);
 
 <?php include __DIR__ . '/../components/partials/footer.php'; ?>
 <?php include __DIR__ . '/../components/partials/footer-scripts.php'; ?>
+ok next gallery 

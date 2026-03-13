@@ -85,30 +85,8 @@ p {
     to { transform: translateY(0); opacity: 1; }
 }
 
-@keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.7; }
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
-}
-
-@keyframes glow {
-    0%, 100% { box-shadow: 0 0 5px rgba(13, 110, 253, 0.5); }
-    50% { box-shadow: 0 0 20px rgba(13, 110, 253, 0.8); }
-}
-
-@keyframes shimmer {
-    0% { background-position: -1000px 0; }
-    100% { background-position: 1000px 0; }
-}
-
-@keyframes be-cursor-pulse {
-    0%, 100% { r: 3px; opacity: 1; }
-    50% { r: 5px; opacity: 0.6; }
-}
+/* Removed: pulse, float, glow, shimmer, be-cursor-pulse animations */
+/* These caused blinking/flicker effects and are replaced with smooth transitions */
 
 @keyframes scaleRotate {
     0% { transform: scale(1) rotate(0deg); opacity: 0; }
@@ -144,10 +122,7 @@ p {
     75% { transform: translateX(-3px) rotate(-0.5deg); }
 }
 
-@keyframes pulseScale {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.08); }
-}
+/* Removed: pulseScale animation - replaced with smooth transitions */
 
 @keyframes swing {
     0%, 100% { transform: rotate(0deg); }
@@ -275,24 +250,24 @@ p {
 
 .hero h1 {
     color: white;
-    animation: fadeInUp 0.8s ease-out;
     font-size: 3.5rem;
     font-weight: 800;
     line-height: 1.1;
+    opacity: 1;
 }
 
 .hero p {
     color: rgba(255, 255, 255, 0.9);
-    animation: fadeInUp 0.8s ease-out 0.2s both;
     font-size: 1.25rem;
+    opacity: 1;
 }
 
 .hero .btn {
-    animation: fadeInUp 0.8s ease-out 0.4s both;
+    opacity: 1;
 }
 
 .hero-image {
-    animation: float 3s ease-in-out infinite;
+    /* Removed: float animation - smooth static display */
 }
 
 /* Buttons */
@@ -578,7 +553,7 @@ section {
     width: 100%;
     height: 100%;
     background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-    animation: shimmer 2s infinite;
+    /* Removed: shimmer animation - no flashing effect */
 }
 
 /* Utility Classes */
@@ -598,17 +573,10 @@ section {
     animation: fadeInRight 0.6s ease-out;
 }
 
-.pulse {
-    animation: pulse 2s ease-in-out infinite;
-}
-
-.float {
-    animation: float 3s ease-in-out infinite;
-}
-
-.glow {
-    animation: glow 2s ease-in-out infinite;
-}
+/* Removed: .pulse, .float, .glow utility classes - no infinite animations */
+.pulse { /* disabled */ }
+.float { /* disabled */ }
+.glow { /* disabled */ }
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -790,7 +758,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Hero */
 .be-hero {
     position: relative;
-    padding: 5.75rem 0 4.25rem;
+    padding: 6.5rem 0 5rem;
     color: #ffffff;
     background: linear-gradient(180deg, #0b1220 0%, #0f172a 100%);
     overflow: hidden;
@@ -827,7 +795,7 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(10, 18, 32, 0.50);
+    background: rgba(5, 15, 35, 0.38);
     z-index: 1;
     pointer-events: none;
 }
@@ -910,15 +878,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .be-hero__title {
-    font-size: clamp(2.25rem, 5vw, 3.6rem);
-    margin-bottom: 1rem;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: 1.25rem;
     color: #ffffff;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+    opacity: 1;
 }
 
 .be-hero__lead {
-    font-size: 1.05rem;
-    color: rgba(255, 255, 255, 0.86);
-    max-width: 56ch;
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.92);
+    max-width: 65ch;
+    line-height: 1.7;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+    opacity: 1;
 }
 
 .be-kicker {
@@ -946,14 +919,16 @@ h1, h2, h3, h4, h5, h6 {
 .be-hero .be-kicker,
 .be-page-hero .be-kicker,
 .be-section--dark .be-kicker {
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(255, 255, 255, 0.90);
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
 }
 
 .be-hero__logos-label {
     display: block;
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.78);
-    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 0.6rem;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
 }
 
 .be-logos {
@@ -963,12 +938,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .be-logo-pill {
-    padding: 0.45rem 0.75rem;
+    padding: 0.5rem 0.85rem;
     border-radius: 999px;
-    border: 1px solid rgba(255, 255, 255, 0.16);
-    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    background: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(8px);
     font-size: 0.85rem;
     letter-spacing: 0.04em;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
 }
 
 .be-hero__media {
@@ -1208,10 +1185,10 @@ h1, h2, h3, h4, h5, h6 {
     padding: 1.35rem 1.35rem 1.25rem;
     box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
     cursor: pointer;
-    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-        box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-        border-color 0.4s ease;
-    will-change: transform;
+    transition: transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+    will-change: auto;
 }
 
 .be-card:hover {
@@ -1244,8 +1221,8 @@ h1, h2, h3, h4, h5, h6 {
     background: linear-gradient(135deg, var(--be-accent), #1f7cff);
     box-shadow: 0 12px 24px rgba(13, 110, 253, 0.18);
     margin-bottom: 0.9rem;
-    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: transform 0.35s ease,
+                box-shadow 0.35s ease;
     font-size: 1.5rem;
 }
 
@@ -1314,10 +1291,10 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-        border-color 0.3s ease,
-        background 0.3s ease,
-        box-shadow 0.3s ease;
+    transition: transform 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
 .be-slider__btn:hover {
@@ -1359,10 +1336,10 @@ h1, h2, h3, h4, h5, h6 {
     background: #ffffff;
     border: 1px solid rgba(13, 110, 253, 0.08);
     overflow: hidden;
-    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                border-color 0.4s ease;
-    will-change: transform;
+    transition: transform 0.35s ease,
+                box-shadow 0.35s ease,
+                border-color 0.35s ease;
+    will-change: auto;
 }
 
 .be-card--service::before {
@@ -1409,11 +1386,11 @@ h1, h2, h3, h4, h5, h6 {
     padding: 1.35rem 1.35rem 1.25rem;
     box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
     cursor: pointer;
-    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
-                box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
-                border-color 0.4s ease;
+    transition: transform 0.35s ease, 
+                box-shadow 0.35s ease, 
+                border-color 0.35s ease;
     overflow: hidden;
-    will-change: transform;
+    will-change: auto;
 }
 
 .be-team-card:hover {
@@ -1477,10 +1454,10 @@ h1, h2, h3, h4, h5, h6 {
     padding: 1.35rem 1.35rem 1.25rem;
     box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
     cursor: pointer;
-    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-        box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-        border-color 0.4s ease;
-    will-change: transform;
+    transition: transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+    will-change: auto;
 }
 
 .be-client-card:hover {
@@ -1525,7 +1502,7 @@ button,
 }
 
 .be-cursor-pulse {
-    animation: be-cursor-pulse 1.5s ease-in-out infinite;
+    /* Removed: be-cursor-pulse animation - no pulsing effect */
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1544,11 +1521,11 @@ button:focus-visible,
 }
 
 .btn {
-    transition: transform 0.18s cubic-bezier(0.2, 0.7, 0.2, 1),
-        box-shadow 0.18s ease,
-        background-color 0.18s ease,
-        border-color 0.18s ease,
-        color 0.18s ease;
+    transition: transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        color 0.25s ease;
 }
 
 .btn:active {
@@ -1556,7 +1533,7 @@ button:focus-visible,
 }
 
 .nav-link {
-    transition: color 0.18s ease, transform 0.18s ease;
+    transition: color 0.25s ease, transform 0.25s ease;
 }
 
 .nav-link:hover {
@@ -1572,17 +1549,30 @@ button:focus-visible,
 }
 
 .be-client-card__logo {
-    width: 64px;
-    height: 64px;
+    width: 72px;
+    height: 72px;
     border-radius: 18px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Rajdhani', 'Arial', 'Helvetica', system-ui, -apple-system, sans-serif;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    background: linear-gradient(135deg, rgba(13, 110, 253, 0.14), rgba(34, 197, 94, 0.10));
+    background: #f5f7fa;
     margin-bottom: 0.9rem;
+    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.12);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    overflow: hidden;
+}
+
+.be-client-card:hover .be-client-card__logo {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(13, 110, 253, 0.18);
+}
+
+.be-client-card__logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    padding: 8px;
 }
 
 .be-client-card__name {
@@ -1722,9 +1712,9 @@ button:focus-visible,
 
 /* Animations: elements opt-in via data-be-animate */
 [data-be-animate] {
-    opacity: 0;
-    transform: translate3d(0, 20px, 0);
-    will-change: transform, opacity;
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    will-change: auto;
     backface-visibility: hidden;
 }
 
@@ -1732,24 +1722,28 @@ button:focus-visible,
     opacity: 1;
 }
 
-.be-anim--fadeInUp.be-inview { animation: fadeInUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards; will-change: transform, opacity; }
-.be-anim--fadeInDown.be-inview { animation: fadeInDown 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards; will-change: transform, opacity; }
-.be-anim--fadeInLeft.be-inview { animation: fadeInLeft 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards; will-change: transform, opacity; }
-.be-anim--fadeInRight.be-inview { animation: fadeInRight 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards; will-change: transform, opacity; }
-.be-anim--scaleRotate.be-inview { animation: scaleRotate 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; will-change: transform, opacity; }
-.be-anim--slideRotate.be-inview { animation: slideRotate 0.75s ease forwards; will-change: transform, opacity; }
-.be-anim--elasticBounce.be-inview { animation: elasticBounce 0.85s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; will-change: transform, opacity; }
-.be-anim--flipIn.be-inview { animation: flipIn 0.8s ease forwards; will-change: transform, opacity; }
-.be-anim--zoomSlide.be-inview { animation: zoomSlide 0.75s ease forwards; will-change: transform, opacity; }
-.be-anim--tiltShift.be-inview { animation: tiltShift 0.8s ease forwards; will-change: transform, opacity; }
-.be-anim--slideSkew.be-inview { animation: slideSkew 0.75s ease forwards; will-change: transform, opacity; }
+/* Removed: aggressive entrance animations - elements now appear smoothly */
+.be-anim--fadeInUp.be-inview { opacity: 1; }
+.be-anim--fadeInDown.be-inview { opacity: 1; }
+.be-anim--fadeInLeft.be-inview { opacity: 1; }
+.be-anim--fadeInRight.be-inview { opacity: 1; }
+.be-anim--scaleRotate.be-inview { opacity: 1; }
+.be-anim--slideRotate.be-inview { opacity: 1; }
+.be-anim--elasticBounce.be-inview { opacity: 1; }
+.be-anim--flipIn.be-inview { opacity: 1; }
+.be-anim--zoomSlide.be-inview { opacity: 1; }
+.be-anim--tiltShift.be-inview { opacity: 1; }
+.be-anim--slideSkew.be-inview { opacity: 1; }
 
 @media (max-width: 768px) {
     .be-bullets { grid-template-columns: 1fr; }
     
-    /* Optimize video for mobile */
+    .be-hero {
+        padding: 5rem 0 4rem;
+    }
+    
     .be-hero__overlay {
-        background: rgba(10, 18, 32, 0.60);
+        background: rgba(5, 15, 35, 0.50);
     }
 }
 
@@ -1807,9 +1801,9 @@ button:focus-visible,
 .capability-item img,
 .be-card--service img,
 .be-card__img {
-    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                opacity 0.5s ease;
-    will-change: transform;
+    transition: transform 0.35s ease,
+                opacity 0.35s ease;
+    will-change: auto;
     backface-visibility: hidden;
 }
 
@@ -1834,10 +1828,10 @@ button:focus-visible,
     padding: 1.5rem;
     box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
     cursor: pointer;
-    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
-                box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
-                border-color 0.4s ease;
-    will-change: transform;
+    transition: transform 0.35s ease, 
+                box-shadow 0.35s ease, 
+                border-color 0.35s ease;
+    will-change: auto;
 }
 
 .project-card:hover {
@@ -1924,9 +1918,9 @@ button:focus-visible,
     padding: 1.5rem;
     box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
     text-align: center;
-    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
-                box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    will-change: transform;
+    transition: transform 0.35s ease, 
+                box-shadow 0.35s ease;
+    will-change: auto;
     overflow: hidden;
 }
 
@@ -1947,7 +1941,7 @@ button:focus-visible,
     font-size: 1.75rem;
     margin-bottom: 1rem;
     box-shadow: 0 12px 24px rgba(13, 110, 253, 0.18);
-    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: transform 0.35s ease;
 }
 
 .capability-item:hover .capability-item__icon {
@@ -1999,7 +1993,7 @@ button:focus-visible,
     height: auto;
     display: block;
     border-radius: var(--be-radius);
-    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: transform 0.35s ease;
 }
 
 .be-media-card__img {
@@ -2054,7 +2048,7 @@ picture img {
 }
 
 
-/* Gallery Grid Styles - Professional Design */
+/* Gallery Grid Styles - Updated */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));

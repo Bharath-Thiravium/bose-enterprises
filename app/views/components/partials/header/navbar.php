@@ -12,6 +12,7 @@ $navItems = [
     'about' => 'About',
     'services' => 'Services',
     'projects' => 'Projects',
+    'gallery' => 'Gallery',
     'team' => 'Team',
     'contact' => 'Contact',
 ];
@@ -41,7 +42,7 @@ $navItems = [
     <nav class="navbar navbar-expand-lg navbar-light bg-white be-navbar">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center gap-3" href="<?php echo APP_URL; ?>?page=home">
-                <img class="be-logo" src="<?php echo APP_URL; ?>/public/assets/img/logo.png" alt="<?php echo htmlspecialchars($companyName, ENT_QUOTES, 'UTF-8'); ?>">
+                <img class="be-logo" src="<?php echo APP_URL; ?>/public/assets/img/logo.jpeg" alt="<?php echo htmlspecialchars($companyName, ENT_QUOTES, 'UTF-8'); ?>">
                 <span class="be-brand">
                     <span class="be-brand__name"><?php echo htmlspecialchars($companyName, ENT_QUOTES, 'UTF-8'); ?></span>
                     <span class="be-brand__tag"><?php echo htmlspecialchars($companyTagline, ENT_QUOTES, 'UTF-8'); ?></span>

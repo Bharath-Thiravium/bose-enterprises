@@ -18,14 +18,11 @@ function initScrollAnimations() {
   var animated = document.querySelectorAll('[data-be-animate]');
   if (!animated.length) return;
 
-  var defaultAnimation = 'fadeInUp';
-
+  // Removed aggressive stagger delays - elements appear smoothly
   document.querySelectorAll('[data-be-stagger]').forEach(function (parent) {
-    var step = parseInt(parent.getAttribute('data-be-stagger'), 10);
-    if (!Number.isFinite(step) || step < 0) return;
     var children = parent.querySelectorAll('[data-be-animate]');
-    children.forEach(function (child, index) {
-      child.style.animationDelay = (index * step) + 'ms';
+    children.forEach(function (child) {
+      child.style.animationDelay = '0ms';
     });
   });
 
@@ -34,11 +31,8 @@ function initScrollAnimations() {
       entries.forEach(function (entry) {
         if (!entry.isIntersecting) return;
         var el = entry.target;
-        var anim = el.getAttribute('data-be-animate');
-        if (!anim) {
-          anim = defaultAnimation;
-        }
-        el.classList.add('be-inview', 'be-anim--' + anim);
+        // Simply make element visible - no flashy animations
+        el.classList.add('be-inview');
         observer.unobserve(el);
       });
     });
@@ -171,29 +165,9 @@ function fixLazyImageFlickering() {
 }
 
 function initCursor() {
-  var cursor = document.createElement('div');
-  cursor.className = 'be-cursor';
-  cursor.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="8"/><line x1="12" y1="4" x2="12" y2="2"/><line x1="12" y1="22" x2="12" y2="20"/><line x1="4" y1="12" x2="2" y2="12"/><line x1="22" y1="12" x2="20" y2="12"/><circle cx="12" cy="12" r="3" class="be-cursor-pulse"/></svg>';
-  document.body.appendChild(cursor);
-
-  var mouseX = 0;
-  var mouseY = 0;
-
-  document.addEventListener('mousemove', function (e) {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    cursor.style.left = mouseX + 'px';
-    cursor.style.top = mouseY + 'px';
-    cursor.style.opacity = '1';
-  }, { passive: true });
-
-  document.addEventListener('mouseleave', function () {
-    cursor.style.opacity = '0';
-  });
-
-  document.addEventListener('mouseenter', function () {
-    cursor.style.opacity = '1';
-  });
+  // Removed: custom cursor with pulse animation
+  // Using default browser cursor for better performance and no flicker
+  return;
 }
 
 function initHeroVideo() {

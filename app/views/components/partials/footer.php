@@ -20,7 +20,7 @@ $services = [
         <div class="row gy-4">
             <div class="col-lg-4 col-md-6">
                 <div class="footer-brand d-flex align-items-center gap-3 mb-3">
-                    <img class="be-logo be-logo--footer" src="<?php echo APP_URL; ?>/../logo.png" alt="<?php echo htmlspecialchars($companyName, ENT_QUOTES, 'UTF-8'); ?>">
+                    <img class="be-logo be-logo--footer" src="<?php echo APP_URL; ?>/public/assets/img/logo.png" alt="<?php echo htmlspecialchars($companyName, ENT_QUOTES, 'UTF-8'); ?>">
                     <div>
                         <h5 class="mb-0"><?php echo htmlspecialchars($companyName, ENT_QUOTES, 'UTF-8'); ?></h5>
                         <p class="footer-tagline mb-0"><?php echo htmlspecialchars($companyTagline, ENT_QUOTES, 'UTF-8'); ?></p>
