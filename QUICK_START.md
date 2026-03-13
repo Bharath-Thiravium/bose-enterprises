@@ -92,7 +92,7 @@ All pages are accessible via the navigation menu or direct URLs:
 
 ### Company Details
 - **Name:** BOSE ENTERPRISES
-- **Industry:** Solar EPC & Infrastructure Services
+- **Industry:** Solar Installation and Commisioning Contractor  Services
 - **Established:** 2019
 - **Location:** South India
 - **Email:** info@bose-enterprises.in

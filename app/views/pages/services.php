@@ -40,36 +40,42 @@ include __DIR__ . '/../components/partials/header/navbar.php';
                 <div class="be-slider__track" data-be-slider-track>
                     <article class="be-card be-card--service">
                         <div class="be-card__num">01</div>
+                        <img src="<?php echo APP_URL; ?>/public/assets/img/service-1.jpg" alt="Solar EPC" class="be-card__img" style="width: 100%; height: 200px; object-fit: cover; margin: -1.35rem -1.35rem 1rem -1.35rem; border-radius: 16px 16px 0 0;">
                         <div class="be-card__icon"><i class="fa-solid fa-solar-panel"></i></div>
                         <h3 class="be-card__title">Solar EPC &amp; Turnkey Solutions</h3>
                         <p class="be-card__text">Complete execution from design and procurement through installation, testing, and commissioning for ground-mounted and rooftop systems.</p>
                     </article>
                     <article class="be-card be-card--service">
                         <div class="be-card__num">02</div>
+                        <img src="<?php echo APP_URL; ?>/public/assets/img/service-2.jpg" alt="Civil Works" class="be-card__img" style="width: 100%; height: 200px; object-fit: cover; margin: -1.35rem -1.35rem 1rem -1.35rem; border-radius: 16px 16px 0 0;">
                         <div class="be-card__icon"><i class="fa-solid fa-building"></i></div>
                         <h3 class="be-card__title">Solar Farm Civil Works</h3>
                         <p class="be-card__text">Roads, drains, compound walls, fencing, inverter and transformer foundations, and switchyard civil infrastructure.</p>
                     </article>
                     <article class="be-card be-card--service">
                         <div class="be-card__num">03</div>
+                        <img src="<?php echo APP_URL; ?>/public/assets/img/service-3.jpg" alt="Electrical Works" class="be-card__img" style="width: 100%; height: 200px; object-fit: cover; margin: -1.35rem -1.35rem 1rem -1.35rem; border-radius: 16px 16px 0 0;">
                         <div class="be-card__icon"><i class="fa-solid fa-plug"></i></div>
                         <h3 class="be-card__title">Electrical Installation Works</h3>
                         <p class="be-card__text">UG/PG cable laying, terminations, earthing, panel erection, lightning arrestor installation, and equipment installation.</p>
                     </article>
                     <article class="be-card be-card--service">
                         <div class="be-card__num">04</div>
+                        <img src="<?php echo APP_URL; ?>/public/assets/img/service-4.jpg" alt="AC Electrical" class="be-card__img" style="width: 100%; height: 200px; object-fit: cover; margin: -1.35rem -1.35rem 1rem -1.35rem; border-radius: 16px 16px 0 0;">
                         <div class="be-card__icon"><i class="fa-solid fa-bolt"></i></div>
                         <h3 class="be-card__title">AC Side Electrical Works</h3>
                         <p class="be-card__text">Transformer and HT works, cable tray works, oil filtration, testing, and full commissioning support.</p>
                     </article>
                     <article class="be-card be-card--service">
                         <div class="be-card__num">05</div>
+                        <img src="<?php echo APP_URL; ?>/public/assets/img/project-1.jpg" alt="Plant Installation" class="be-card__img" style="width: 100%; height: 200px; object-fit: cover; margin: -1.35rem -1.35rem 1rem -1.35rem; border-radius: 16px 16px 0 0;">
                         <div class="be-card__icon"><i class="fa-solid fa-wrench"></i></div>
                         <h3 class="be-card__title">Solar Plant Installation</h3>
                         <p class="be-card__text">MMS structure, PV module installation, inverter systems, and plant infrastructure with precision and quality.</p>
                     </article>
                     <article class="be-card be-card--service">
                         <div class="be-card__num">06</div>
+                        <img src="<?php echo APP_URL; ?>/public/assets/img/project-2.jpg" alt="O&M" class="be-card__img" style="width: 100%; height: 200px; object-fit: cover; margin: -1.35rem -1.35rem 1rem -1.35rem; border-radius: 16px 16px 0 0;">
                         <div class="be-card__icon"><i class="fa-solid fa-screwdriver"></i></div>
                         <h3 class="be-card__title">Operation &amp; Maintenance</h3>
                         <p class="be-card__text">Inspection, testing, preventive maintenance, and performance optimization to keep plants at peak efficiency.</p>

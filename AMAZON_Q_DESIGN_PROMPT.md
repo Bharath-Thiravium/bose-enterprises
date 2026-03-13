@@ -110,7 +110,7 @@ Transform the BOSE ENTERPRISES PHP website to match the professional design patt
 ### Company Information:
 - Company Name: BOSE ENTERPRISES
 - Established: 2019
-- Industry: Solar EPC & Infrastructure Services
+- Industry: Solar Installation and Commisioning Contractor  Services
 - Location: South India
 - Email: info@bose-enterprises.in
 - Phone: +91 (555) 000-0000

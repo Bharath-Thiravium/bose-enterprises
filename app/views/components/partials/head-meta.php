@@ -1,6 +1,6 @@
 <?php
 // Head Meta Tags Component with SEO Optimization
-$page_title = isset($page_title) ? $page_title . ' - BOSE ENTERPRISES' : 'BOSE ENTERPRISES | Solar EPC & Infrastructure Company';
+$page_title = isset($page_title) ? $page_title . ' - BOSE ENTERPRISES' : 'BOSE ENTERPRISES | Solar Installation and Commisioning Contractor  Company';
 $page_description = isset($page_description) ? $page_description : 'BOSE ENTERPRISES is a leading solar infrastructure and EPC service provider specializing in solar farm construction, electrical installation, and commissioning services across India.';
 $page_keywords = isset($page_keywords) ? $page_keywords : 'solar EPC contractor India, solar farm construction, solar infrastructure company, solar power installation India, solar engineering company';
 ?>
@@ -32,10 +32,24 @@ $page_keywords = isset($page_keywords) ? $page_keywords : 'solar EPC contractor 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Google Fonts (LEPL-style typography) -->
+    <!-- Google Fonts (LEPL-style typography) - with system font fallback -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Rubik:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@700&family=Rubik:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Fallback fonts while external fonts load */
+        @font-face {
+            font-family: 'Rajdhani', sans-serif;
+            src: local('Arial'), local('Helvetica');
+            font-weight: 700;
+        }
+        @font-face {
+            font-family: 'Rubik', sans-serif;
+            src: local('Segoe UI'), local('Roboto');
+            font-weight: 400;
+        }
+    </style>
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="<?php echo APP_URL; ?>/public/assets/css/style.css?v=<?php echo time(); ?>">
@@ -47,5 +61,11 @@ $page_keywords = isset($page_keywords) ? $page_keywords : 'solar EPC contractor 
     <!-- Preconnect to external resources -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 </head>
 <body>
