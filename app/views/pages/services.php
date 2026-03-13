@@ -68,14 +68,14 @@ include __DIR__ . '/../components/partials/header/navbar.php';
                     </article>
                     <article class="be-card be-card--service">
                         <div class="be-card__num">05</div>
-                        <img src="<?php echo APP_URL; ?>/public/assets/img/project-1.jpg" alt="Plant Installation" class="be-card__img" style="width: 100%; height: 200px; object-fit: cover; margin: -1.35rem -1.35rem 1rem -1.35rem; border-radius: 16px 16px 0 0;">
+                        <img src="<?php echo APP_URL; ?>/public/assets/img/service-1.jpg" alt="Plant Installation" class="be-card__img" style="width: 100%; height: 200px; object-fit: cover; margin: -1.35rem -1.35rem 1rem -1.35rem; border-radius: 16px 16px 0 0;">
                         <div class="be-card__icon"><i class="fa-solid fa-wrench"></i></div>
                         <h3 class="be-card__title">Solar Plant Installation</h3>
                         <p class="be-card__text">MMS structure, PV module installation, inverter systems, and plant infrastructure with precision and quality.</p>
                     </article>
                     <article class="be-card be-card--service">
                         <div class="be-card__num">06</div>
-                        <img src="<?php echo APP_URL; ?>/public/assets/img/project-2.jpg" alt="O&M" class="be-card__img" style="width: 100%; height: 200px; object-fit: cover; margin: -1.35rem -1.35rem 1rem -1.35rem; border-radius: 16px 16px 0 0;">
+                        <img src="<?php echo APP_URL; ?>/public/assets/img/service-2.jpg" alt="O&M" class="be-card__img" style="width: 100%; height: 200px; object-fit: cover; margin: -1.35rem -1.35rem 1rem -1.35rem; border-radius: 16px 16px 0 0;">
                         <div class="be-card__icon"><i class="fa-solid fa-screwdriver"></i></div>
                         <h3 class="be-card__title">Operation &amp; Maintenance</h3>
                         <p class="be-card__text">Inspection, testing, preventive maintenance, and performance optimization to keep plants at peak efficiency.</p>

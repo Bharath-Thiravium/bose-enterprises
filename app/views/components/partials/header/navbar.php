@@ -12,7 +12,6 @@ $navItems = [
     'about' => 'About',
     'services' => 'Services',
     'projects' => 'Projects',
-    'gallery' => 'Gallery',
     'team' => 'Team',
     'contact' => 'Contact',
 ];

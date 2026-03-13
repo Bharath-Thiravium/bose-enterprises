@@ -380,21 +380,21 @@ include __DIR__ . '/../components/partials/header/navbar.php';
                 </div>
 
                 <div class="capability-item" data-be-animate="fadeInUp">
-                    <img src="<?php echo APP_URL; ?>/public/assets/img/whyus-3,.jpg" alt="Civil Infrastructure" style="width: 100%; height: 200px; object-fit: cover; margin: -1.5rem -1.5rem 1rem -1.5rem; border-radius: 18px 18px 0 0;">
+                    <img src="<?php echo APP_URL; ?>/public/assets/img/whyus-4.jpg" alt="Civil Infrastructure" style="width: 100%; height: 200px; object-fit: cover; margin: -1.5rem -1.5rem 1rem -1.5rem; border-radius: 18px 18px 0 0;">
                     <div class="capability-item__icon"><i class="fa-solid fa-road"></i></div>
                     <h3 class="capability-item__title">Civil Infrastructure</h3>
                     <p class="capability-item__desc">Road construction, fencing, compound walls, and complete site infrastructure development.</p>
                 </div>
 
                 <div class="capability-item" data-be-animate="fadeInUp">
-                    <img src="<?php echo APP_URL; ?>/public/assets/img/whyus-5.jpg" alt="Building Construction" style="width: 100%; height: 200px; object-fit: cover; margin: -1.5rem -1.5rem 1rem -1.5rem; border-radius: 18px 18px 0 0;">
+                    <img src="<?php echo APP_URL; ?>/public/assets/img/whyus-1.jpg" alt="Building Construction" style="width: 100%; height: 200px; object-fit: cover; margin: -1.5rem -1.5rem 1rem -1.5rem; border-radius: 18px 18px 0 0;">
                     <div class="capability-item__icon"><i class="fa-solid fa-building"></i></div>
                     <h3 class="capability-item__title">Building Construction</h3>
                     <p class="capability-item__desc">MCR and ICR building construction with complete civil and electrical integration.</p>
                 </div>
 
                 <div class="capability-item" data-be-animate="fadeInUp">
-                    <img src="<?php echo APP_URL; ?>/public/assets/img/whyus-6.jpg" alt="Testing & Commissioning" style="width: 100%; height: 200px; object-fit: cover; margin: -1.5rem -1.5rem 1rem -1.5rem; border-radius: 18px 18px 0 0;">
+                    <img src="<?php echo APP_URL; ?>/public/assets/img/whyus-2.jpg" alt="Testing & Commissioning" style="width: 100%; height: 200px; object-fit: cover; margin: -1.5rem -1.5rem 1rem -1.5rem; border-radius: 18px 18px 0 0;">
                     <div class="capability-item__icon"><i class="fa-solid fa-check-circle"></i></div>
                     <h3 class="capability-item__title">Testing & Commissioning</h3>
                     <p class="capability-item__desc">Comprehensive testing, commissioning, and performance verification of complete systems.</p>

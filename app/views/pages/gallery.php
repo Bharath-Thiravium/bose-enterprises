@@ -4,40 +4,19 @@ $page_description = 'BOSE ENTERPRISES Gallery - View our solar projects and infr
 include __DIR__ . '/../components/partials/head-meta.php';
 include __DIR__ . '/../components/partials/header/navbar.php';
 
-$web_path = APP_URL . '/public/images/gallery';
+$gallery_path = __DIR__ . '/../../../../gallery/Images';
+$images = [];
 
-$images = [
-   
-    'image6.jpg',
-    'image7.jpg',
-    'image8.jpg',
-    'image9.jpg',
-    'image10.jpg',
-    'image11.jpg',
-    'image12.jpg',
-    'image13.jpg',
-    'image14.jpg',
-    'image15.jpg',
-    'image16.jpg',
-    'image17.jpg',
-    'image18.jpg',
-    'image19.jpg',
-    'image20.jpg',
-    'image21.jpg',
-    'image22.jpg',
-     'image23.jpg',
-    'image24.jpg',
-    'image25.jpg',
-    'image26.jpg',
-    'image27.jpg',
-    'image28.jpg',
-    'image29.jpg',
-    
-
-];
-
+if (is_dir($gallery_path)) {
+    $files = scandir($gallery_path);
+    foreach ($files as $file) {
+        if (preg_match('/\.(jpg|jpeg|png|gif|webp)$/i', $file)) {
+            $images[] = $file;
+        }
+    }
+    sort($images);
+}
 ?>
-
 
 <main class="main-content">
     <section class="be-section be-section--light">
@@ -48,21 +27,23 @@ $images = [
                 <p class="be-section__sub">Explore our solar infrastructure and project execution work across South India.</p>
             </div>
 
-            <?php if (!empty($images)): ?>
-                <div class="gallery-grid">
-                    <?php foreach ($images as $image): ?>
-                        <div class="gallery-item">
-                            <img
-                                src="<?php echo htmlspecialchars($web_path . '/' . rawurlencode($image), ENT_QUOTES, 'UTF-8'); ?>"
-                                alt="Solar Project"
-                                loading="lazy"
-                                style="width: 100%; height: 300px; object-fit: cover;"
-                            >
-                        </div>
-                    <?php endforeach; ?>
-                </div>
-            <?php else: ?>
-                <div class="gallery-empty">
+            <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                <?php foreach ($images as $image): ?>
+                    <div class="gallery-item" style="position: relative; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
+                        <img 
+                            src="<?php echo APP_URL; ?>/gallery/Images/<?php echo urlencode($image); ?>" 
+                            alt="<?php echo htmlspecialchars($image); ?>"
+                            loading="lazy"
+                            style="width: 100%; height: 300px; object-fit: cover; display: block; transition: transform 0.3s ease;"
+                            onmouseover="this.style.transform='scale(1.05)'"
+                            onmouseout="this.style.transform='scale(1)'"
+                        >
+                    </div>
+                <?php endforeach; ?>
+            </div>
+
+            <?php if (empty($images)): ?>
+                <div style="text-align: center; padding: 3rem; color: #666;">
                     <p>No images found in the gallery.</p>
                 </div>
             <?php endif; ?>
