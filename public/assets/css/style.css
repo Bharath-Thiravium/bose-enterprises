@@ -177,7 +177,7 @@ p {
 }
 
 .navbar {
-    padding: 1rem 0;
+    padding: 0.75rem 0;
 }
 
 .navbar-brand {
@@ -185,6 +185,8 @@ p {
     font-weight: 700;
     color: var(--primary-color) !important;
     transition: var(--transition);
+    flex-shrink: 0;
+    margin-right: auto;
 }
 
 .navbar-brand:hover {
@@ -194,10 +196,12 @@ p {
 
 .nav-link {
     position: relative;
-    margin: 0 0.5rem;
+    margin: 0;
     color: var(--text-dark) !important;
     font-weight: 500;
     transition: var(--transition);
+    white-space: nowrap;
+    display: inline-block;
 }
 
 .nav-link::after {
@@ -1000,6 +1004,13 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 999px;
     padding-left: 1.1rem;
     padding-right: 1.1rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-size: 0.95rem;
+}
+
+.be-nav-cta i {
+    margin-right: 0.5rem;
 }
 
 /* Hero */
@@ -2526,16 +2537,69 @@ picture img {
 .navbar-nav {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    gap: 0.25rem;
+}
+
+.navbar-nav .nav-item {
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.navbar-nav .nav-link {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.95rem;
+    white-space: nowrap;
 }
 
 .navbar-nav .ms-lg-3 {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-left: auto !important;
+    flex-shrink: 0;
 }
 
+.navbar-nav .ms-lg-3 .btn {
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+/* Laptop (1366px) Optimization */
+@media (min-width: 992px) and (max-width: 1366px) {
+    .navbar-nav .nav-link {
+        padding: 0.5rem 0.6rem;
+        font-size: 0.9rem;
+        margin: 0 0.25rem;
+    }
+    
+    .be-nav-cta {
+        padding-left: 0.9rem;
+        padding-right: 0.9rem;
+        font-size: 0.9rem;
+    }
+    
+    .be-nav-cta i {
+        margin-right: 0.4rem;
+    }
+}
+
+/* Tablet and Mobile */
 @media (max-width: 991px) {
+    .navbar-nav {
+        flex-wrap: wrap;
+        gap: 0;
+    }
+    
+    .navbar-nav .nav-item {
+        width: 100%;
+    }
+    
+    .navbar-nav .nav-link {
+        padding: 0.75rem 0;
+        font-size: 1rem;
+    }
+    
     .navbar-nav .ms-lg-3 {
         width: 100%;
         margin-top: 1rem !important;
