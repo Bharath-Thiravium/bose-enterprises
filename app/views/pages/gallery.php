@@ -45,14 +45,18 @@ $images = [
 ?>
 
 
-<main class="main-content">
-    <section class="be-section be-section--light">
+  <!-- Page Hero -->
+    <section class="be-page-hero">
         <div class="container">
-            <div class="be-section__head">
-                <p class="be-kicker">Gallery</p>
-                <h2 class="be-section__title">Our Projects</h2>
-                <p class="be-section__sub">Explore our solar infrastructure and project execution work across South India.</p>
+            <div class="row">
+                <div class="col-lg-9" data-be-animate="fadeInDown">
+                    <p class="be-kicker">Gallery</p>
+                    <h1 class="be-page-hero__title">Our Projects</h1>
+                    <p class="be-page-hero__lead">Explore our solar infrastructure and project execution work across South India.</p>
+                </div>
             </div>
+        </div>
+    </section>
 
             <?php if (!empty($images)): ?>
                 <div class="gallery-grid">

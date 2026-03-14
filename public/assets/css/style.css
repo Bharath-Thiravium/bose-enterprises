@@ -2606,3 +2606,24 @@ picture img {
         margin-left: 0 !important;
     }
 }
+
+
+
+
+/* Gallery Section Background Color */
+.be-section--light {
+    background: linear-gradient(180deg, #f5f8fc 0%, #ffffff 100%);
+}
+
+.be-section--light .be-section__title {
+    color: #1f2d3d;
+}
+
+.be-section--light .be-section__sub {
+    color: #5b6b7a;
+}
+
+.be-section--light .be-kicker {
+    color: #2563eb;
+    font-weight: 600;
+}
