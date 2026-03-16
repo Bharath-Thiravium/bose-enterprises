@@ -7,7 +7,6 @@ include __DIR__ . '/../components/partials/header/navbar.php';
 $web_path = APP_URL . '/public/images/gallery';
 
 $images = [
-    
     'image6.jpg',
     'image7.jpg',
     'image8.jpg',
@@ -28,40 +27,40 @@ $images = [
     'image23.jpg',
     'image24.jpg',
     'image25.jpg',
-     'image26.jpg',
-      'image27.jpg',
-       'image28.jpg',
-       'image29.jpg',
-      'image30.jpg',
-       'image31.jpg',
-       'image32.jpg',
-       'image33.jpg',
-       'image34.jpg',
-       
-
-
+    'image26.jpg',
+    'image27.jpg',
+    'image28.jpg',
+    'image29.jpg',
+    'image30.jpg',
+    'image31.jpg',
+    'image32.jpg',
+    'image33.jpg',
+    'image34.jpg',
 ];
 
 ?>
 
-
-  <!-- Page Hero -->
+<main class="main-content">
+    <!-- Page Hero -->
     <section class="be-page-hero">
         <div class="container">
             <div class="row">
-                <div class="col-lg-9" data-be-animate="fadeInDown">
-                    <p class="be-kicker">Gallery</p>
-                    <h1 class="be-page-hero__title">Our Projects</h1>
-                    <p class="be-page-hero__lead">Explore our solar infrastructure and project execution work across South India.</p>
+                <div class="col-lg-9">
+                    <p class="be-kicker reveal-down">Gallery</p>
+                    <h1 class="be-page-hero__title reveal-up">Our Projects</h1>
+                    <p class="be-page-hero__lead reveal-up">Explore our solar infrastructure and project execution work across South India.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Gallery Section -->
+    <section class="be-section be-section--white">
+        <div class="container">
             <?php if (!empty($images)): ?>
                 <div class="gallery-grid">
-                    <?php foreach ($images as $image): ?>
-                        <div class="gallery-item">
+                    <?php foreach ($images as $index => $image): ?>
+                        <div class="gallery-item reveal-scale stagger-item">
                             <img
                                 src="<?php echo htmlspecialchars($web_path . '/' . rawurlencode($image), ENT_QUOTES, 'UTF-8'); ?>"
                                 alt="Solar Project"
@@ -78,8 +77,22 @@ $images = [
             <?php endif; ?>
         </div>
     </section>
+
+    <!-- CTA -->
+    <section class="be-cta">
+        <div class="container text-center">
+            <div class="be-cta__inner reveal-scale">
+                <div class="be-cta__icon reveal-up"><i class="fa-solid fa-images"></i></div>
+                <h2 class="be-cta__title reveal-up">Impressed by Our Work?</h2>
+                <p class="be-cta__text reveal-up">Let's discuss how we can bring your solar project to life with the same quality and precision.</p>
+                <div class="d-flex flex-wrap justify-content-center gap-3 mt-3">
+                    <a href="tel:+919940040082" class="btn btn-light btn-lg reveal-up"><i class="fa-solid fa-phone me-2"></i>+91-99400 40082</a>
+                    <a href="<?php echo APP_URL; ?>?page=contact" class="btn btn-outline-light btn-lg reveal-up">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 
 <?php include __DIR__ . '/../components/partials/footer.php'; ?>
 <?php include __DIR__ . '/../components/partials/footer-scripts.php'; ?>
-ok next gallery 

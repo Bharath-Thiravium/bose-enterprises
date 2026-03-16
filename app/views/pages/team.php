@@ -10,10 +10,10 @@ include __DIR__ . '/../components/partials/header/navbar.php';
     <section class="be-page-hero">
         <div class="container">
             <div class="row">
-                <div class="col-lg-9" data-be-animate="fadeInDown">
-                    <p class="be-kicker">Team</p>
-                    <h1 class="be-page-hero__title">Our Leadership Team</h1>
-                    <p class="be-page-hero__lead">Experienced professionals dedicated to solar excellence, with strong civil and electrical backgrounds.</p>
+                <div class="col-lg-9">
+                    <p class="be-kicker reveal-down">Team</p>
+                    <h1 class="be-page-hero__title reveal-up">Our Leadership Team</h1>
+                    <p class="be-page-hero__lead reveal-up">Experienced professionals dedicated to solar excellence, with strong civil and electrical backgrounds.</p>
                 </div>
             </div>
         </div>
@@ -23,14 +23,14 @@ include __DIR__ . '/../components/partials/header/navbar.php';
     <section class="be-section be-section--white">
         <div class="container">
             <div class="be-section__head">
-                <p class="be-kicker">Experts</p>
-                <h2 class="be-section__title">Meet Our Team</h2>
-                <p class="be-section__sub">Numbered team cards with role and experience highlights.</p>
+                <p class="be-kicker reveal-down">Experts</p>
+                <h2 class="be-section__title reveal-up">Meet Our Team</h2>
+                <p class="be-section__sub reveal-up">Numbered team cards with role and experience highlights.</p>
             </div>
 
-            <div class="row g-4" data-be-stagger="120">
-                <div class="col-lg-4 col-md-6" data-be-animate="fadeInUp">
-                    <div class="be-team-card be-team-card--detail">
+            <div class="row g-4 card-grid">
+                <div class="col-lg-4 col-md-6">
+                    <div class="be-team-card be-team-card--detail reveal-scale stagger-item">
                         <div class="be-team-card__num">01</div>
                         <div class="be-team-card__avatar"><i class="fa-solid fa-user-tie"></i></div>
                         <h3 class="be-team-card__name">Karnakaran V</h3>
@@ -39,8 +39,8 @@ include __DIR__ . '/../components/partials/header/navbar.php';
                         <p class="be-team-card__desc">Visionary leader with extensive experience in solar project development and business management.</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6" data-be-animate="fadeInUp">
-                    <div class="be-team-card be-team-card--detail">
+                <div class="col-lg-4 col-md-6">
+                    <div class="be-team-card be-team-card--detail reveal-scale stagger-item">
                         <div class="be-team-card__num">02</div>
                         <div class="be-team-card__avatar"><i class="fa-solid fa-user-tie"></i></div>
                         <h3 class="be-team-card__name">Janasekar</h3>
@@ -49,8 +49,8 @@ include __DIR__ . '/../components/partials/header/navbar.php';
                         <p class="be-team-card__desc">Technical expert in solar EPC execution and infrastructure development.</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6" data-be-animate="fadeInUp">
-                    <div class="be-team-card be-team-card--detail">
+                <div class="col-lg-4 col-md-6">
+                    <div class="be-team-card be-team-card--detail reveal-scale stagger-item">
                         <div class="be-team-card__num">03</div>
                         <div class="be-team-card__avatar"><i class="fa-solid fa-user-tie"></i></div>
                         <h3 class="be-team-card__name">Manikandan</h3>
@@ -59,8 +59,8 @@ include __DIR__ . '/../components/partials/header/navbar.php';
                         <p class="be-team-card__desc">Specialist in civil infrastructure and project management for solar installations.</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6" data-be-animate="fadeInUp">
-                    <div class="be-team-card be-team-card--detail">
+                <div class="col-lg-4 col-md-6">
+                    <div class="be-team-card be-team-card--detail reveal-scale stagger-item">
                         <div class="be-team-card__num">04</div>
                         <div class="be-team-card__avatar"><i class="fa-solid fa-user-tie"></i></div>
                         <h3 class="be-team-card__name">Kanagavel Nagamani</h3>
@@ -69,8 +69,8 @@ include __DIR__ . '/../components/partials/header/navbar.php';
                         <p class="be-team-card__desc">Expert in electrical infrastructure and large-scale solar project execution.</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6" data-be-animate="fadeInUp">
-                    <div class="be-team-card be-team-card--detail">
+                <div class="col-lg-4 col-md-6">
+                    <div class="be-team-card be-team-card--detail reveal-scale stagger-item">
                         <div class="be-team-card__num">05</div>
                         <div class="be-team-card__avatar"><i class="fa-solid fa-user-tie"></i></div>
                         <h3 class="be-team-card__name">Vaira Dasan</h3>
@@ -79,8 +79,8 @@ include __DIR__ . '/../components/partials/header/navbar.php';
                         <p class="be-team-card__desc">Skilled in project coordination and civil infrastructure implementation.</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6" data-be-animate="fadeInUp">
-                    <div class="be-team-card be-team-card--detail">
+                <div class="col-lg-4 col-md-6">
+                    <div class="be-team-card be-team-card--detail reveal-scale stagger-item">
                         <div class="be-team-card__num">06</div>
                         <div class="be-team-card__avatar"><i class="fa-solid fa-user-tie"></i></div>
                         <h3 class="be-team-card__name">Prabha Karan</h3>
@@ -97,49 +97,49 @@ include __DIR__ . '/../components/partials/header/navbar.php';
     <section class="be-section be-section--light">
         <div class="container">
             <div class="be-section__head">
-                <p class="be-kicker">Strengths</p>
-                <h2 class="be-section__title">What Makes The Team Effective</h2>
-                <p class="be-section__sub">Capabilities that matter on real sites.</p>
+                <p class="be-kicker reveal-down">Strengths</p>
+                <h2 class="be-section__title reveal-up">What Makes The Team Effective</h2>
+                <p class="be-section__sub reveal-up">Capabilities that matter on real sites.</p>
             </div>
 
-            <div class="row g-4" data-be-stagger="120">
-                <div class="col-lg-4 col-md-6" data-be-animate="fadeInUp">
-                    <div class="be-card">
+            <div class="row g-4 card-grid">
+                <div class="col-lg-4 col-md-6">
+                    <div class="be-card reveal-scale stagger-item">
                         <div class="be-card__icon"><i class="fa-solid fa-star"></i></div>
                         <h3 class="be-card__title">Solar EPC Expertise</h3>
                         <p class="be-card__text">Deep knowledge of solar power plant design, construction, and commissioning.</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6" data-be-animate="fadeInUp">
-                    <div class="be-card">
+                <div class="col-lg-4 col-md-6">
+                    <div class="be-card reveal-scale stagger-item">
                         <div class="be-card__icon"><i class="fa-solid fa-star"></i></div>
                         <h3 class="be-card__title">Infrastructure Development</h3>
                         <p class="be-card__text">Proven track record in civil and electrical infrastructure projects.</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6" data-be-animate="fadeInUp">
-                    <div class="be-card">
+                <div class="col-lg-4 col-md-6">
+                    <div class="be-card reveal-scale stagger-item">
                         <div class="be-card__icon"><i class="fa-solid fa-star"></i></div>
                         <h3 class="be-card__title">Project Management</h3>
                         <p class="be-card__text">Skilled in managing complex projects with precision and efficiency.</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6" data-be-animate="fadeInUp">
-                    <div class="be-card">
+                <div class="col-lg-4 col-md-6">
+                    <div class="be-card reveal-scale stagger-item">
                         <div class="be-card__icon"><i class="fa-solid fa-star"></i></div>
                         <h3 class="be-card__title">Safety &amp; Compliance</h3>
                         <p class="be-card__text">Committed to industry standards and safety protocols.</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6" data-be-animate="fadeInUp">
-                    <div class="be-card">
+                <div class="col-lg-4 col-md-6">
+                    <div class="be-card reveal-scale stagger-item">
                         <div class="be-card__icon"><i class="fa-solid fa-star"></i></div>
                         <h3 class="be-card__title">Technical Excellence</h3>
                         <p class="be-card__text">Continuous learning and adoption of relevant technologies.</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6" data-be-animate="fadeInUp">
-                    <div class="be-card">
+                <div class="col-lg-4 col-md-6">
+                    <div class="be-card reveal-scale stagger-item">
                         <div class="be-card__icon"><i class="fa-solid fa-star"></i></div>
                         <h3 class="be-card__title">Customer Focus</h3>
                         <p class="be-card__text">Dedicated to understanding and exceeding client expectations.</p>
@@ -152,13 +152,13 @@ include __DIR__ . '/../components/partials/header/navbar.php';
     <!-- CTA -->
     <section class="be-cta">
         <div class="container text-center">
-            <div class="be-cta__inner" data-be-animate="fadeInUp">
-                <div class="be-cta__icon"><i class="fa-solid fa-phone-volume"></i></div>
-                <h2 class="be-cta__title">Work With Our Expert Team</h2>
-                <p class="be-cta__text">Let our experienced professionals handle your solar infrastructure project.</p>
+            <div class="be-cta__inner reveal-scale">
+                <div class="be-cta__icon reveal-up"><i class="fa-solid fa-phone-volume"></i></div>
+                <h2 class="be-cta__title reveal-up">Work With Our Expert Team</h2>
+                <p class="be-cta__text reveal-up">Let our experienced professionals handle your solar infrastructure project.</p>
                 <div class="d-flex flex-wrap justify-content-center gap-3 mt-3">
-                    <a href="tel:+915550000000" class="btn btn-light btn-lg"><i class="fa-solid fa-phone me-2"></i>+91 (555) 000-0000</a>
-                    <a href="<?php echo APP_URL; ?>?page=contact" class="btn btn-outline-light btn-lg">Contact Us Today</a>
+                    <a href="tel:+919940040082" class="btn btn-light btn-lg reveal-up"><i class="fa-solid fa-phone me-2"></i>+91-99400 40082</a>
+                    <a href="<?php echo APP_URL; ?>?page=contact" class="btn btn-outline-light btn-lg reveal-up">Contact Us Today</a>
                 </div>
             </div>
         </div>

@@ -22,20 +22,20 @@ include __DIR__ . '/../components/partials/header/navbar.php';
         <div class="container be-hero__content">
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-xl-7 text-center">
-                    <p class="be-kicker mx-auto">Solar EPC &amp; Infrastructure Services</p>
-                    <h1 class="be-hero__title">Turnkey Solar EPC &amp; Infrastructure Projects</h1>
-                    <p class="be-hero__lead mx-auto">BOSE ENTERPRISES delivers engineering, construction, and commissioning of large-scale solar power projects across South India with safety, technical excellence, and on-time delivery.</p>
+                    <p class="be-kicker mx-auto reveal-down">Solar EPC &amp; Infrastructure Services</p>
+                    <h1 class="be-hero__title reveal-up">Turnkey Solar EPC &amp; Infrastructure Projects</h1>
+                    <p class="be-hero__lead mx-auto reveal-up">BOSE ENTERPRISES delivers engineering, construction, and commissioning of large-scale solar power projects across South India with safety, technical excellence, and on-time delivery.</p>
                     <div class="d-flex flex-wrap gap-3 mt-4 justify-content-center">
-                        <a href="<?php echo APP_URL; ?>?page=services" class="btn btn-primary btn-lg">Explore Services</a>
-                        <a href="<?php echo APP_URL; ?>?page=contact" class="btn btn-outline-light btn-lg">Talk to Our Team</a>
+                        <a href="<?php echo APP_URL; ?>?page=services" class="btn btn-primary btn-lg reveal-up">Explore Services</a>
+                        <a href="<?php echo APP_URL; ?>?page=contact" class="btn btn-outline-light btn-lg reveal-up">Talk to Our Team</a>
                     </div>
 
                     <div class="be-hero__logos mt-4">
-                        <span class="be-hero__logos-label">Trusted by</span>
+                        <span class="be-hero__logos-label reveal-down">Trusted by</span>
                         <div class="be-logos justify-content-center">
-                            <div class="be-logo-pill">RENFRA</div>
-                            <div class="be-logo-pill">STERLING &amp; WILSON</div>
-                            <div class="be-logo-pill">HINDUJA GROUP</div>
+                            <div class="be-logo-pill reveal-up">RENFRA</div>
+                            <div class="be-logo-pill reveal-up">STERLING &amp; WILSON</div>
+                            <div class="be-logo-pill reveal-up">HINDUJA GROUP</div>
                         </div>
                     </div>
                 </div>
@@ -47,69 +47,69 @@ include __DIR__ . '/../components/partials/header/navbar.php';
     <section class="be-section be-section--light" id="about">
         <div class="container">
             <div class="be-section__head">
-                <p class="be-kicker">About Us</p>
-                <h2 class="be-section__title">Charged With Purpose. Built For Execution.</h2>
-                <p class="be-section__sub">Established in 2019, BOSE ENTERPRISES is a growing solar professional company in South India specializing in complete solar power project solutions and infrastructure development.</p>
+                <p class="be-kicker reveal-down">About Us</p>
+                <h2 class="be-section__title reveal-up">Charged With Purpose. Built For Execution.</h2>
+                <p class="be-section__sub reveal-up">Established in 2019, BOSE ENTERPRISES is a growing solar professional company in South India specializing in complete solar power project solutions and infrastructure development.</p>
             </div>
 
             <!-- Mission & Values -->
             <div class="row align-items-center g-4 mb-5 home-mission-section">
-                <div class="col-lg-6 home-mission-image-wrap" data-be-animate="fadeInLeft">
+                <div class="col-lg-6 reveal-left">
                     <picture class="about-image-wrapper home-mission-image">
                         <source srcset="<?php echo APP_URL; ?>/public/assets/img/about-1.jpg?w=500&h=600&fit=crop&q=80&fm=webp" type="image/webp">
                         <source srcset="<?php echo APP_URL; ?>/public/assets/img/about-1.jpg?w=500&h=600&fit=crop&q=80" type="image/jpeg">
                         <img src="<?php echo APP_URL; ?>/public/assets/img/about-1.jpg" alt="Solar Infrastructure" loading="lazy" class="about-image">
                     </picture>
                 </div>
-                <div class="col-lg-6 home-mission-card-wrap" data-be-animate="fadeInRight">
+                <div class="col-lg-6 reveal-right">
                     <div class="be-panel home-mission-card">
-                        <h3 class="be-panel__title home-mission-title" data-be-animate="fadeInUp">Our Mission</h3>
-                        <p class="mb-0 home-mission-text" data-be-animate="fadeInUp">"Our mission is to deliver high-quality solar infrastructure solutions by ensuring safety, technical excellence, and timely project completion while providing maximum value and satisfaction to our customers."</p>
+                        <h3 class="be-panel__title reveal-up">Our Mission</h3>
+                        <p class="mb-0 reveal-up">Our mission is to deliver high-quality solar infrastructure solutions by ensuring safety, technical excellence, and timely project completion while providing maximum value and satisfaction to our customers.</p>
                     </div>
 
                     <div class="be-bullets mt-4 home-mission-bullets">
-                        <div class="be-bullet home-mission-bullet" data-be-animate="fadeInUp"><i class="fa-solid fa-shield-halved"></i><span>Safety-first execution</span></div>
-                        <div class="be-bullet home-mission-bullet" data-be-animate="fadeInUp"><i class="fa-solid fa-compass-drafting"></i><span>Technical excellence</span></div>
-                        <div class="be-bullet home-mission-bullet" data-be-animate="fadeInUp"><i class="fa-solid fa-clock"></i><span>On-time delivery</span></div>
-                        <div class="be-bullet home-mission-bullet" data-be-animate="fadeInUp"><i class="fa-solid fa-handshake"></i><span>Customer satisfaction</span></div>
+                        <div class="be-bullet stagger-item reveal-up"><i class="fa-solid fa-shield-halved"></i><span>Safety-first execution</span></div>
+                        <div class="be-bullet stagger-item reveal-up"><i class="fa-solid fa-compass-drafting"></i><span>Technical excellence</span></div>
+                        <div class="be-bullet stagger-item reveal-up"><i class="fa-solid fa-clock"></i><span>On-time delivery</span></div>
+                        <div class="be-bullet stagger-item reveal-up"><i class="fa-solid fa-handshake"></i><span>Customer satisfaction</span></div>
                     </div>
                 </div>
             </div>
 
             <!-- Stats Grid -->
-            <div class="row g-4" >
+            <div class="row g-4 card-grid">
                 <div class="col-lg-4 col-md-6">
-                    <div class="be-stat">
+                    <div class="be-stat reveal-scale stagger-item">
                         <div class="be-stat__value">2019</div>
                         <div class="be-stat__label">Established</div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="be-stat">
+                    <div class="be-stat reveal-scale stagger-item">
                         <div class="be-stat__value">South India</div>
                         <div class="be-stat__label">Primary footprint</div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="be-stat">
+                    <div class="be-stat reveal-scale stagger-item">
                         <div class="be-stat__value">Solar EPC</div>
                         <div class="be-stat__label">Core expertise</div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="be-stat">
+                    <div class="be-stat reveal-scale stagger-item">
                         <div class="be-stat__value">Infrastructure</div>
                         <div class="be-stat__label">Civil + electrical works</div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="be-stat">
+                    <div class="be-stat reveal-scale stagger-item">
                         <div class="be-stat__value">Plot16/17, NS nagar</div>
                         <div class="be-stat__label">Dindigul - 624005</div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="be-stat">
+                    <div class="be-stat reveal-scale stagger-item">
                         <div class="be-stat__value">22+ Years</div>
                         <div class="be-stat__label">Leadership experience</div>
                     </div>
@@ -117,7 +117,7 @@ include __DIR__ . '/../components/partials/header/navbar.php';
             </div>
 
             <div class="text-center mt-5">
-                <a href="<?php echo APP_URL; ?>?page=about" class="btn btn-outline-primary btn-lg">Learn More About Us</a>
+                <a href="<?php echo APP_URL; ?>?page=about" class="btn btn-outline-primary btn-lg reveal-up">Learn More About Us</a>
             </div>
         </div>
     </section>
@@ -126,9 +126,9 @@ include __DIR__ . '/../components/partials/header/navbar.php';
     <section class="be-section be-section--white" id="services">
         <div class="container">
             <div class="be-section__head">
-                <p class="be-kicker">Services</p>
-                <h2 class="be-section__title">Electricity-Grade Discipline For Solar Projects</h2>
-                <p class="be-section__sub">From civil infrastructure to AC-side electrical works, we deliver end-to-end execution with clear timelines and quality controls.</p>
+                <p class="be-kicker reveal-down">Services</p>
+                <h2 class="be-section__title reveal-up">Electricity-Grade Discipline For Solar Projects</h2>
+                <p class="be-section__sub reveal-up">From civil infrastructure to AC-side electrical works, we deliver end-to-end execution with clear timelines and quality controls.</p>
             </div>
 
             <div class="be-slider" data-be-slider="services" data-be-autoplay="true" data-be-interval="3500" data-be-pause-hover="true">
@@ -141,42 +141,42 @@ include __DIR__ . '/../components/partials/header/navbar.php';
                     </button>
                 </div>
                 <div class="be-slider__track" data-be-slider-track>
-                    <article class="be-card be-card--service">
+                    <article class="be-card be-card--service reveal-scale">
                         <div class="be-card__num">01</div>
                         <img src="<?php echo APP_URL; ?>/public/assets/img/service-1.jpg" alt="Solar EPC" class="be-card__img" style="width: 100%; height: 200px; object-fit: cover; margin: -1.35rem -1.35rem 1rem -1.35rem; border-radius: 16px 16px 0 0;">
                         <div class="be-card__icon"><i class="fa-solid fa-solar-panel"></i></div>
                         <h3 class="be-card__title">Solar EPC &amp; Turnkey Solutions</h3>
                         <p class="be-card__text">Design, engineering, procurement, installation, testing, and commissioning for ground-mounted solar farms and rooftop solar systems.</p>
                     </article>
-                    <article class="be-card be-card--service">
+                    <article class="be-card be-card--service reveal-scale">
                         <div class="be-card__num">02</div>
                         <img src="<?php echo APP_URL; ?>/public/assets/img/service-2.jpg" alt="Civil Works" class="be-card__img" style="width: 100%; height: 200px; object-fit: cover; margin: -1.35rem -1.35rem 1rem -1.35rem; border-radius: 16px 16px 0 0;">
                         <div class="be-card__icon"><i class="fa-solid fa-helmet-safety"></i></div>
                         <h3 class="be-card__title">Solar Farm Civil Works</h3>
                         <p class="be-card__text">Roads, drains, compound walls, fencing, inverter foundations, transformer foundations, and switchyard civil infrastructure.</p>
                     </article>
-                    <article class="be-card be-card--service">
+                    <article class="be-card be-card--service reveal-scale">
                         <div class="be-card__num">03</div>
                         <img src="<?php echo APP_URL; ?>/public/assets/img/service-3.jpg" alt="Electrical Works" class="be-card__img" style="width: 100%; height: 200px; object-fit: cover; margin: -1.35rem -1.35rem 1rem -1.35rem; border-radius: 16px 16px 0 0;">
                         <div class="be-card__icon"><i class="fa-solid fa-plug-circle-bolt"></i></div>
                         <h3 class="be-card__title">Electrical Installation Works</h3>
                         <p class="be-card__text">UG/PG cable laying, terminations, earthing systems, panel erection, LA installation, and compliant electrical execution.</p>
                     </article>
-                    <article class="be-card be-card--service">
+                    <article class="be-card be-card--service reveal-scale">
                         <div class="be-card__num">04</div>
                         <img src="<?php echo APP_URL; ?>/public/assets/img/service-4.jpg" alt="AC Electrical" class="be-card__img" style="width: 100%; height: 200px; object-fit: cover; margin: -1.35rem -1.35rem 1rem -1.35rem; border-radius: 16px 16px 0 0;">
                         <div class="be-card__icon"><i class="fa-solid fa-bolt"></i></div>
                         <h3 class="be-card__title">AC Side Electrical Works</h3>
                         <p class="be-card__text">Transformer installation, HT cable laying, cable tray works, oil filtration, equipment testing, and commissioning support.</p>
                     </article>
-                    <article class="be-card be-card--service">
+                    <article class="be-card be-card--service reveal-scale">
                         <div class="be-card__num">05</div>
                         <img src="<?php echo APP_URL; ?>/public/assets/img/project-1.jpg" alt="Plant Installation" class="be-card__img" style="width: 100%; height: 200px; object-fit: cover; margin: -1.35rem -1.35rem 1rem -1.35rem; border-radius: 16px 16px 0 0;">
                         <div class="be-card__icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
                         <h3 class="be-card__title">Solar Plant Installation</h3>
                         <p class="be-card__text">MMS structures, PV modules, inverters, and plant equipment installation with alignment checks and quality inspections.</p>
                     </article>
-                    <article class="be-card be-card--service">
+                    <article class="be-card be-card--service reveal-scale">
                         <div class="be-card__num">06</div>
                         <img src="<?php echo APP_URL; ?>/public/assets/img/project-2.jpg" alt="O&M" class="be-card__img" style="width: 100%; height: 200px; object-fit: cover; margin: -1.35rem -1.35rem 1rem -1.35rem; border-radius: 16px 16px 0 0;">
                         <div class="be-card__icon"><i class="fa-solid fa-screwdriver"></i></div>
@@ -187,7 +187,7 @@ include __DIR__ . '/../components/partials/header/navbar.php';
             </div>
 
             <div class="text-center mt-4">
-                <a href="<?php echo APP_URL; ?>?page=services" class="btn btn-outline-primary btn-lg">View All Services</a>
+                <a href="<?php echo APP_URL; ?>?page=services" class="btn btn-outline-primary btn-lg reveal-up">View All Services</a>
             </div>
         </div>
     </section>
@@ -197,25 +197,25 @@ include __DIR__ . '/../components/partials/header/navbar.php';
         <div class="container">
             <div class="row align-items-center g-4">
                 <div class="col-lg-5">
-                    <p class="be-kicker be-kicker--light">Capabilities</p>
-                    <h2 class="be-section__title be-section__title--light">Execution Strength You Can Measure</h2>
-                    <p class="be-section__sub be-section__sub--light">Animated progress indicators highlight the capabilities clients typically evaluate for EPC readiness.</p>
+                    <p class="be-kicker be-kicker--light reveal-down">Capabilities</p>
+                    <h2 class="be-section__title be-section__title--light reveal-up">Execution Strength You Can Measure</h2>
+                    <p class="be-section__sub be-section__sub--light reveal-up">Animated progress indicators highlight the capabilities clients typically evaluate for EPC readiness.</p>
                 </div>
                 <div class="col-lg-7">
                     <div class="be-skills" data-be-skills>
-                        <div class="be-skill" data-progress="92">
+                        <div class="be-skill reveal-up" data-progress="92">
                             <div class="be-skill__head"><span>Solar Projects</span><span class="be-skill__pct">92%</span></div>
                             <div class="be-skill__bar"><div class="be-skill__fill"></div></div>
                         </div>
-                        <div class="be-skill" data-progress="88">
+                        <div class="be-skill reveal-up" data-progress="88">
                             <div class="be-skill__head"><span>Electrical Infrastructure</span><span class="be-skill__pct">88%</span></div>
                             <div class="be-skill__bar"><div class="be-skill__fill"></div></div>
                         </div>
-                        <div class="be-skill" data-progress="84">
+                        <div class="be-skill reveal-up" data-progress="84">
                             <div class="be-skill__head"><span>Civil Works &amp; Foundations</span><span class="be-skill__pct">84%</span></div>
                             <div class="be-skill__bar"><div class="be-skill__fill"></div></div>
                         </div>
-                        <div class="be-skill" data-progress="90">
+                        <div class="be-skill reveal-up" data-progress="90">
                             <div class="be-skill__head"><span>Testing &amp; Commissioning</span><span class="be-skill__pct">90%</span></div>
                             <div class="be-skill__bar"><div class="be-skill__fill"></div></div>
                         </div>
@@ -229,14 +229,14 @@ include __DIR__ . '/../components/partials/header/navbar.php';
     <section class="be-section be-section--white" id="team">
         <div class="container">
             <div class="be-section__head">
-                <p class="be-kicker">Team</p>
-                <h2 class="be-section__title">Leadership With On-Site Experience</h2>
-                <p class="be-section__sub">Experienced professionals with 7-22+ years expertise in solar EPC and infrastructure projects.</p>
+                <p class="be-kicker reveal-down">Team</p>
+                <h2 class="be-section__title reveal-up">Leadership With On-Site Experience</h2>
+                <p class="be-section__sub reveal-up">Experienced professionals with 7-22+ years expertise in solar EPC and infrastructure projects.</p>
             </div>
 
-            <div class="row g-4" >
+            <div class="row g-4 card-grid">
                 <div class="col-lg-4 col-md-6">
-                    <div class="be-team-card">
+                    <div class="be-team-card reveal-scale stagger-item">
                         <div class="be-team-card__num">01</div>
                         <div class="be-team-card__avatar"><i class="fa-solid fa-user-tie"></i></div>
                         <h3 class="be-team-card__name">Karnakaran V</h3>
@@ -245,7 +245,7 @@ include __DIR__ . '/../components/partials/header/navbar.php';
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="be-team-card">
+                    <div class="be-team-card reveal-scale stagger-item">
                         <div class="be-team-card__num">02</div>
                         <div class="be-team-card__avatar"><i class="fa-solid fa-user-tie"></i></div>
                         <h3 class="be-team-card__name">Janasekar</h3>
@@ -254,7 +254,7 @@ include __DIR__ . '/../components/partials/header/navbar.php';
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="be-team-card">
+                    <div class="be-team-card reveal-scale stagger-item">
                         <div class="be-team-card__num">03</div>
                         <div class="be-team-card__avatar"><i class="fa-solid fa-user-tie"></i></div>
                         <h3 class="be-team-card__name">Manikandan</h3>
@@ -263,7 +263,7 @@ include __DIR__ . '/../components/partials/header/navbar.php';
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="be-team-card">
+                    <div class="be-team-card reveal-scale stagger-item">
                         <div class="be-team-card__num">04</div>
                         <div class="be-team-card__avatar"><i class="fa-solid fa-user-tie"></i></div>
                         <h3 class="be-team-card__name">Kanagavel Nagamani</h3>
@@ -272,7 +272,7 @@ include __DIR__ . '/../components/partials/header/navbar.php';
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="be-team-card">
+                    <div class="be-team-card reveal-scale stagger-item">
                         <div class="be-team-card__num">05</div>
                         <div class="be-team-card__avatar"><i class="fa-solid fa-user-tie"></i></div>
                         <h3 class="be-team-card__name">Vaira Dasan</h3>
@@ -281,7 +281,7 @@ include __DIR__ . '/../components/partials/header/navbar.php';
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="be-team-card">
+                    <div class="be-team-card reveal-scale stagger-item">
                         <div class="be-team-card__num">06</div>
                         <div class="be-team-card__avatar"><i class="fa-solid fa-user-tie"></i></div>
                         <h3 class="be-team-card__name">Prabha Karan</h3>
@@ -292,7 +292,7 @@ include __DIR__ . '/../components/partials/header/navbar.php';
             </div>
 
             <div class="text-center mt-4">
-                <a href="<?php echo APP_URL; ?>?page=team" class="btn btn-outline-primary btn-lg">Meet the Full Team</a>
+                <a href="<?php echo APP_URL; ?>?page=team" class="btn btn-outline-primary btn-lg reveal-up">Meet the Full Team</a>
             </div>
         </div>
     </section>
@@ -301,14 +301,14 @@ include __DIR__ . '/../components/partials/header/navbar.php';
     <section class="be-section be-section--light" id="clients">
         <div class="container">
             <div class="be-section__head">
-                <p class="be-kicker">Clients</p>
-                <h2 class="be-section__title">Partners Who Value Reliable Delivery</h2>
-                <p class="be-section__sub">A selection of clients and partners we've worked with across solar EPC and infrastructure execution.</p>
+                <p class="be-kicker reveal-down">Clients</p>
+                <h2 class="be-section__title reveal-up">Partners Who Value Reliable Delivery</h2>
+                <p class="be-section__sub reveal-up">A selection of clients and partners we've worked with across solar EPC and infrastructure execution.</p>
             </div>
 
-            <div class="row g-4" >
+            <div class="row g-4 card-grid">
                 <div class="col-lg-4 col-md-6">
-                    <div class="be-client-card">
+                    <div class="be-client-card reveal-scale stagger-item">
                         <div class="be-client-card__logo">
                             <img src="<?php echo APP_URL; ?>/public/assets/img/partner-logo.png" alt="Renfra Energy" class="be-client-card__logo-img">
                         </div>
@@ -317,7 +317,7 @@ include __DIR__ . '/../components/partials/header/navbar.php';
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="be-client-card">
+                    <div class="be-client-card reveal-scale stagger-item">
                         <div class="be-client-card__logo">
                             <img src="<?php echo APP_URL; ?>/public/assets/img/partner2-logo.png" alt="Sterling & Wilson" class="be-client-card__logo-img">
                         </div>
@@ -326,7 +326,7 @@ include __DIR__ . '/../components/partials/header/navbar.php';
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="be-client-card">
+                    <div class="be-client-card reveal-scale stagger-item">
                         <div class="be-client-card__logo">
                             <img src="<?php echo APP_URL; ?>/public/assets/img/partner3-logo.png" alt="Hinduja Group" class="be-client-card__logo-img">
                         </div>
@@ -341,13 +341,13 @@ include __DIR__ . '/../components/partials/header/navbar.php';
     <!-- CTA -->
     <section class="be-cta" id="cta">
         <div class="container text-center">
-            <div class="be-cta__inner">
-                <div class="be-cta__icon"><i class="fa-solid fa-phone-volume"></i></div>
-                <h2 class="be-cta__title">Ready to Start Your Solar Project?</h2>
-                <p class="be-cta__text">Call us to discuss scope, timelines, and execution needs. We'll respond quickly with clear next steps.</p>
+            <div class="be-cta__inner reveal-scale">
+                <div class="be-cta__icon reveal-up"><i class="fa-solid fa-phone-volume"></i></div>
+                <h2 class="be-cta__title reveal-up">Ready to Start Your Solar Project?</h2>
+                <p class="be-cta__text reveal-up">Call us to discuss scope, timelines, and execution needs. We'll respond quickly with clear next steps.</p>
                 <div class="d-flex flex-wrap justify-content-center gap-3 mt-3">
-                    <a href="tel:+919940040082" class="btn btn-light btn-lg"><i class="fa-solid fa-phone me-2"></i>+91-99400 40082</a>
-                    <a href="<?php echo APP_URL; ?>?page=contact" class="btn btn-outline-light btn-lg">Send a Message</a>
+                    <a href="tel:+919940040082" class="btn btn-light btn-lg reveal-up"><i class="fa-solid fa-phone me-2"></i>+91-99400 40082</a>
+                    <a href="<?php echo APP_URL; ?>?page=contact" class="btn btn-outline-light btn-lg reveal-up">Send a Message</a>
                 </div>
             </div>
         </div>

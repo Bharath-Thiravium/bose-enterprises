@@ -1,0 +1,526 @@
+/* =========================================================
+   GLOBAL PREMIUM ANIMATION SYSTEM - BE PROJECT
+   ========================================================= */
+
+/* =========================================================
+   ANIMATION KEYFRAMES
+   ========================================================= */
+
+@keyframes revealUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes revealDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes revealLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes revealRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes revealScale {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* =========================================================
+   PAGE WRAPPER - INITIAL LOAD
+   ========================================================= */
+
+.page-wrapper {
+    opacity: 0;
+    transform: translateY(16px);
+    animation: revealUp 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s forwards;
+}
+
+/* =========================================================
+   REVEAL CLASSES - SCROLL TRIGGERED
+   ========================================================= */
+
+/* Initial state - hidden */
+.reveal-up,
+.reveal-down,
+.reveal-left,
+.reveal-right,
+.reveal-scale {
+    opacity: 0;
+    will-change: transform, opacity;
+}
+
+.reveal-up {
+    transform: translateY(30px);
+}
+
+.reveal-down {
+    transform: translateY(-20px);
+}
+
+.reveal-left {
+    transform: translateX(-30px);
+}
+
+.reveal-right {
+    transform: translateX(30px);
+}
+
+.reveal-scale {
+    transform: scale(0.95);
+}
+
+/* Visible state - triggered by JS */
+.reveal-up.is-visible {
+    animation: revealUp 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.reveal-down.is-visible {
+    animation: revealDown 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.reveal-left.is-visible {
+    animation: revealLeft 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.reveal-right.is-visible {
+    animation: revealRight 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.reveal-scale.is-visible {
+    animation: revealScale 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* =========================================================
+   STAGGER SYSTEM
+   ========================================================= */
+
+.stagger-group {
+    display: flex;
+    flex-direction: column;
+    gap: inherit;
+}
+
+.stagger-item {
+    opacity: 0;
+    will-change: transform, opacity;
+}
+
+/* Stagger delays for items */
+.stagger-item.is-visible {
+    animation: revealUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.stagger-item:nth-child(1).is-visible {
+    animation-delay: 0s;
+}
+
+.stagger-item:nth-child(2).is-visible {
+    animation-delay: 0.08s;
+}
+
+.stagger-item:nth-child(3).is-visible {
+    animation-delay: 0.16s;
+}
+
+.stagger-item:nth-child(4).is-visible {
+    animation-delay: 0.24s;
+}
+
+.stagger-item:nth-child(5).is-visible {
+    animation-delay: 0.32s;
+}
+
+.stagger-item:nth-child(6).is-visible {
+    animation-delay: 0.4s;
+}
+
+.stagger-item:nth-child(n+7).is-visible {
+    animation-delay: calc(0.08s * (var(--index, 7) - 1));
+}
+
+/* =========================================================
+   HOVER EFFECTS
+   ========================================================= */
+
+.hover-lift {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
+}
+
+.hover-lift-strong {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.hover-lift-strong:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 48px rgba(15, 23, 42, 0.15);
+}
+
+.hover-image {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.hover-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
+}
+
+.hover-shadow {
+    transition: box-shadow 0.35s ease;
+}
+
+.hover-shadow:hover {
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
+}
+
+/* =========================================================
+   BUTTON TRANSITIONS
+   ========================================================= */
+
+.btn {
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+/* =========================================================
+   CARD ANIMATIONS
+   ========================================================= */
+
+.be-card,
+.be-team-card,
+.be-client-card,
+.be-stat,
+.project-card,
+.capability-item {
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.be-card:hover,
+.be-team-card:hover,
+.be-client-card:hover,
+.project-card:hover,
+.capability-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
+}
+
+/* =========================================================
+   IMAGE ANIMATIONS
+   ========================================================= */
+
+img {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.hover-image img:hover {
+    transform: scale(1.02);
+}
+
+/* =========================================================
+   SECTION ANIMATIONS
+   ========================================================= */
+
+.be-section {
+    opacity: 1;
+}
+
+.be-section.reveal-up {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.be-section.reveal-up.is-visible {
+    animation: revealUp 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* =========================================================
+   GRID ANIMATIONS
+   ========================================================= */
+
+.be-slider__track,
+.projects-grid,
+.capabilities-grid,
+.gallery-grid,
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.be-card--service,
+.be-team-card,
+.be-client-card,
+.be-stat,
+.project-card,
+.capability-item,
+.gallery-item {
+    opacity: 0;
+    transform: translateY(24px);
+    will-change: transform, opacity;
+}
+
+.be-card--service.is-visible,
+.be-team-card.is-visible,
+.be-client-card.is-visible,
+.be-stat.is-visible,
+.project-card.is-visible,
+.capability-item.is-visible,
+.gallery-item.is-visible {
+    animation: revealUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Stagger for grid items */
+.be-card--service:nth-child(1).is-visible,
+.be-team-card:nth-child(1).is-visible,
+.be-client-card:nth-child(1).is-visible,
+.be-stat:nth-child(1).is-visible,
+.project-card:nth-child(1).is-visible,
+.capability-item:nth-child(1).is-visible,
+.gallery-item:nth-child(1).is-visible {
+    animation-delay: 0s;
+}
+
+.be-card--service:nth-child(2).is-visible,
+.be-team-card:nth-child(2).is-visible,
+.be-client-card:nth-child(2).is-visible,
+.be-stat:nth-child(2).is-visible,
+.project-card:nth-child(2).is-visible,
+.capability-item:nth-child(2).is-visible,
+.gallery-item:nth-child(2).is-visible {
+    animation-delay: 0.08s;
+}
+
+.be-card--service:nth-child(3).is-visible,
+.be-team-card:nth-child(3).is-visible,
+.be-client-card:nth-child(3).is-visible,
+.be-stat:nth-child(3).is-visible,
+.project-card:nth-child(3).is-visible,
+.capability-item:nth-child(3).is-visible,
+.gallery-item:nth-child(3).is-visible {
+    animation-delay: 0.16s;
+}
+
+.be-card--service:nth-child(4).is-visible,
+.be-team-card:nth-child(4).is-visible,
+.be-client-card:nth-child(4).is-visible,
+.be-stat:nth-child(4).is-visible,
+.project-card:nth-child(4).is-visible,
+.capability-item:nth-child(4).is-visible,
+.gallery-item:nth-child(4).is-visible {
+    animation-delay: 0.24s;
+}
+
+.be-card--service:nth-child(5).is-visible,
+.be-team-card:nth-child(5).is-visible,
+.be-stat:nth-child(5).is-visible,
+.project-card:nth-child(5).is-visible,
+.capability-item:nth-child(5).is-visible,
+.gallery-item:nth-child(5).is-visible {
+    animation-delay: 0.32s;
+}
+
+.be-card--service:nth-child(6).is-visible,
+.be-team-card:nth-child(6).is-visible,
+.be-stat:nth-child(6).is-visible,
+.project-card:nth-child(6).is-visible,
+.capability-item:nth-child(6).is-visible,
+.gallery-item:nth-child(6).is-visible {
+    animation-delay: 0.4s;
+}
+
+/* =========================================================
+   ACCESSIBILITY - RESPECT REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .page-wrapper,
+    .reveal-up,
+    .reveal-down,
+    .reveal-left,
+    .reveal-right,
+    .reveal-scale,
+    .stagger-item {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+    
+    .hover-lift:hover,
+    .hover-lift-strong:hover,
+    .hover-image:hover {
+        transform: none !important;
+    }
+}
+
+/* =========================================================
+   MOBILE OPTIMIZATIONS
+   ========================================================= */
+
+@media (max-width: 767px) {
+    .page-wrapper {
+        animation: revealUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.05s forwards;
+    }
+    
+    .reveal-up.is-visible,
+    .reveal-down.is-visible,
+    .reveal-left.is-visible,
+    .reveal-right.is-visible,
+    .reveal-scale.is-visible {
+        animation-duration: 0.6s;
+    }
+    
+    .stagger-item:nth-child(2).is-visible {
+        animation-delay: 0.06s;
+    }
+    
+    .stagger-item:nth-child(3).is-visible {
+        animation-delay: 0.12s;
+    }
+    
+    .stagger-item:nth-child(4).is-visible {
+        animation-delay: 0.18s;
+    }
+    
+    .be-card--service:nth-child(2).is-visible,
+    .be-team-card:nth-child(2).is-visible,
+    .be-client-card:nth-child(2).is-visible,
+    .be-stat:nth-child(2).is-visible,
+    .project-card:nth-child(2).is-visible,
+    .capability-item:nth-child(2).is-visible,
+    .gallery-item:nth-child(2).is-visible {
+        animation-delay: 0.06s;
+    }
+    
+    .be-card--service:nth-child(3).is-visible,
+    .be-team-card:nth-child(3).is-visible,
+    .be-client-card:nth-child(3).is-visible,
+    .be-stat:nth-child(3).is-visible,
+    .project-card:nth-child(3).is-visible,
+    .capability-item:nth-child(3).is-visible,
+    .gallery-item:nth-child(3).is-visible {
+        animation-delay: 0.12s;
+    }
+    
+    .be-card--service:nth-child(4).is-visible,
+    .be-team-card:nth-child(4).is-visible,
+    .be-client-card:nth-child(4).is-visible,
+    .be-stat:nth-child(4).is-visible,
+    .project-card:nth-child(4).is-visible,
+    .capability-item:nth-child(4).is-visible,
+    .gallery-item:nth-child(4).is-visible {
+        animation-delay: 0.18s;
+    }
+}
+
+/* =========================================================
+   PERFORMANCE OPTIMIZATION
+   ========================================================= */
+
+.reveal-up,
+.reveal-down,
+.reveal-left,
+.reveal-right,
+.reveal-scale,
+.stagger-item,
+.be-card--service,
+.be-team-card,
+.be-client-card,
+.be-stat,
+.project-card,
+.capability-item,
+.gallery-item {
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+/* =========================================================
+   UTILITY CLASSES
+   ========================================================= */
+
+.no-animation {
+    animation: none !important;
+    transition: none !important;
+}
+
+.animation-delay-1 {
+    animation-delay: 0.1s !important;
+}
+
+.animation-delay-2 {
+    animation-delay: 0.2s !important;
+}
+
+.animation-delay-3 {
+    animation-delay: 0.3s !important;
+}
+
+.animation-delay-4 {
+    animation-delay: 0.4s !important;
+}
+
+.animation-delay-5 {
+    animation-delay: 0.5s !important;
+}

@@ -1,0 +1,530 @@
+/* =========================================================
+   BOSE ENTERPRISES - GLOBAL PAGE TRANSITIONS & ANIMATIONS
+   Premium motion system inspired by BK Green Energy
+   ========================================================= */
+
+/* =========================================================
+   PAGE TRANSITION SYSTEM
+   ========================================================= */
+
+/* Page wrapper - smooth fade + slide on load */
+.page-wrapper {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+    backface-visibility: hidden;
+}
+
+.page-wrapper.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================================================
+   PREMIUM SECTION REVEAL ANIMATIONS
+   ========================================================= */
+
+/* Keyframes for smooth reveals */
+@keyframes revealUp {
+    from {
+        opacity: 0;
+        transform: translateY(28px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes revealDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes revealLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-28px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes revealRight {
+    from {
+        opacity: 0;
+        transform: translateX(28px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes revealScale {
+    from {
+        opacity: 0;
+        transform: scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* =========================================================
+   REVEAL ANIMATION CLASSES
+   ========================================================= */
+
+/* Reveal up - for headings, text, buttons */
+.reveal-up {
+    opacity: 0;
+    transform: translateY(28px);
+    will-change: opacity, transform;
+}
+
+.reveal-up.is-visible {
+    animation: revealUp 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Reveal down - for kickers, labels */
+.reveal-down {
+    opacity: 0;
+    transform: translateY(-20px);
+    will-change: opacity, transform;
+}
+
+.reveal-down.is-visible {
+    animation: revealDown 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Reveal left - for left-side images, content */
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-28px);
+    will-change: opacity, transform;
+}
+
+.reveal-left.is-visible {
+    animation: revealLeft 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Reveal right - for right-side content, cards */
+.reveal-right {
+    opacity: 0;
+    transform: translateX(28px);
+    will-change: opacity, transform;
+}
+
+.reveal-right.is-visible {
+    animation: revealRight 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Reveal scale - for cards, boxes */
+.reveal-scale {
+    opacity: 0;
+    transform: scale(0.96);
+    will-change: opacity, transform;
+}
+
+.reveal-scale.is-visible {
+    animation: revealScale 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Fade in - for subtle elements */
+.fade-in {
+    opacity: 0;
+    will-change: opacity;
+}
+
+.fade-in.is-visible {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* =========================================================
+   STAGGER SYSTEM
+   ========================================================= */
+
+/* Stagger delays for grid items */
+.stagger-item {
+    will-change: opacity, transform;
+}
+
+.stagger-item.is-visible {
+    animation-fill-mode: forwards;
+}
+
+/* Stagger delays - 0.08s between items */
+.stagger-item:nth-child(1).is-visible { animation-delay: 0s; }
+.stagger-item:nth-child(2).is-visible { animation-delay: 0.08s; }
+.stagger-item:nth-child(3).is-visible { animation-delay: 0.16s; }
+.stagger-item:nth-child(4).is-visible { animation-delay: 0.24s; }
+.stagger-item:nth-child(5).is-visible { animation-delay: 0.32s; }
+.stagger-item:nth-child(6).is-visible { animation-delay: 0.4s; }
+.stagger-item:nth-child(7).is-visible { animation-delay: 0.48s; }
+.stagger-item:nth-child(8).is-visible { animation-delay: 0.56s; }
+.stagger-item:nth-child(9).is-visible { animation-delay: 0.64s; }
+.stagger-item:nth-child(10).is-visible { animation-delay: 0.72s; }
+
+/* =========================================================
+   HOVER EFFECTS - PREMIUM POLISH
+   ========================================================= */
+
+/* Image hover - subtle scale + shadow */
+.hover-image {
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hover-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
+}
+
+/* Card hover - lift + shadow */
+.hover-card {
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+                border-color 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hover-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
+}
+
+/* Button hover - smooth lift */
+.hover-button {
+    transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+                background-color 0.25s ease;
+}
+
+.hover-button:hover {
+    transform: translateY(-2px);
+}
+
+.hover-button:active {
+    transform: translateY(0px) scale(0.98);
+}
+
+/* Icon hover - subtle lift + scale */
+.hover-icon {
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hover-icon:hover {
+    transform: translateY(-2px) scale(1.05);
+}
+
+/* Link hover - smooth color transition */
+.hover-link {
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.hover-link:hover {
+    transform: translateX(2px);
+}
+
+/* =========================================================
+   SECTION ANIMATIONS
+   ========================================================= */
+
+/* Section heading animations */
+.section-kicker {
+    animation: revealDown 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    opacity: 0;
+}
+
+.section-title {
+    animation: revealUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.1s forwards;
+    opacity: 0;
+}
+
+.section-subtitle {
+    animation: revealUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.2s forwards;
+    opacity: 0;
+}
+
+/* =========================================================
+   GRID ANIMATIONS
+   ========================================================= */
+
+/* Card grid stagger */
+.card-grid .be-card,
+.card-grid .be-team-card,
+.card-grid .be-client-card,
+.card-grid .project-card,
+.card-grid .capability-item {
+    opacity: 0;
+    transform: translateY(28px);
+    will-change: opacity, transform;
+}
+
+.card-grid .be-card.is-visible,
+.card-grid .be-team-card.is-visible,
+.card-grid .be-client-card.is-visible,
+.card-grid .project-card.is-visible,
+.card-grid .capability-item.is-visible {
+    animation: revealUp 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Apply stagger to grid items */
+.card-grid .be-card:nth-child(1).is-visible,
+.card-grid .be-team-card:nth-child(1).is-visible,
+.card-grid .be-client-card:nth-child(1).is-visible,
+.card-grid .project-card:nth-child(1).is-visible,
+.card-grid .capability-item:nth-child(1).is-visible { animation-delay: 0s; }
+
+.card-grid .be-card:nth-child(2).is-visible,
+.card-grid .be-team-card:nth-child(2).is-visible,
+.card-grid .be-client-card:nth-child(2).is-visible,
+.card-grid .project-card:nth-child(2).is-visible,
+.card-grid .capability-item:nth-child(2).is-visible { animation-delay: 0.08s; }
+
+.card-grid .be-card:nth-child(3).is-visible,
+.card-grid .be-team-card:nth-child(3).is-visible,
+.card-grid .be-client-card:nth-child(3).is-visible,
+.card-grid .project-card:nth-child(3).is-visible,
+.card-grid .capability-item:nth-child(3).is-visible { animation-delay: 0.16s; }
+
+.card-grid .be-card:nth-child(4).is-visible,
+.card-grid .be-team-card:nth-child(4).is-visible,
+.card-grid .be-client-card:nth-child(4).is-visible,
+.card-grid .project-card:nth-child(4).is-visible,
+.card-grid .capability-item:nth-child(4).is-visible { animation-delay: 0.24s; }
+
+.card-grid .be-card:nth-child(5).is-visible,
+.card-grid .be-team-card:nth-child(5).is-visible,
+.card-grid .be-client-card:nth-child(5).is-visible,
+.card-grid .project-card:nth-child(5).is-visible,
+.card-grid .capability-item:nth-child(5).is-visible { animation-delay: 0.32s; }
+
+.card-grid .be-card:nth-child(6).is-visible,
+.card-grid .be-team-card:nth-child(6).is-visible,
+.card-grid .be-client-card:nth-child(6).is-visible,
+.card-grid .project-card:nth-child(6).is-visible,
+.card-grid .capability-item:nth-child(6).is-visible { animation-delay: 0.4s; }
+
+/* =========================================================
+   GALLERY ANIMATIONS
+   ========================================================= */
+
+.gallery-item {
+    opacity: 0;
+    transform: translateY(28px);
+    will-change: opacity, transform;
+}
+
+.gallery-item.is-visible {
+    animation: revealUp 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.gallery-item:nth-child(1).is-visible { animation-delay: 0s; }
+.gallery-item:nth-child(2).is-visible { animation-delay: 0.08s; }
+.gallery-item:nth-child(3).is-visible { animation-delay: 0.16s; }
+.gallery-item:nth-child(4).is-visible { animation-delay: 0.24s; }
+.gallery-item:nth-child(5).is-visible { animation-delay: 0.32s; }
+.gallery-item:nth-child(6).is-visible { animation-delay: 0.4s; }
+.gallery-item:nth-child(7).is-visible { animation-delay: 0.48s; }
+.gallery-item:nth-child(8).is-visible { animation-delay: 0.56s; }
+.gallery-item:nth-child(9).is-visible { animation-delay: 0.64s; }
+
+/* =========================================================
+   FORM ANIMATIONS
+   ========================================================= */
+
+.form-group {
+    opacity: 0;
+    transform: translateY(20px);
+    will-change: opacity, transform;
+}
+
+.form-group.is-visible {
+    animation: revealUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.form-group:nth-child(1).is-visible { animation-delay: 0s; }
+.form-group:nth-child(2).is-visible { animation-delay: 0.08s; }
+.form-group:nth-child(3).is-visible { animation-delay: 0.16s; }
+.form-group:nth-child(4).is-visible { animation-delay: 0.24s; }
+.form-group:nth-child(5).is-visible { animation-delay: 0.32s; }
+
+/* =========================================================
+   ACCESSIBILITY - REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    .page-wrapper,
+    .reveal-up,
+    .reveal-down,
+    .reveal-left,
+    .reveal-right,
+    .reveal-scale,
+    .fade-in,
+    .section-kicker,
+    .section-title,
+    .section-subtitle,
+    .card-grid .be-card,
+    .card-grid .be-team-card,
+    .card-grid .be-client-card,
+    .card-grid .project-card,
+    .card-grid .capability-item,
+    .gallery-item,
+    .form-group {
+        animation: none !important;
+        transition: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+    
+    .hover-image:hover,
+    .hover-card:hover,
+    .hover-button:hover,
+    .hover-icon:hover,
+    .hover-link:hover {
+        transform: none !important;
+    }
+}
+
+/* =========================================================
+   MOBILE OPTIMIZATIONS
+   ========================================================= */
+
+@media (max-width: 767px) {
+    /* Reduce animation distances on mobile */
+    .reveal-up {
+        transform: translateY(20px);
+    }
+    
+    .reveal-left {
+        transform: translateX(-20px);
+    }
+    
+    .reveal-right {
+        transform: translateX(20px);
+    }
+    
+    /* Faster animations on mobile */
+    .reveal-up.is-visible {
+        animation: revealUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+    
+    .reveal-down.is-visible {
+        animation: revealDown 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+    
+    .reveal-left.is-visible {
+        animation: revealLeft 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+    
+    .reveal-right.is-visible {
+        animation: revealRight 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+    
+    /* Reduce stagger on mobile */
+    .stagger-item:nth-child(1).is-visible { animation-delay: 0s; }
+    .stagger-item:nth-child(2).is-visible { animation-delay: 0.06s; }
+    .stagger-item:nth-child(3).is-visible { animation-delay: 0.12s; }
+    .stagger-item:nth-child(4).is-visible { animation-delay: 0.18s; }
+    .stagger-item:nth-child(5).is-visible { animation-delay: 0.24s; }
+    .stagger-item:nth-child(6).is-visible { animation-delay: 0.3s; }
+    
+    /* Reduce card grid stagger on mobile */
+    .card-grid .be-card:nth-child(1).is-visible,
+    .card-grid .be-team-card:nth-child(1).is-visible,
+    .card-grid .be-client-card:nth-child(1).is-visible,
+    .card-grid .project-card:nth-child(1).is-visible,
+    .card-grid .capability-item:nth-child(1).is-visible { animation-delay: 0s; }
+    
+    .card-grid .be-card:nth-child(2).is-visible,
+    .card-grid .be-team-card:nth-child(2).is-visible,
+    .card-grid .be-client-card:nth-child(2).is-visible,
+    .card-grid .project-card:nth-child(2).is-visible,
+    .card-grid .capability-item:nth-child(2).is-visible { animation-delay: 0.06s; }
+    
+    .card-grid .be-card:nth-child(3).is-visible,
+    .card-grid .be-team-card:nth-child(3).is-visible,
+    .card-grid .be-client-card:nth-child(3).is-visible,
+    .card-grid .project-card:nth-child(3).is-visible,
+    .card-grid .capability-item:nth-child(3).is-visible { animation-delay: 0.12s; }
+    
+    .card-grid .be-card:nth-child(4).is-visible,
+    .card-grid .be-team-card:nth-child(4).is-visible,
+    .card-grid .be-client-card:nth-child(4).is-visible,
+    .card-grid .project-card:nth-child(4).is-visible,
+    .card-grid .capability-item:nth-child(4).is-visible { animation-delay: 0.18s; }
+    
+    .card-grid .be-card:nth-child(5).is-visible,
+    .card-grid .be-team-card:nth-child(5).is-visible,
+    .card-grid .be-client-card:nth-child(5).is-visible,
+    .card-grid .project-card:nth-child(5).is-visible,
+    .card-grid .capability-item:nth-child(5).is-visible { animation-delay: 0.24s; }
+    
+    .card-grid .be-card:nth-child(6).is-visible,
+    .card-grid .be-team-card:nth-child(6).is-visible,
+    .card-grid .be-client-card:nth-child(6).is-visible,
+    .card-grid .project-card:nth-child(6).is-visible,
+    .card-grid .capability-item:nth-child(6).is-visible { animation-delay: 0.3s; }
+    
+    /* Reduce gallery stagger on mobile */
+    .gallery-item:nth-child(1).is-visible { animation-delay: 0s; }
+    .gallery-item:nth-child(2).is-visible { animation-delay: 0.06s; }
+    .gallery-item:nth-child(3).is-visible { animation-delay: 0.12s; }
+    .gallery-item:nth-child(4).is-visible { animation-delay: 0.18s; }
+    .gallery-item:nth-child(5).is-visible { animation-delay: 0.24s; }
+    .gallery-item:nth-child(6).is-visible { animation-delay: 0.3s; }
+    .gallery-item:nth-child(7).is-visible { animation-delay: 0.36s; }
+    .gallery-item:nth-child(8).is-visible { animation-delay: 0.42s; }
+    .gallery-item:nth-child(9).is-visible { animation-delay: 0.48s; }
+}
+
+/* =========================================================
+   PERFORMANCE OPTIMIZATIONS
+   ========================================================= */
+
+/* GPU acceleration for animations */
+.page-wrapper,
+.reveal-up,
+.reveal-down,
+.reveal-left,
+.reveal-right,
+.reveal-scale,
+.hover-image,
+.hover-card,
+.hover-button,
+.hover-icon {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+/* Prevent layout shift */
+html, body {
+    overflow-x: hidden;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}

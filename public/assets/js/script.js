@@ -1,9 +1,12 @@
-// Bose Enterprises - LEPL-style interactions
-// - Scroll-triggered animations via IntersectionObserver
-// - Service slider (3-up on desktop) using scroll-snap + buttons + autoplay
+// Bose Enterprises - Premium Page Transitions & Section Animations
+// - Smooth page fade + slide transitions
+// - Scroll-triggered section reveals with IntersectionObserver
+// - Service slider with autoplay
 // - Skills/progress bars animate on scroll
 
 document.addEventListener('DOMContentLoaded', function () {
+  initPageTransition();
+  initSectionAnimations();
   initScrollAnimations();
   assignRandomHoverAnimations();
   initSliders();
@@ -14,37 +17,142 @@ document.addEventListener('DOMContentLoaded', function () {
   initHeroVideo();
 });
 
-function initScrollAnimations() {
-  var animated = document.querySelectorAll('[data-be-animate]');
-  if (!animated.length) return;
+// =========================================================
+// PAGE TRANSITION SYSTEM
+// =========================================================
 
-  // Removed aggressive stagger delays - elements appear smoothly
-  document.querySelectorAll('[data-be-stagger]').forEach(function (parent) {
-    var children = parent.querySelectorAll('[data-be-animate]');
-    children.forEach(function (child) {
-      child.style.animationDelay = '0ms';
-    });
+function initPageTransition() {
+  var wrapper = document.querySelector('.page-wrapper');
+  if (!wrapper) return;
+  
+  // Trigger page visible state
+  requestAnimationFrame(function() {
+    wrapper.classList.add('is-visible');
   });
+}
+
+// =========================================================
+// SECTION ANIMATIONS - PREMIUM REVEALS
+// =========================================================
+
+function initSectionAnimations() {
+  // Apply reveal classes to common section elements
+  
+  // Section kickers
+  document.querySelectorAll('.be-kicker').forEach(function(el) {
+    if (!el.classList.contains('reveal-down')) {
+      el.classList.add('reveal-down');
+    }
+  });
+  
+  // Section titles
+  document.querySelectorAll('.be-section__title, .section-title').forEach(function(el) {
+    if (!el.classList.contains('reveal-up')) {
+      el.classList.add('reveal-up');
+    }
+  });
+  
+  // Section subtitles
+  document.querySelectorAll('.be-section__sub, .section-subtitle').forEach(function(el) {
+    if (!el.classList.contains('reveal-up')) {
+      el.classList.add('reveal-up');
+    }
+  });
+  
+  // Card grids - add stagger
+  document.querySelectorAll('.row').forEach(function(row) {
+    var cards = row.querySelectorAll('.be-card, .be-team-card, .be-client-card, .project-card, .capability-item, .be-stat');
+    if (cards.length > 0) {
+      row.classList.add('card-grid');
+      cards.forEach(function(card) {
+        if (!card.classList.contains('reveal-scale')) {
+          card.classList.add('reveal-scale', 'stagger-item');
+        }
+      });
+    }
+  });
+  
+  // Gallery items
+  document.querySelectorAll('.gallery-item').forEach(function(item) {
+    if (!item.classList.contains('reveal-scale')) {
+      item.classList.add('reveal-scale', 'stagger-item');
+    }
+  });
+  
+  // Form groups
+  document.querySelectorAll('.form-group').forEach(function(group) {
+    if (!group.classList.contains('reveal-up')) {
+      group.classList.add('reveal-up', 'stagger-item');
+    }
+  });
+  
+  // Images with hover effect
+  document.querySelectorAll('img:not(.be-logo)').forEach(function(img) {
+    if (!img.classList.contains('hover-image')) {
+      img.classList.add('hover-image');
+    }
+  });
+  
+  // Cards with hover effect
+  document.querySelectorAll('.be-card, .be-team-card, .be-client-card, .project-card, .capability-item').forEach(function(card) {
+    if (!card.classList.contains('hover-card')) {
+      card.classList.add('hover-card');
+    }
+  });
+  
+  // Buttons with hover effect
+  document.querySelectorAll('.btn').forEach(function(btn) {
+    if (!btn.classList.contains('hover-button')) {
+      btn.classList.add('hover-button');
+    }
+  });
+  
+  // Links with hover effect
+  document.querySelectorAll('a:not(.btn)').forEach(function(link) {
+    if (!link.classList.contains('hover-link')) {
+      link.classList.add('hover-link');
+    }
+  });
+}
+
+// =========================================================
+// SCROLL ANIMATIONS - INTERSECTION OBSERVER
+// =========================================================
+
+function initScrollAnimations() {
+  var elementsToAnimate = document.querySelectorAll(
+    '.reveal-up, .reveal-down, .reveal-left, .reveal-right, .reveal-scale, .fade-in, ' +
+    '[data-be-animate], .stagger-item, .gallery-item, .form-group'
+  );
+  
+  if (!elementsToAnimate.length) return;
 
   var observer = new IntersectionObserver(function (entries) {
     requestAnimationFrame(function () {
       entries.forEach(function (entry) {
         if (!entry.isIntersecting) return;
+        
         var el = entry.target;
-        // Simply make element visible - no flashy animations
-        el.classList.add('be-inview');
+        
+        // Add is-visible class to trigger animation
+        el.classList.add('is-visible');
+        
+        // Unobserve after animation completes
         observer.unobserve(el);
       });
     });
-  }, { threshold: 0.12, rootMargin: '0px 0px -10% 0px' });
+  }, { 
+    threshold: 0.1, 
+    rootMargin: '0px 0px -50px 0px' 
+  });
 
-  animated.forEach(function (el) {
+  elementsToAnimate.forEach(function (el) {
     observer.observe(el);
   });
 }
 
 function assignRandomHoverAnimations() {
-  // Removed aggressive random animations for smoother, consistent behavior
+  // Removed: aggressive random animations for smoother, consistent behavior
   return;
 }
 
