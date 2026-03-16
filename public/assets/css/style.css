@@ -2969,3 +2969,454 @@ picture img {
         animation: aboutFadeInUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.74s forwards;
     }
 }
+
+
+/* =========================================================
+   PRODUCTION-SAFE ANIMATION SYSTEM - REVEAL CLASSES
+   ========================================================= */
+
+/* DEFAULT: All elements visible (no animation) */
+.reveal-up,
+.reveal-down,
+.reveal-left,
+.reveal-right,
+.reveal-scale,
+.fade-in,
+.stagger-item,
+.gallery-item,
+.form-group {
+    opacity: 1;
+    transform: translateY(0) translateX(0) scale(1);
+    will-change: auto;
+}
+
+/* ONLY apply hidden state after motion-ready class is added by JS */
+body.motion-ready .reveal-up,
+body.motion-ready .reveal-down,
+body.motion-ready .reveal-left,
+body.motion-ready .reveal-right,
+body.motion-ready .reveal-scale,
+body.motion-ready .fade-in,
+body.motion-ready .stagger-item,
+body.motion-ready .gallery-item,
+body.motion-ready .form-group {
+    opacity: 0;
+    will-change: opacity, transform;
+}
+
+body.motion-ready .reveal-up {
+    transform: translateY(28px);
+}
+
+body.motion-ready .reveal-down {
+    transform: translateY(-20px);
+}
+
+body.motion-ready .reveal-left {
+    transform: translateX(-28px);
+}
+
+body.motion-ready .reveal-right {
+    transform: translateX(28px);
+}
+
+body.motion-ready .reveal-scale {
+    transform: scale(0.96);
+}
+
+/* Animation trigger: Only animate when is-visible class is added */
+body.motion-ready .reveal-up.is-visible {
+    animation: fadeInUp 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+body.motion-ready .reveal-down.is-visible {
+    animation: fadeInDown 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+body.motion-ready .reveal-left.is-visible {
+    animation: fadeInLeft 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+body.motion-ready .reveal-right.is-visible {
+    animation: fadeInRight 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+body.motion-ready .reveal-scale.is-visible {
+    animation: scaleRotate 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+body.motion-ready .fade-in.is-visible {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Stagger delays for grid items */
+body.motion-ready .stagger-item:nth-child(1).is-visible { animation-delay: 0s; }
+body.motion-ready .stagger-item:nth-child(2).is-visible { animation-delay: 0.08s; }
+body.motion-ready .stagger-item:nth-child(3).is-visible { animation-delay: 0.16s; }
+body.motion-ready .stagger-item:nth-child(4).is-visible { animation-delay: 0.24s; }
+body.motion-ready .stagger-item:nth-child(5).is-visible { animation-delay: 0.32s; }
+body.motion-ready .stagger-item:nth-child(6).is-visible { animation-delay: 0.4s; }
+
+/* Gallery items stagger */
+body.motion-ready .gallery-item:nth-child(1).is-visible { animation-delay: 0s; }
+body.motion-ready .gallery-item:nth-child(2).is-visible { animation-delay: 0.08s; }
+body.motion-ready .gallery-item:nth-child(3).is-visible { animation-delay: 0.16s; }
+body.motion-ready .gallery-item:nth-child(4).is-visible { animation-delay: 0.24s; }
+body.motion-ready .gallery-item:nth-child(5).is-visible { animation-delay: 0.32s; }
+body.motion-ready .gallery-item:nth-child(6).is-visible { animation-delay: 0.4s; }
+
+/* Ensure gallery items animate */
+body.motion-ready .gallery-item.is-visible {
+    animation: fadeInUp 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Form groups stagger */
+body.motion-ready .form-group:nth-child(1).is-visible { animation-delay: 0s; }
+body.motion-ready .form-group:nth-child(2).is-visible { animation-delay: 0.08s; }
+body.motion-ready .form-group:nth-child(3).is-visible { animation-delay: 0.16s; }
+body.motion-ready .form-group:nth-child(4).is-visible { animation-delay: 0.24s; }
+body.motion-ready .form-group:nth-child(5).is-visible { animation-delay: 0.32s; }
+
+/* Ensure form groups animate */
+body.motion-ready .form-group.is-visible {
+    animation: fadeInUp 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Accessibility: Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    body.motion-ready .reveal-up,
+    body.motion-ready .reveal-down,
+    body.motion-ready .reveal-left,
+    body.motion-ready .reveal-right,
+    body.motion-ready .reveal-scale,
+    body.motion-ready .fade-in,
+    body.motion-ready .stagger-item,
+    body.motion-ready .gallery-item,
+    body.motion-ready .form-group {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+
+/* Mobile optimizations */
+@media (max-width: 767px) {
+    body.motion-ready .reveal-up.is-visible,
+    body.motion-ready .reveal-down.is-visible,
+    body.motion-ready .reveal-left.is-visible,
+    body.motion-ready .reveal-right.is-visible,
+    body.motion-ready .reveal-scale.is-visible {
+        animation-duration: 0.55s;
+    }
+    
+    body.motion-ready .stagger-item:nth-child(2).is-visible { animation-delay: 0.06s; }
+    body.motion-ready .stagger-item:nth-child(3).is-visible { animation-delay: 0.12s; }
+    body.motion-ready .stagger-item:nth-child(4).is-visible { animation-delay: 0.18s; }
+    body.motion-ready .stagger-item:nth-child(5).is-visible { animation-delay: 0.24s; }
+    body.motion-ready .stagger-item:nth-child(6).is-visible { animation-delay: 0.3s; }
+}
+
+
+/* =========================================================
+   PREMIUM PAGE TRANSITION SYSTEM - BK GREEN ENERGY STYLE
+   ========================================================= */
+
+/* Page wrapper - smooth fade in + slide up on load */
+.page-wrapper {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Initial state - hidden until JS marks as visible */
+body.motion-ready .page-wrapper:not(.is-visible) {
+    opacity: 0;
+    transform: translateY(18px);
+}
+
+/* Visible state - triggered by JS */
+body.motion-ready .page-wrapper.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================================================
+   PREMIUM HOVER EFFECTS - CARDS & IMAGES
+   ========================================================= */
+
+/* Card hover - subtle lift + shadow */
+.be-card,
+.be-team-card,
+.be-client-card,
+.project-card,
+.capability-item,
+.gallery-item {
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+                border-color 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.be-card:hover,
+.be-team-card:hover,
+.be-client-card:hover,
+.project-card:hover,
+.capability-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
+}
+
+.gallery-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
+}
+
+/* Image hover - subtle scale + shadow */
+.be-media-card,
+.about-image,
+.project-card img,
+.capability-item img,
+.gallery-item img {
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.be-media-card:hover,
+.about-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
+}
+
+.project-card:hover img,
+.capability-item:hover img,
+.gallery-item:hover img {
+    transform: scale(1.03);
+}
+
+/* Button hover - smooth lift */
+.btn {
+    transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+                background-color 0.25s ease,
+                border-color 0.25s ease,
+                color 0.25s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: translateY(0px) scale(0.98);
+}
+
+/* Link hover - smooth color transition */
+a:not(.btn) {
+    transition: color 0.25s ease,
+                text-decoration-color 0.25s ease;
+}
+
+/* Icon hover - subtle lift + scale */
+.be-card__icon,
+.capability-item__icon {
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.be-card:hover .be-card__icon,
+.capability-item:hover .capability-item__icon {
+    transform: translateY(-2px) scale(1.05);
+}
+
+/* =========================================================
+   SECTION REVEAL ANIMATIONS - CONSISTENT TIMING
+   ========================================================= */
+
+/* Ensure all reveal elements have consistent animation timing */
+body.motion-ready .reveal-up.is-visible,
+body.motion-ready .reveal-down.is-visible,
+body.motion-ready .reveal-left.is-visible,
+body.motion-ready .reveal-right.is-visible,
+body.motion-ready .reveal-scale.is-visible {
+    animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* =========================================================
+   STAGGER ANIMATION DELAYS - GRID ITEMS
+   ========================================================= */
+
+/* Stagger delays for card grids */
+body.motion-ready .stagger-item:nth-child(1).is-visible { animation-delay: 0s; }
+body.motion-ready .stagger-item:nth-child(2).is-visible { animation-delay: 0.08s; }
+body.motion-ready .stagger-item:nth-child(3).is-visible { animation-delay: 0.16s; }
+body.motion-ready .stagger-item:nth-child(4).is-visible { animation-delay: 0.24s; }
+body.motion-ready .stagger-item:nth-child(5).is-visible { animation-delay: 0.32s; }
+body.motion-ready .stagger-item:nth-child(6).is-visible { animation-delay: 0.4s; }
+body.motion-ready .stagger-item:nth-child(7).is-visible { animation-delay: 0.48s; }
+body.motion-ready .stagger-item:nth-child(8).is-visible { animation-delay: 0.56s; }
+body.motion-ready .stagger-item:nth-child(9).is-visible { animation-delay: 0.64s; }
+
+/* Ensure stagger items animate */
+body.motion-ready .stagger-item.is-visible {
+    animation: fadeInUp 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* =========================================================
+   NAVBAR & FOOTER POLISH
+   ========================================================= */
+
+/* Navbar link hover - smooth transition */
+.nav-link {
+    transition: color 0.25s ease,
+                transform 0.25s ease;
+}
+
+.nav-link:hover {
+    transform: translateY(-1px);
+}
+
+/* Footer link hover - smooth transition */
+.footer a {
+    transition: color 0.25s ease,
+                transform 0.25s ease;
+}
+
+.footer a:hover {
+    transform: translateX(2px);
+}
+
+/* Social icon hover - subtle lift */
+.be-social {
+    transition: transform 0.25s ease,
+                background 0.25s ease,
+                color 0.25s ease;
+}
+
+.be-social:hover {
+    transform: translateY(-2px);
+}
+
+/* =========================================================
+   MOBILE RESPONSIVE ANIMATION RULES
+   ========================================================= */
+
+@media (max-width: 767px) {
+    /* Reduce animation distance on mobile */
+    body.motion-ready .reveal-up {
+        transform: translateY(20px);
+    }
+    
+    body.motion-ready .reveal-down {
+        transform: translateY(-15px);
+    }
+    
+    body.motion-ready .reveal-left {
+        transform: translateX(-20px);
+    }
+    
+    body.motion-ready .reveal-right {
+        transform: translateX(20px);
+    }
+    
+    body.motion-ready .reveal-scale {
+        transform: scale(0.97);
+    }
+    
+    /* Faster animations on mobile */
+    body.motion-ready .reveal-up.is-visible,
+    body.motion-ready .reveal-down.is-visible,
+    body.motion-ready .reveal-left.is-visible,
+    body.motion-ready .reveal-right.is-visible,
+    body.motion-ready .reveal-scale.is-visible {
+        animation-duration: 0.55s;
+    }
+    
+    /* Tighter stagger on mobile */
+    body.motion-ready .stagger-item:nth-child(1).is-visible { animation-delay: 0s; }
+    body.motion-ready .stagger-item:nth-child(2).is-visible { animation-delay: 0.06s; }
+    body.motion-ready .stagger-item:nth-child(3).is-visible { animation-delay: 0.12s; }
+    body.motion-ready .stagger-item:nth-child(4).is-visible { animation-delay: 0.18s; }
+    body.motion-ready .stagger-item:nth-child(5).is-visible { animation-delay: 0.24s; }
+    body.motion-ready .stagger-item:nth-child(6).is-visible { animation-delay: 0.3s; }
+    
+    /* Reduce hover lift on mobile */
+    .be-card:hover,
+    .be-team-card:hover,
+    .be-client-card:hover,
+    .project-card:hover,
+    .capability-item:hover {
+        transform: translateY(-2px);
+    }
+    
+    .gallery-item:hover {
+        transform: translateY(-3px);
+    }
+}
+
+/* =========================================================
+   ACCESSIBILITY - RESPECT REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    /* Disable all animations */
+    .page-wrapper,
+    body.motion-ready .reveal-up,
+    body.motion-ready .reveal-down,
+    body.motion-ready .reveal-left,
+    body.motion-ready .reveal-right,
+    body.motion-ready .reveal-scale,
+    body.motion-ready .stagger-item {
+        animation: none !important;
+        transition: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+    
+    /* Disable hover effects */
+    .be-card:hover,
+    .be-team-card:hover,
+    .be-client-card:hover,
+    .project-card:hover,
+    .capability-item:hover,
+    .gallery-item:hover,
+    .be-media-card:hover,
+    .about-image:hover,
+    .btn:hover,
+    .nav-link:hover,
+    .footer a:hover,
+    .be-social:hover {
+        transform: none !important;
+    }
+}
+
+/* =========================================================
+   PERFORMANCE OPTIMIZATION
+   ========================================================= */
+
+/* Enable GPU acceleration for smooth animations */
+.page-wrapper,
+body.motion-ready .reveal-up,
+body.motion-ready .reveal-down,
+body.motion-ready .reveal-left,
+body.motion-ready .reveal-right,
+body.motion-ready .reveal-scale,
+.be-card,
+.be-team-card,
+.be-client-card,
+.project-card,
+.capability-item,
+.gallery-item,
+.btn {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+/* Prevent layout shift during animations */
+html {
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+}

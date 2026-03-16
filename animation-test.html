@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation System Test</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Rubik', sans-serif;
+            background: #f8f9fa;
+        }
+        
+        .test-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .test-section {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .test-item {
+            padding: 20px;
+            margin: 15px 0;
+            background: #f0f4f8;
+            border-radius: 8px;
+            border-left: 4px solid #007bff;
+        }
+        
+        .status {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+        
+        .status.pass {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .status.fail {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        .status.pending {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        .console-output {
+            background: #1e1e1e;
+            color: #00ff00;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            max-height: 300px;
+            overflow-y: auto;
+            margin-top: 10px;
+        }
+        
+        .console-line {
+            margin: 4px 0;
+        }
+        
+        .console-error {
+            color: #ff6b6b;
+        }
+        
+        .console-success {
+            color: #51cf66;
+        }
+        
+        .console-info {
+            color: #74c0fc;
+        }
+        
+        /* Animation test elements */
+        .reveal-up {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        body.motion-ready .reveal-up {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1), transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        
+        body.motion-ready .reveal-up.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .reveal-left {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        body.motion-ready .reveal-left {
+            opacity: 0;
+            transform: translateX(-28px);
+            transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        
+        body.motion-ready .reveal-left.is-visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .reveal-right {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        body.motion-ready .reveal-right {
+            opacity: 0;
+            transform: translateX(28px);
+            transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        
+        body.motion-ready .reveal-right.is-visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .test-box {
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            margin: 15px 0;
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        
+        .button-group button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary-test {
+            background: #007bff;
+            color: white;
+        }
+        
+        .btn-primary-test:hover {
+            background: #0056b3;
+        }
+        
+        .btn-danger-test {
+            background: #dc3545;
+            color: white;
+        }
+        
+        .btn-danger-test:hover {
+            background: #c82333;
+        }
+        
+        .btn-success-test {
+            background: #28a745;
+            color: white;
+        }
+        
+        .btn-success-test:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+
+<div class="test-container">
+    <div class="test-section">
+        <h1><i class="fa-solid fa-flask"></i> Animation System Test</h1>
+        <p class="text-muted">Verify that the animation system is working correctly</p>
+    </div>
+    
+    <!-- System Status -->
+    <div class="test-section">
+        <h2>System Status</h2>
+        
+        <div class="test-item">
+            <strong>motion-ready Class</strong>
+            <span class="status pending" id="status-motion-ready">Checking...</span>
+            <div class="console-output">
+                <div class="console-line" id="check-motion-ready"></div>
+            </div>
+        </div>
+        
+        <div class="test-item">
+            <strong>Page Wrapper</strong>
+            <span class="status pending" id="status-wrapper">Checking...</span>
+            <div class="console-output">
+                <div class="console-line" id="check-wrapper"></div>
+            </div>
+        </div>
+        
+        <div class="test-item">
+            <strong>Animated Elements</strong>
+            <span class="status pending" id="status-elements">Checking...</span>
+            <div class="console-output">
+                <div class="console-line" id="check-elements"></div>
+            </div>
+        </div>
+        
+        <div class="test-item">
+            <strong>IntersectionObserver</strong>
+            <span class="status pending" id="status-observer">Checking...</span>
+            <div class="console-output">
+                <div class="console-line" id="check-observer"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Animation Tests -->
+    <div class="test-section">
+        <h2>Animation Tests</h2>
+        
+        <div class="test-item">
+            <strong>Reveal Up Animation</strong>
+            <div class="test-box reveal-up" id="test-reveal-up">Reveal Up</div>
+            <small class="text-muted">Should fade in and slide up</small>
+        </div>
+        
+        <div class="test-item">
+            <strong>Reveal Left Animation</strong>
+            <div class="test-box reveal-left" id="test-reveal-left">Reveal Left</div>
+            <small class="text-muted">Should fade in and slide from left</small>
+        </div>
+        
+        <div class="test-item">
+            <strong>Reveal Right Animation</strong>
+            <div class="test-box reveal-right" id="test-reveal-right">Reveal Right</div>
+            <small class="text-muted">Should fade in and slide from right</small>
+        </div>
+    </div>
+    
+    <!-- Controls -->
+    <div class="test-section">
+        <h2>Controls</h2>
+        
+        <div class="button-group">
+            <button class="btn-primary-test" onclick="testMotionReady()">
+                <i class="fa-solid fa-play"></i> Enable Motion Ready
+            </button>
+            <button class="btn-success-test" onclick="testTriggerAnimations()">
+                <i class="fa-solid fa-wand-magic-sparkles"></i> Trigger Animations
+            </button>
+            <button class="btn-danger-test" onclick="testReset()">
+                <i class="fa-solid fa-rotate-left"></i> Reset
+            </button>
+            <button class="btn-primary-test" onclick="testRunAll()">
+                <i class="fa-solid fa-play-circle"></i> Run All Tests
+            </button>
+        </div>
+    </div>
+    
+    <!-- Detailed Output -->
+    <div class="test-section">
+        <h2>Detailed Output</h2>
+        <div class="console-output" id="detailed-output">
+            <div class="console-line console-info">Ready for testing...</div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const output = document.getElementById('detailed-output');
+    
+    function log(message, type = 'info') {
+        const line = document.createElement('div');
+        line.className = `console-line console-${type}`;
+        line.textContent = `> ${message}`;
+        output.appendChild(line);
+        output.scrollTop = output.scrollHeight;
+    }
+    
+    function checkStatus() {
+        log('=== Checking System Status ===', 'info');
+        
+        // Check motion-ready
+        const hasMotionReady = document.body.classList.contains('motion-ready');
+        const statusMotion = document.getElementById('status-motion-ready');
+        const checkMotion = document.getElementById('check-motion-ready');
+        
+        if (hasMotionReady) {
+            statusMotion.className = 'status pass';
+            statusMotion.textContent = 'PASS';
+            checkMotion.className = 'console-line console-success';
+            checkMotion.textContent = 'motion-ready class found on body';
+            log('✓ motion-ready class is present', 'success');
+        } else {
+            statusMotion.className = 'status fail';
+            statusMotion.textContent = 'FAIL';
+            checkMotion.className = 'console-line console-error';
+            checkMotion.textContent = 'motion-ready class NOT found';
+            log('✗ motion-ready class is missing', 'error');
+        }
+        
+        // Check wrapper
+        const wrapper = document.querySelector('.page-wrapper');
+        const statusWrapper = document.getElementById('status-wrapper');
+        const checkWrapper = document.getElementById('check-wrapper');
+        
+        if (wrapper) {
+            statusWrapper.className = 'status pass';
+            statusWrapper.textContent = 'PASS';
+            checkWrapper.className = 'console-line console-success';
+            checkWrapper.textContent = `page-wrapper found (is-visible: ${wrapper.classList.contains('is-visible')})`;
+            log('✓ page-wrapper element exists', 'success');
+        } else {
+            statusWrapper.className = 'status fail';
+            statusWrapper.textContent = 'FAIL';
+            checkWrapper.className = 'console-line console-error';
+            checkWrapper.textContent = 'page-wrapper NOT found';
+            log('✗ page-wrapper element missing', 'error');
+        }
+        
+        // Check elements
+        const elements = document.querySelectorAll('[class*="reveal-"]');
+        const statusElements = document.getElementById('status-elements');
+        const checkElements = document.getElementById('check-elements');
+        
+        if (elements.length > 0) {
+            statusElements.className = 'status pass';
+            statusElements.textContent = 'PASS';
+            checkElements.className = 'console-line console-success';
+            checkElements.textContent = `Found ${elements.length} animated elements`;
+            log(`✓ Found ${elements.length} animated elements`, 'success');
+        } else {
+            statusElements.className = 'status fail';
+            statusElements.textContent = 'FAIL';
+            checkElements.className = 'console-line console-error';
+            checkElements.textContent = 'No animated elements found';
+            log('✗ No animated elements found', 'error');
+        }
+        
+        // Check IntersectionObserver
+        const statusObserver = document.getElementById('status-observer');
+        const checkObserver = document.getElementById('check-observer');
+        
+        if (typeof IntersectionObserver !== 'undefined') {
+            statusObserver.className = 'status pass';
+            statusObserver.textContent = 'PASS';
+            checkObserver.className = 'console-line console-success';
+            checkObserver.textContent = 'IntersectionObserver is supported';
+            log('✓ IntersectionObserver is available', 'success');
+        } else {
+            statusObserver.className = 'status fail';
+            statusObserver.textContent = 'FAIL';
+            checkObserver.className = 'console-line console-error';
+            checkObserver.textContent = 'IntersectionObserver NOT supported';
+            log('✗ IntersectionObserver not supported', 'error');
+        }
+    }
+    
+    function testMotionReady() {
+        log('Enabling motion-ready class...', 'info');
+        document.body.classList.add('motion-ready');
+        log('✓ motion-ready class added to body', 'success');
+        checkStatus();
+    }
+    
+    function testTriggerAnimations() {
+        log('Triggering animations...', 'info');
+        
+        const elements = document.querySelectorAll('[class*="reveal-"]');
+        elements.forEach(el => {
+            el.classList.add('is-visible');
+        });
+        
+        log(`✓ Added is-visible class to ${elements.length} elements`, 'success');
+    }
+    
+    function testReset() {
+        log('Resetting test...', 'info');
+        document.body.classList.remove('motion-ready');
+        document.querySelectorAll('[class*="reveal-"]').forEach(el => {
+            el.classList.remove('is-visible');
+        });
+        log('✓ Test reset', 'success');
+        checkStatus();
+    }
+    
+    function testRunAll() {
+        log('=== Running Full Test Suite ===', 'info');
+        testMotionReady();
+        setTimeout(() => {
+            testTriggerAnimations();
+            log('✓ All tests completed', 'success');
+        }, 500);
+    }
+    
+    // Initial check on page load
+    window.addEventListener('load', () => {
+        log('Page loaded, running initial checks...', 'info');
+        checkStatus();
+    });
+</script>
+
+</body>
+</html>

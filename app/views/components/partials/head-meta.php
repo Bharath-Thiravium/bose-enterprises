@@ -52,10 +52,10 @@ $page_keywords = isset($page_keywords) ? $page_keywords : 'solar EPC contractor 
     </style>
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="<?php echo APP_URL; ?>/public/assets/css/style.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="<?php echo APP_URL; ?>/public/assets/css/style.css?v=1.0">
     
-    <!-- Page Transition CSS - Progressive Enhancement -->
-    <link rel="stylesheet" href="<?php echo APP_URL; ?>/public/assets/css/page-transitions.css?v=<?php echo time(); ?>">
+    <!-- Global Animation System CSS -->
+    <link rel="stylesheet" href="<?php echo APP_URL; ?>/public/assets/css/animations-global.css?v=2.0">
     
     <!-- Favicon -->
     <link rel="icon" type="image/jpeg" href="<?php echo APP_URL; ?>/public/assets/img/logo.jpeg">

@@ -1,12 +1,78 @@
 /* =========================================================
-   GLOBAL PREMIUM ANIMATION SYSTEM - BE PROJECT
+   BOSE ENTERPRISES - GLOBAL ANIMATION SYSTEM
+   Premium Corporate Style | BK Green Energy Inspired
+   Production-Safe | Performance-Optimized
    ========================================================= */
 
 /* =========================================================
-   ANIMATION KEYFRAMES
+   ANIMATION KEYFRAMES - PREMIUM CORPORATE STYLE
    ========================================================= */
 
-@keyframes revealUp {
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.92);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInOnly {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes pageTransitionIn {
     from {
         opacity: 0;
         transform: translateY(30px);
@@ -17,229 +83,158 @@
     }
 }
 
-@keyframes revealDown {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes revealLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes revealRight {
-    from {
-        opacity: 0;
-        transform: translateX(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes revealScale {
-    from {
-        opacity: 0;
-        transform: scale(0.95);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
 /* =========================================================
-   PAGE WRAPPER - INITIAL LOAD
+   DEFAULT STATE - CONTENT ALWAYS VISIBLE
    ========================================================= */
 
-.page-wrapper {
-    opacity: 0;
-    transform: translateY(16px);
-    animation: revealUp 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s forwards;
-}
-
-/* =========================================================
-   REVEAL CLASSES - SCROLL TRIGGERED
-   ========================================================= */
-
-/* Initial state - hidden */
 .reveal-up,
 .reveal-down,
 .reveal-left,
 .reveal-right,
-.reveal-scale {
-    opacity: 0;
-    will-change: transform, opacity;
+.reveal-scale,
+.fade-up,
+.fade-left,
+.fade-right,
+.scale-in,
+.stagger-item,
+.gallery-item,
+.form-group,
+.card-hover,
+.image-hover {
+    opacity: 1;
+    transform: translateY(0) translateX(0) scale(1);
 }
 
-.reveal-up {
+/* =========================================================
+   MOTION-READY STATE - ANIMATIONS ENABLED
+   ========================================================= */
+
+body.motion-ready .reveal-up,
+body.motion-ready .fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+body.motion-ready .reveal-down {
+    opacity: 0;
+    transform: translateY(-30px);
+}
+
+body.motion-ready .reveal-left,
+body.motion-ready .fade-left {
+    opacity: 0;
+    transform: translateX(-40px);
+}
+
+body.motion-ready .reveal-right,
+body.motion-ready .fade-right {
+    opacity: 0;
+    transform: translateX(40px);
+}
+
+body.motion-ready .reveal-scale,
+body.motion-ready .scale-in {
+    opacity: 0;
+    transform: scale(0.92);
+}
+
+body.motion-ready .stagger-item,
+body.motion-ready .gallery-item,
+body.motion-ready .form-group {
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+/* =========================================================
+   REVEAL ANIMATIONS - SCROLL TRIGGERED
+   ========================================================= */
+
+body.motion-ready .reveal-up.is-visible,
+body.motion-ready .fade-up.is-visible {
+    animation: fadeUp 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+body.motion-ready .reveal-down.is-visible {
+    animation: fadeDown 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+body.motion-ready .reveal-left.is-visible,
+body.motion-ready .fade-left.is-visible {
+    animation: fadeLeft 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+body.motion-ready .reveal-right.is-visible,
+body.motion-ready .fade-right.is-visible {
+    animation: fadeRight 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+body.motion-ready .reveal-scale.is-visible,
+body.motion-ready .scale-in.is-visible {
+    animation: scaleIn 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* =========================================================
+   STAGGER ANIMATIONS - GRID ITEMS
+   ========================================================= */
+
+body.motion-ready .stagger-item.is-visible {
+    animation: fadeUp 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+body.motion-ready .stagger-item:nth-child(1).is-visible { animation-delay: 0s; }
+body.motion-ready .stagger-item:nth-child(2).is-visible { animation-delay: 0.1s; }
+body.motion-ready .stagger-item:nth-child(3).is-visible { animation-delay: 0.2s; }
+body.motion-ready .stagger-item:nth-child(4).is-visible { animation-delay: 0.3s; }
+body.motion-ready .stagger-item:nth-child(5).is-visible { animation-delay: 0.4s; }
+body.motion-ready .stagger-item:nth-child(6).is-visible { animation-delay: 0.5s; }
+body.motion-ready .stagger-item:nth-child(7).is-visible { animation-delay: 0.6s; }
+body.motion-ready .stagger-item:nth-child(8).is-visible { animation-delay: 0.7s; }
+body.motion-ready .stagger-item:nth-child(9).is-visible { animation-delay: 0.8s; }
+
+/* =========================================================
+   GALLERY ANIMATIONS
+   ========================================================= */
+
+body.motion-ready .gallery-item.is-visible {
+    animation: fadeUp 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+body.motion-ready .gallery-item:nth-child(1).is-visible { animation-delay: 0s; }
+body.motion-ready .gallery-item:nth-child(2).is-visible { animation-delay: 0.1s; }
+body.motion-ready .gallery-item:nth-child(3).is-visible { animation-delay: 0.2s; }
+body.motion-ready .gallery-item:nth-child(4).is-visible { animation-delay: 0.3s; }
+body.motion-ready .gallery-item:nth-child(5).is-visible { animation-delay: 0.4s; }
+body.motion-ready .gallery-item:nth-child(6).is-visible { animation-delay: 0.5s; }
+
+/* =========================================================
+   FORM ANIMATIONS
+   ========================================================= */
+
+body.motion-ready .form-group.is-visible {
+    animation: fadeUp 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+body.motion-ready .form-group:nth-child(1).is-visible { animation-delay: 0s; }
+body.motion-ready .form-group:nth-child(2).is-visible { animation-delay: 0.1s; }
+body.motion-ready .form-group:nth-child(3).is-visible { animation-delay: 0.2s; }
+body.motion-ready .form-group:nth-child(4).is-visible { animation-delay: 0.3s; }
+body.motion-ready .form-group:nth-child(5).is-visible { animation-delay: 0.4s; }
+
+/* =========================================================
+   PAGE WRAPPER - INITIAL LOAD ANIMATION
+   ========================================================= */
+
+body.motion-ready .page-wrapper {
+    opacity: 0;
     transform: translateY(30px);
 }
 
-.reveal-down {
-    transform: translateY(-20px);
-}
-
-.reveal-left {
-    transform: translateX(-30px);
-}
-
-.reveal-right {
-    transform: translateX(30px);
-}
-
-.reveal-scale {
-    transform: scale(0.95);
-}
-
-/* Visible state - triggered by JS */
-.reveal-up.is-visible {
-    animation: revealUp 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-}
-
-.reveal-down.is-visible {
-    animation: revealDown 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-}
-
-.reveal-left.is-visible {
-    animation: revealLeft 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-}
-
-.reveal-right.is-visible {
-    animation: revealRight 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-}
-
-.reveal-scale.is-visible {
-    animation: revealScale 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+body.motion-ready .page-wrapper.is-visible {
+    animation: pageTransitionIn 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
 }
 
 /* =========================================================
-   STAGGER SYSTEM
-   ========================================================= */
-
-.stagger-group {
-    display: flex;
-    flex-direction: column;
-    gap: inherit;
-}
-
-.stagger-item {
-    opacity: 0;
-    will-change: transform, opacity;
-}
-
-/* Stagger delays for items */
-.stagger-item.is-visible {
-    animation: revealUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-}
-
-.stagger-item:nth-child(1).is-visible {
-    animation-delay: 0s;
-}
-
-.stagger-item:nth-child(2).is-visible {
-    animation-delay: 0.08s;
-}
-
-.stagger-item:nth-child(3).is-visible {
-    animation-delay: 0.16s;
-}
-
-.stagger-item:nth-child(4).is-visible {
-    animation-delay: 0.24s;
-}
-
-.stagger-item:nth-child(5).is-visible {
-    animation-delay: 0.32s;
-}
-
-.stagger-item:nth-child(6).is-visible {
-    animation-delay: 0.4s;
-}
-
-.stagger-item:nth-child(n+7).is-visible {
-    animation-delay: calc(0.08s * (var(--index, 7) - 1));
-}
-
-/* =========================================================
-   HOVER EFFECTS
-   ========================================================= */
-
-.hover-lift {
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
-}
-
-.hover-lift:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
-}
-
-.hover-lift-strong {
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
-}
-
-.hover-lift-strong:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 20px 48px rgba(15, 23, 42, 0.15);
-}
-
-.hover-image {
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
-}
-
-.hover-image:hover {
-    transform: scale(1.02);
-    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
-}
-
-.hover-shadow {
-    transition: box-shadow 0.35s ease;
-}
-
-.hover-shadow:hover {
-    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
-}
-
-/* =========================================================
-   BUTTON TRANSITIONS
-   ========================================================= */
-
-.btn {
-    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
-}
-
-.btn:hover {
-    transform: translateY(-1px);
-}
-
-.btn:active {
-    transform: translateY(0);
-}
-
-/* =========================================================
-   CARD ANIMATIONS
+   HOVER EFFECTS - CARDS
    ========================================================= */
 
 .be-card,
@@ -247,140 +242,219 @@
 .be-client-card,
 .be-stat,
 .project-card,
-.capability-item {
-    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+.capability-item,
+.card-hover {
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                border-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .be-card:hover,
 .be-team-card:hover,
 .be-client-card:hover,
 .project-card:hover,
-.capability-item:hover {
+.capability-item:hover,
+.card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.be-stat:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================================================
+   HOVER EFFECTS - IMAGES
+   ========================================================= */
+
+.be-media-card,
+.about-image,
+.project-card img,
+.capability-item img,
+.gallery-item img,
+.image-hover,
+.image-hover img {
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.be-media-card:hover,
+.about-image:hover,
+.image-hover:hover {
+    transform: scale(1.03);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.project-card:hover img,
+.capability-item:hover img,
+.gallery-item:hover img,
+.image-hover:hover img {
+    transform: scale(1.05);
+}
+
+/* =========================================================
+   HOVER EFFECTS - BUTTONS
+   ========================================================= */
+
+.btn {
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                background-color 0.3s ease,
+                border-color 0.3s ease,
+                color 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn:active {
+    transform: translateY(-1px) scale(0.98);
+}
+
+/* =========================================================
+   HOVER EFFECTS - LINKS
+   ========================================================= */
+
+a:not(.btn) {
+    transition: color 0.3s ease,
+                text-decoration-color 0.3s ease;
+}
+
+/* =========================================================
+   ICON HOVER EFFECTS
+   ========================================================= */
+
+.be-card__icon,
+.capability-item__icon {
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.be-card:hover .be-card__icon,
+.capability-item:hover .capability-item__icon {
+    transform: translateY(-4px) scale(1.08);
+}
+
+/* =========================================================
+   NAVBAR & FOOTER TRANSITIONS
+   ========================================================= */
+
+.nav-link {
+    transition: color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.nav-link:hover {
     transform: translateY(-2px);
-    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
+}
+
+.footer a {
+    transition: color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.footer a:hover {
+    transform: translateX(3px);
+}
+
+.be-social {
+    transition: transform 0.3s ease,
+                background 0.3s ease,
+                color 0.3s ease;
+}
+
+.be-social:hover {
+    transform: translateY(-3px);
 }
 
 /* =========================================================
-   IMAGE ANIMATIONS
+   MOBILE OPTIMIZATIONS
    ========================================================= */
 
-img {
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
-}
-
-.hover-image img:hover {
-    transform: scale(1.02);
-}
-
-/* =========================================================
-   SECTION ANIMATIONS
-   ========================================================= */
-
-.be-section {
-    opacity: 1;
-}
-
-.be-section.reveal-up {
-    opacity: 0;
-    transform: translateY(30px);
-}
-
-.be-section.reveal-up.is-visible {
-    animation: revealUp 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-}
-
-/* =========================================================
-   GRID ANIMATIONS
-   ========================================================= */
-
-.be-slider__track,
-.projects-grid,
-.capabilities-grid,
-.gallery-grid,
-.row {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.be-card--service,
-.be-team-card,
-.be-client-card,
-.be-stat,
-.project-card,
-.capability-item,
-.gallery-item {
-    opacity: 0;
-    transform: translateY(24px);
-    will-change: transform, opacity;
-}
-
-.be-card--service.is-visible,
-.be-team-card.is-visible,
-.be-client-card.is-visible,
-.be-stat.is-visible,
-.project-card.is-visible,
-.capability-item.is-visible,
-.gallery-item.is-visible {
-    animation: revealUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-}
-
-/* Stagger for grid items */
-.be-card--service:nth-child(1).is-visible,
-.be-team-card:nth-child(1).is-visible,
-.be-client-card:nth-child(1).is-visible,
-.be-stat:nth-child(1).is-visible,
-.project-card:nth-child(1).is-visible,
-.capability-item:nth-child(1).is-visible,
-.gallery-item:nth-child(1).is-visible {
-    animation-delay: 0s;
-}
-
-.be-card--service:nth-child(2).is-visible,
-.be-team-card:nth-child(2).is-visible,
-.be-client-card:nth-child(2).is-visible,
-.be-stat:nth-child(2).is-visible,
-.project-card:nth-child(2).is-visible,
-.capability-item:nth-child(2).is-visible,
-.gallery-item:nth-child(2).is-visible {
-    animation-delay: 0.08s;
-}
-
-.be-card--service:nth-child(3).is-visible,
-.be-team-card:nth-child(3).is-visible,
-.be-client-card:nth-child(3).is-visible,
-.be-stat:nth-child(3).is-visible,
-.project-card:nth-child(3).is-visible,
-.capability-item:nth-child(3).is-visible,
-.gallery-item:nth-child(3).is-visible {
-    animation-delay: 0.16s;
-}
-
-.be-card--service:nth-child(4).is-visible,
-.be-team-card:nth-child(4).is-visible,
-.be-client-card:nth-child(4).is-visible,
-.be-stat:nth-child(4).is-visible,
-.project-card:nth-child(4).is-visible,
-.capability-item:nth-child(4).is-visible,
-.gallery-item:nth-child(4).is-visible {
-    animation-delay: 0.24s;
-}
-
-.be-card--service:nth-child(5).is-visible,
-.be-team-card:nth-child(5).is-visible,
-.be-stat:nth-child(5).is-visible,
-.project-card:nth-child(5).is-visible,
-.capability-item:nth-child(5).is-visible,
-.gallery-item:nth-child(5).is-visible {
-    animation-delay: 0.32s;
-}
-
-.be-card--service:nth-child(6).is-visible,
-.be-team-card:nth-child(6).is-visible,
-.be-stat:nth-child(6).is-visible,
-.project-card:nth-child(6).is-visible,
-.capability-item:nth-child(6).is-visible,
-.gallery-item:nth-child(6).is-visible {
-    animation-delay: 0.4s;
+@media (max-width: 768px) {
+    /* Reduce animation distance on mobile */
+    body.motion-ready .reveal-up,
+    body.motion-ready .fade-up {
+        transform: translateY(30px);
+    }
+    
+    body.motion-ready .reveal-down {
+        transform: translateY(-20px);
+    }
+    
+    body.motion-ready .reveal-left,
+    body.motion-ready .fade-left {
+        transform: translateX(-30px);
+    }
+    
+    body.motion-ready .reveal-right,
+    body.motion-ready .fade-right {
+        transform: translateX(30px);
+    }
+    
+    body.motion-ready .reveal-scale,
+    body.motion-ready .scale-in {
+        transform: scale(0.95);
+    }
+    
+    body.motion-ready .stagger-item,
+    body.motion-ready .gallery-item,
+    body.motion-ready .form-group {
+        transform: translateY(30px);
+    }
+    
+    /* Faster animations on mobile */
+    body.motion-ready .reveal-up.is-visible,
+    body.motion-ready .fade-up.is-visible,
+    body.motion-ready .reveal-down.is-visible,
+    body.motion-ready .reveal-left.is-visible,
+    body.motion-ready .fade-left.is-visible,
+    body.motion-ready .reveal-right.is-visible,
+    body.motion-ready .fade-right.is-visible,
+    body.motion-ready .reveal-scale.is-visible,
+    body.motion-ready .scale-in.is-visible,
+    body.motion-ready .stagger-item.is-visible,
+    body.motion-ready .gallery-item.is-visible,
+    body.motion-ready .form-group.is-visible {
+        animation-duration: 0.6s;
+    }
+    
+    /* Tighter stagger on mobile */
+    body.motion-ready .stagger-item:nth-child(2).is-visible { animation-delay: 0.08s; }
+    body.motion-ready .stagger-item:nth-child(3).is-visible { animation-delay: 0.16s; }
+    body.motion-ready .stagger-item:nth-child(4).is-visible { animation-delay: 0.24s; }
+    body.motion-ready .stagger-item:nth-child(5).is-visible { animation-delay: 0.32s; }
+    body.motion-ready .stagger-item:nth-child(6).is-visible { animation-delay: 0.4s; }
+    
+    body.motion-ready .gallery-item:nth-child(2).is-visible { animation-delay: 0.08s; }
+    body.motion-ready .gallery-item:nth-child(3).is-visible { animation-delay: 0.16s; }
+    body.motion-ready .gallery-item:nth-child(4).is-visible { animation-delay: 0.24s; }
+    body.motion-ready .gallery-item:nth-child(5).is-visible { animation-delay: 0.32s; }
+    body.motion-ready .gallery-item:nth-child(6).is-visible { animation-delay: 0.4s; }
+    
+    /* Reduce hover effects on mobile */
+    .be-card:hover,
+    .be-team-card:hover,
+    .be-client-card:hover,
+    .project-card:hover,
+    .capability-item:hover {
+        transform: translateY(-4px);
+    }
+    
+    .be-stat:hover {
+        transform: translateY(-3px);
+    }
+    
+    .be-media-card:hover,
+    .about-image:hover {
+        transform: scale(1.02);
+    }
+    
+    .btn:hover {
+        transform: translateY(-2px);
+    }
 }
 
 /* =========================================================
@@ -388,90 +462,42 @@ img {
    ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-    }
-    
-    .page-wrapper,
-    .reveal-up,
-    .reveal-down,
-    .reveal-left,
-    .reveal-right,
-    .reveal-scale,
-    .stagger-item {
+    /* Disable all animations */
+    body.motion-ready .page-wrapper,
+    body.motion-ready .reveal-up,
+    body.motion-ready .reveal-down,
+    body.motion-ready .reveal-left,
+    body.motion-ready .reveal-right,
+    body.motion-ready .reveal-scale,
+    body.motion-ready .fade-up,
+    body.motion-ready .fade-left,
+    body.motion-ready .fade-right,
+    body.motion-ready .scale-in,
+    body.motion-ready .stagger-item,
+    body.motion-ready .gallery-item,
+    body.motion-ready .form-group {
         animation: none !important;
+        transition: none !important;
         opacity: 1 !important;
         transform: none !important;
     }
     
-    .hover-lift:hover,
-    .hover-lift-strong:hover,
-    .hover-image:hover {
+    /* Disable hover effects */
+    .be-card:hover,
+    .be-team-card:hover,
+    .be-client-card:hover,
+    .project-card:hover,
+    .capability-item:hover,
+    .be-stat:hover,
+    .be-media-card:hover,
+    .about-image:hover,
+    .btn:hover,
+    .nav-link:hover,
+    .footer a:hover,
+    .be-social:hover,
+    .card-hover:hover,
+    .image-hover:hover {
         transform: none !important;
-    }
-}
-
-/* =========================================================
-   MOBILE OPTIMIZATIONS
-   ========================================================= */
-
-@media (max-width: 767px) {
-    .page-wrapper {
-        animation: revealUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.05s forwards;
-    }
-    
-    .reveal-up.is-visible,
-    .reveal-down.is-visible,
-    .reveal-left.is-visible,
-    .reveal-right.is-visible,
-    .reveal-scale.is-visible {
-        animation-duration: 0.6s;
-    }
-    
-    .stagger-item:nth-child(2).is-visible {
-        animation-delay: 0.06s;
-    }
-    
-    .stagger-item:nth-child(3).is-visible {
-        animation-delay: 0.12s;
-    }
-    
-    .stagger-item:nth-child(4).is-visible {
-        animation-delay: 0.18s;
-    }
-    
-    .be-card--service:nth-child(2).is-visible,
-    .be-team-card:nth-child(2).is-visible,
-    .be-client-card:nth-child(2).is-visible,
-    .be-stat:nth-child(2).is-visible,
-    .project-card:nth-child(2).is-visible,
-    .capability-item:nth-child(2).is-visible,
-    .gallery-item:nth-child(2).is-visible {
-        animation-delay: 0.06s;
-    }
-    
-    .be-card--service:nth-child(3).is-visible,
-    .be-team-card:nth-child(3).is-visible,
-    .be-client-card:nth-child(3).is-visible,
-    .be-stat:nth-child(3).is-visible,
-    .project-card:nth-child(3).is-visible,
-    .capability-item:nth-child(3).is-visible,
-    .gallery-item:nth-child(3).is-visible {
-        animation-delay: 0.12s;
-    }
-    
-    .be-card--service:nth-child(4).is-visible,
-    .be-team-card:nth-child(4).is-visible,
-    .be-client-card:nth-child(4).is-visible,
-    .be-stat:nth-child(4).is-visible,
-    .project-card:nth-child(4).is-visible,
-    .capability-item:nth-child(4).is-visible,
-    .gallery-item:nth-child(4).is-visible {
-        animation-delay: 0.18s;
     }
 }
 
@@ -484,16 +510,25 @@ img {
 .reveal-left,
 .reveal-right,
 .reveal-scale,
+.fade-up,
+.fade-left,
+.fade-right,
+.scale-in,
 .stagger-item,
-.be-card--service,
+.gallery-item,
+.form-group,
+.page-wrapper,
+.be-card,
 .be-team-card,
 .be-client-card,
-.be-stat,
 .project-card,
 .capability-item,
-.gallery-item {
+.card-hover,
+.image-hover {
     backface-visibility: hidden;
     perspective: 1000px;
+    transform: translateZ(0);
+    will-change: auto;
 }
 
 /* =========================================================
@@ -505,22 +540,8 @@ img {
     transition: none !important;
 }
 
-.animation-delay-1 {
-    animation-delay: 0.1s !important;
-}
-
-.animation-delay-2 {
-    animation-delay: 0.2s !important;
-}
-
-.animation-delay-3 {
-    animation-delay: 0.3s !important;
-}
-
-.animation-delay-4 {
-    animation-delay: 0.4s !important;
-}
-
-.animation-delay-5 {
-    animation-delay: 0.5s !important;
-}
+.animation-delay-1 { animation-delay: 0.1s !important; }
+.animation-delay-2 { animation-delay: 0.2s !important; }
+.animation-delay-3 { animation-delay: 0.3s !important; }
+.animation-delay-4 { animation-delay: 0.4s !important; }
+.animation-delay-5 { animation-delay: 0.5s !important; }
