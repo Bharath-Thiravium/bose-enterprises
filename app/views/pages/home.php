@@ -53,25 +53,25 @@ include __DIR__ . '/../components/partials/header/navbar.php';
             </div>
 
             <!-- Mission & Values -->
-            <div class="row align-items-center g-4 mb-5">
-                <div class="col-lg-6">
-                    <picture class="about-image-wrapper">
+            <div class="row align-items-center g-4 mb-5 home-mission-section">
+                <div class="col-lg-6 home-mission-image-wrap" data-be-animate="fadeInLeft">
+                    <picture class="about-image-wrapper home-mission-image">
                         <source srcset="<?php echo APP_URL; ?>/public/assets/img/about-1.jpg?w=500&h=600&fit=crop&q=80&fm=webp" type="image/webp">
                         <source srcset="<?php echo APP_URL; ?>/public/assets/img/about-1.jpg?w=500&h=600&fit=crop&q=80" type="image/jpeg">
                         <img src="<?php echo APP_URL; ?>/public/assets/img/about-1.jpg" alt="Solar Infrastructure" loading="lazy" class="about-image">
                     </picture>
                 </div>
-                <div class="col-lg-6">
-                    <div class="be-panel">
-                        <h3 class="be-panel__title">Our Mission</h3>
-                        <p class="mb-0">"Our mission is to deliver high-quality solar infrastructure solutions by ensuring safety, technical excellence, and timely project completion while providing maximum value and satisfaction to our customers."</p>
+                <div class="col-lg-6 home-mission-card-wrap" data-be-animate="fadeInRight">
+                    <div class="be-panel home-mission-card">
+                        <h3 class="be-panel__title home-mission-title" data-be-animate="fadeInUp">Our Mission</h3>
+                        <p class="mb-0 home-mission-text" data-be-animate="fadeInUp">"Our mission is to deliver high-quality solar infrastructure solutions by ensuring safety, technical excellence, and timely project completion while providing maximum value and satisfaction to our customers."</p>
                     </div>
 
-                    <div class="be-bullets mt-4">
-                        <div class="be-bullet"><i class="fa-solid fa-shield-halved"></i><span>Safety-first execution</span></div>
-                        <div class="be-bullet"><i class="fa-solid fa-compass-drafting"></i><span>Technical excellence</span></div>
-                        <div class="be-bullet"><i class="fa-solid fa-clock"></i><span>On-time delivery</span></div>
-                        <div class="be-bullet"><i class="fa-solid fa-handshake"></i><span>Customer satisfaction</span></div>
+                    <div class="be-bullets mt-4 home-mission-bullets">
+                        <div class="be-bullet home-mission-bullet" data-be-animate="fadeInUp"><i class="fa-solid fa-shield-halved"></i><span>Safety-first execution</span></div>
+                        <div class="be-bullet home-mission-bullet" data-be-animate="fadeInUp"><i class="fa-solid fa-compass-drafting"></i><span>Technical excellence</span></div>
+                        <div class="be-bullet home-mission-bullet" data-be-animate="fadeInUp"><i class="fa-solid fa-clock"></i><span>On-time delivery</span></div>
+                        <div class="be-bullet home-mission-bullet" data-be-animate="fadeInUp"><i class="fa-solid fa-handshake"></i><span>Customer satisfaction</span></div>
                     </div>
                 </div>
             </div>

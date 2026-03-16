@@ -2627,3 +2627,345 @@ picture img {
     color: #2563eb;
     font-weight: 600;
 }
+
+
+/* =========================================================
+   ABOUT PAGE - PREMIUM ENTRANCE ANIMATIONS
+   ========================================================= */
+
+/* Animation keyframes for About page */
+@keyframes aboutFadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes aboutFadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes aboutFadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes aboutFadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* About section heading animations */
+.about-section-head {
+    opacity: 0;
+}
+
+.about-kicker[data-be-animate="fadeInDown"] {
+    animation: aboutFadeInDown 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.about-title[data-be-animate="fadeInUp"] {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: aboutFadeInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.15s forwards;
+}
+
+.about-subtitle[data-be-animate="fadeInUp"] {
+    opacity: 0;
+    transform: translateY(24px);
+    animation: aboutFadeInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s forwards;
+}
+
+/* About image animation */
+.about-image-wrap[data-be-animate="fadeInLeft"] {
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: aboutFadeInLeft 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s forwards;
+}
+
+.about-media-card {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.about-media-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
+}
+
+/* About snapshot card animation */
+.about-snapshot-wrap[data-be-animate="fadeInRight"] {
+    opacity: 0;
+    transform: translateX(30px);
+    animation: aboutFadeInRight 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s forwards;
+}
+
+.company-snapshot-card {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.company-snapshot-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
+}
+
+/* Snapshot items staggered animation */
+.snapshot-item[data-be-animate="fadeInUp"] {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.snapshot-item:nth-child(1)[data-be-animate="fadeInUp"] {
+    animation: aboutFadeInUp 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.55s forwards;
+}
+
+.snapshot-item:nth-child(2)[data-be-animate="fadeInUp"] {
+    animation: aboutFadeInUp 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.65s forwards;
+}
+
+.snapshot-item:nth-child(3)[data-be-animate="fadeInUp"] {
+    animation: aboutFadeInUp 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.75s forwards;
+}
+
+/* Snapshot text animation */
+.snapshot-text[data-be-animate="fadeInUp"] {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: aboutFadeInUp 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.85s forwards;
+}
+
+/* Snapshot items hover effect */
+.be-snapshot__item {
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.be-snapshot__item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(13, 110, 253, 0.1);
+    border-color: rgba(13, 110, 253, 0.2);
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    .about-kicker[data-be-animate="fadeInDown"],
+    .about-title[data-be-animate="fadeInUp"],
+    .about-subtitle[data-be-animate="fadeInUp"],
+    .about-image-wrap[data-be-animate="fadeInLeft"],
+    .about-snapshot-wrap[data-be-animate="fadeInRight"],
+    .snapshot-item[data-be-animate="fadeInUp"],
+    .snapshot-text[data-be-animate="fadeInUp"] {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+    
+    .about-media-card:hover,
+    .company-snapshot-card:hover,
+    .be-snapshot__item:hover {
+        transform: none !important;
+    }
+}
+
+/* Mobile responsiveness for animations */
+@media (max-width: 767px) {
+    .about-title[data-be-animate="fadeInUp"] {
+        animation: aboutFadeInUp 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s forwards;
+    }
+    
+    .about-subtitle[data-be-animate="fadeInUp"] {
+        animation: aboutFadeInUp 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s forwards;
+    }
+    
+    .about-image-wrap[data-be-animate="fadeInLeft"] {
+        animation: aboutFadeInUp 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s forwards;
+        transform: translateY(30px);
+    }
+    
+    .about-snapshot-wrap[data-be-animate="fadeInRight"] {
+        animation: aboutFadeInUp 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s forwards;
+        transform: translateY(30px);
+    }
+    
+    .snapshot-item:nth-child(1)[data-be-animate="fadeInUp"] {
+        animation: aboutFadeInUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s forwards;
+    }
+    
+    .snapshot-item:nth-child(2)[data-be-animate="fadeInUp"] {
+        animation: aboutFadeInUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.58s forwards;
+    }
+    
+    .snapshot-item:nth-child(3)[data-be-animate="fadeInUp"] {
+        animation: aboutFadeInUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.66s forwards;
+    }
+    
+    .snapshot-text[data-be-animate="fadeInUp"] {
+        animation: aboutFadeInUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.74s forwards;
+    }
+}
+
+
+/* =========================================================
+   HOME PAGE - MISSION SECTION PREMIUM ANIMATIONS
+   ========================================================= */
+
+/* Home mission section animations */
+.home-mission-section {
+    opacity: 1;
+}
+
+/* Left mission image animation */
+.home-mission-image-wrap[data-be-animate="fadeInLeft"] {
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: aboutFadeInLeft 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s forwards;
+}
+
+.home-mission-image {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.home-mission-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
+}
+
+/* Right mission card animation */
+.home-mission-card-wrap[data-be-animate="fadeInRight"] {
+    opacity: 0;
+    transform: translateX(30px);
+    animation: aboutFadeInRight 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s forwards;
+}
+
+.home-mission-card {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.home-mission-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
+}
+
+/* Mission title animation */
+.home-mission-title[data-be-animate="fadeInUp"] {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: aboutFadeInUp 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s forwards;
+}
+
+/* Mission text animation */
+.home-mission-text[data-be-animate="fadeInUp"] {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: aboutFadeInUp 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s forwards;
+}
+
+/* Mission bullets staggered animation */
+.home-mission-bullet[data-be-animate="fadeInUp"] {
+    opacity: 0;
+    transform: translateY(24px);
+}
+
+.home-mission-bullet:nth-child(1)[data-be-animate="fadeInUp"] {
+    animation: aboutFadeInUp 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.6s forwards;
+}
+
+.home-mission-bullet:nth-child(2)[data-be-animate="fadeInUp"] {
+    animation: aboutFadeInUp 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.7s forwards;
+}
+
+.home-mission-bullet:nth-child(3)[data-be-animate="fadeInUp"] {
+    animation: aboutFadeInUp 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.8s forwards;
+}
+
+.home-mission-bullet:nth-child(4)[data-be-animate="fadeInUp"] {
+    animation: aboutFadeInUp 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.9s forwards;
+}
+
+/* Mission bullet hover effect */
+.be-bullet {
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.home-mission-bullet:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(13, 110, 253, 0.1);
+    border-color: rgba(13, 110, 253, 0.2);
+}
+
+/* Respect reduced motion preference for home mission */
+@media (prefers-reduced-motion: reduce) {
+    .home-mission-image-wrap[data-be-animate="fadeInLeft"],
+    .home-mission-card-wrap[data-be-animate="fadeInRight"],
+    .home-mission-title[data-be-animate="fadeInUp"],
+    .home-mission-text[data-be-animate="fadeInUp"],
+    .home-mission-bullet[data-be-animate="fadeInUp"] {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+    
+    .home-mission-image:hover,
+    .home-mission-card:hover,
+    .home-mission-bullet:hover {
+        transform: none !important;
+    }
+}
+
+/* Mobile responsiveness for home mission animations */
+@media (max-width: 767px) {
+    .home-mission-image-wrap[data-be-animate="fadeInLeft"] {
+        animation: aboutFadeInUp 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s forwards;
+        transform: translateY(30px);
+    }
+    
+    .home-mission-card-wrap[data-be-animate="fadeInRight"] {
+        animation: aboutFadeInUp 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s forwards;
+        transform: translateY(30px);
+    }
+    
+    .home-mission-title[data-be-animate="fadeInUp"] {
+        animation: aboutFadeInUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s forwards;
+    }
+    
+    .home-mission-text[data-be-animate="fadeInUp"] {
+        animation: aboutFadeInUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s forwards;
+    }
+    
+    .home-mission-bullet:nth-child(1)[data-be-animate="fadeInUp"] {
+        animation: aboutFadeInUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s forwards;
+    }
+    
+    .home-mission-bullet:nth-child(2)[data-be-animate="fadeInUp"] {
+        animation: aboutFadeInUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.58s forwards;
+    }
+    
+    .home-mission-bullet:nth-child(3)[data-be-animate="fadeInUp"] {
+        animation: aboutFadeInUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.66s forwards;
+    }
+    
+    .home-mission-bullet:nth-child(4)[data-be-animate="fadeInUp"] {
+        animation: aboutFadeInUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.74s forwards;
+    }
+}

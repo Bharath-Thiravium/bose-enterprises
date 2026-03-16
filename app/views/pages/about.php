@@ -22,15 +22,15 @@ include __DIR__ . '/../components/partials/header/navbar.php';
     <!-- Who We Are -->
     <section class="be-section be-section--white">
         <div class="container">
-            <div class="be-section__head">
-                <p class="be-kicker">Who We Are</p>
-                <h2 class="be-section__title">Solar Professionals With Execution DNA</h2>
-                <p class="be-section__sub">BOSE ENTERPRISES is a growing solar infrastructure company based in South India specializing in solar power project construction and EPC services.</p>
+            <div class="be-section__head about-section-head">
+                <p class="be-kicker about-kicker" data-be-animate="fadeInDown">Who We Are</p>
+                <h2 class="be-section__title about-title" data-be-animate="fadeInUp">Solar Professionals With Execution DNA</h2>
+                <p class="be-section__sub about-subtitle" data-be-animate="fadeInUp">BOSE ENTERPRISES is a growing solar infrastructure company based in South India specializing in solar power project construction and EPC services.</p>
             </div>
 
             <div class="row align-items-center g-4">
-                <div class="col-lg-6" data-be-animate="fadeInLeft">
-                    <div class="be-media-card be-media-card--tall">
+                <div class="col-lg-6 about-image-wrap" data-be-animate="fadeInLeft">
+                    <div class="be-media-card be-media-card--tall about-media-card">
                         <img src="<?php echo APP_URL; ?>/public/assets/img/about-2.jpg" alt="Solar Infrastructure" style="width: 100%; height: 400px; object-fit: cover; border-radius: 18px;">
                         <div class="be-media-card__caption">
                             <strong>End-to-end delivery</strong>
@@ -38,15 +38,15 @@ include __DIR__ . '/../components/partials/header/navbar.php';
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6" data-be-animate="fadeInUp">
-                    <div class="be-panel">
+                <div class="col-lg-6 about-snapshot-wrap" data-be-animate="fadeInRight">
+                    <div class="be-panel company-snapshot-card">
                         <h3 class="be-panel__title">Company Snapshot</h3>
                         <div class="be-snapshot">
-                            <div class="be-snapshot__item"><span>Established</span><strong>2019</strong></div>
-                            <div class="be-snapshot__item"><span>Industry</span><strong>Solar EPC &amp; Infrastructure</strong></div>
-                            <div class="be-snapshot__item"><span>Location</span><strong>South India</strong></div>
+                            <div class="be-snapshot__item snapshot-item" data-be-animate="fadeInUp"><span>Established</span><strong>2019</strong></div>
+                            <div class="be-snapshot__item snapshot-item" data-be-animate="fadeInUp"><span>Industry</span><strong>Solar EPC &amp; Infrastructure</strong></div>
+                            <div class="be-snapshot__item snapshot-item" data-be-animate="fadeInUp"><span>Location</span><strong>South India</strong></div>
                         </div>
-                        <p class="mb-0 mt-3">With a dedicated team of experienced professionals, we execute solar EPC projects with a focus on quality, safety, and predictable timelines.</p>
+                        <p class="mb-0 mt-3 snapshot-text" data-be-animate="fadeInUp">With a dedicated team of experienced professionals, we execute solar EPC projects with a focus on quality, safety, and predictable timelines.</p>
                     </div>
                 </div>
             </div>
