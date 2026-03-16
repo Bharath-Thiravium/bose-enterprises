@@ -54,31 +54,8 @@ $page_keywords = isset($page_keywords) ? $page_keywords : 'solar EPC contractor 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="<?php echo APP_URL; ?>/public/assets/css/style.css?v=<?php echo time(); ?>">
     
-    <!-- Page Transition CSS -->
+    <!-- Page Transition CSS - Progressive Enhancement -->
     <link rel="stylesheet" href="<?php echo APP_URL; ?>/public/assets/css/page-transitions.css?v=<?php echo time(); ?>">
-    
-    <!-- Page Transition Inline Styles -->
-    <style>
-        /* Prevent FOUC - page starts invisible */
-        .page-wrapper {
-            opacity: 0;
-            transform: translateY(18px);
-            transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
-                        transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
-            will-change: opacity, transform;
-        }
-        
-        /* Page visible state */
-        .page-wrapper.is-visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        /* Prevent layout shift during transition */
-        html, body {
-            overflow-x: hidden;
-        }
-    </style>
     
     <!-- Favicon -->
     <link rel="icon" type="image/jpeg" href="<?php echo APP_URL; ?>/public/assets/img/logo.jpeg">
