@@ -56,8 +56,6 @@ include __DIR__ . '/../components/partials/header/navbar.php';
             <div class="row align-items-center g-4 mb-5">
                 <div class="col-lg-6">
                     <picture class="about-image-wrapper reveal-popup">
-                        <source srcset="<?php echo APP_URL; ?>/public/assets/img/about-1.jpg?w=500&h=600&fit=crop&q=80&fm=webp" type="image/webp">
-                        <source srcset="<?php echo APP_URL; ?>/public/assets/img/about-1.jpg?w=500&h=600&fit=crop&q=80" type="image/jpeg">
                         <img src="<?php echo APP_URL; ?>/public/assets/img/about-1.jpg" alt="Solar Infrastructure" loading="lazy" class="about-image">
                     </picture>
                 </div>
