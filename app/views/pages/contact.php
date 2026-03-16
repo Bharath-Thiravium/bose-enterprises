@@ -11,24 +11,24 @@ $companyEmail = MAIL_FROM;
 
 <main class="main-content">
     <!-- Page Hero -->
-    <section class="be-page-hero">
+    <section class="be-page-hero reveal">
         <div class="container">
             <div class="row">
-                <div class="col-lg-9">
-                    <p class="be-kicker reveal-down">Contact</p>
-                    <h1 class="be-page-hero__title reveal-up">Get in Touch with BOSE ENTERPRISES</h1>
-                    <p class="be-page-hero__lead reveal-up">Tell us about your project scope and timeline. Our team responds quickly with clear next steps.</p>
+                <div class="col-lg-9" data-be-animate="fadeInDown">
+                    <p class="be-kicker">Contact</p>
+                    <h1 class="be-page-hero__title">Get in Touch with BOSE ENTERPRISES</h1>
+                    <p class="be-page-hero__lead">Tell us about your project scope and timeline. Our team responds quickly with clear next steps.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Cards -->
-    <section class="be-section be-section--white">
+    <section class="be-section be-section--white reveal">
         <div class="container">
-            <div class="row g-4 card-grid">
-                <div class="col-lg-4">
-                    <div class="be-card be-card--contact reveal-scale stagger-item">
+            <div class="row g-4" data-be-stagger="120">
+                <div class="col-lg-4" data-be-animate="fadeInUp">
+                    <div class="be-card be-card--contact reveal">
                         <div class="be-card__icon"><i class="fa-solid fa-location-dot"></i></div>
                         <h3 class="be-card__title">Location</h3>
                         <p class="be-card__text mb-0">
@@ -38,16 +38,16 @@ $companyEmail = MAIL_FROM;
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <div class="be-card be-card--contact reveal-scale stagger-item">
+                <div class="col-lg-4" data-be-animate="fadeInUp">
+                    <div class="be-card be-card--contact reveal">
                         <div class="be-card__icon"><i class="fa-solid fa-phone"></i></div>
                         <h3 class="be-card__title">Phone</h3>
                         <p class="be-card__text mb-2"><a href="tel:<?php echo htmlspecialchars($companyPhoneTel, ENT_QUOTES, 'UTF-8'); ?>"><?php echo htmlspecialchars($companyPhoneDisplay, ENT_QUOTES, 'UTF-8'); ?></a></p>
                         <p class="be-card__text mb-0">Available during business hours.</p>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <div class="be-card be-card--contact reveal-scale stagger-item">
+                <div class="col-lg-4" data-be-animate="fadeInUp">
+                    <div class="be-card be-card--contact reveal">
                         <div class="be-card__icon"><i class="fa-solid fa-envelope"></i></div>
                         <h3 class="be-card__title">Email</h3>
                         <p class="be-card__text mb-0"><a href="mailto:<?php echo htmlspecialchars($companyEmail, ENT_QUOTES, 'UTF-8'); ?>"><?php echo htmlspecialchars($companyEmail, ENT_QUOTES, 'UTF-8'); ?></a></p>
@@ -58,17 +58,17 @@ $companyEmail = MAIL_FROM;
     </section>
 
     <!-- Contact Form -->
-    <section class="be-section be-section--light" id="contact-form">
+    <section class="be-section be-section--light reveal" id="contact-form">
         <div class="container">
             <div class="be-section__head">
-                <p class="be-kicker reveal-down">Message</p>
-                <h2 class="be-section__title reveal-up">Send Us a Message</h2>
-                <p class="be-section__sub reveal-up">Share details about your site, scope, and timeline.</p>
+                <p class="be-kicker">Message</p>
+                <h2 class="be-section__title">Send Us a Message</h2>
+                <p class="be-section__sub">Share details about your site, scope, and timeline.</p>
             </div>
 
             <div class="row justify-content-center">
-                <div class="col-lg-9 reveal-up">
-                    <form method="POST" action="#" class="be-form">
+                <div class="col-lg-9" data-be-animate="fadeInUp">
+                    <form method="POST" action="#" class="be-form reveal">
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <label for="name" class="form-label">Full Name</label>
@@ -102,38 +102,38 @@ $companyEmail = MAIL_FROM;
     </section>
 
     <!-- Why Contact Us -->
-    <section class="be-section be-section--white">
+    <section class="be-section be-section--white reveal">
         <div class="container">
             <div class="be-section__head">
-                <p class="be-kicker reveal-down">Why Contact Us</p>
-                <h2 class="be-section__title reveal-up">Clarity, Speed, and Accountability</h2>
-                <p class="be-section__sub reveal-up">What to expect when you engage with BOSE ENTERPRISES.</p>
+                <p class="be-kicker">Why Contact Us</p>
+                <h2 class="be-section__title">Clarity, Speed, and Accountability</h2>
+                <p class="be-section__sub">What to expect when you engage with BOSE ENTERPRISES.</p>
             </div>
 
-            <div class="row g-4 card-grid">
-                <div class="col-lg-6">
-                    <div class="be-card reveal-scale stagger-item">
+            <div class="row g-4" data-be-stagger="120">
+                <div class="col-lg-6" data-be-animate="fadeInUp">
+                    <div class="be-card reveal">
                         <div class="be-card__icon"><i class="fa-solid fa-comments"></i></div>
                         <h3 class="be-card__title">Expert Consultation</h3>
                         <p class="be-card__text">Professional advice on solar infrastructure requirements and execution planning.</p>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="be-card reveal-scale stagger-item">
+                <div class="col-lg-6" data-be-animate="fadeInUp">
+                    <div class="be-card reveal">
                         <div class="be-card__icon"><i class="fa-solid fa-sitemap"></i></div>
                         <h3 class="be-card__title">Customized Solutions</h3>
                         <p class="be-card__text">Services tailored to your scope, site realities, and budget constraints.</p>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="be-card reveal-scale stagger-item">
+                <div class="col-lg-6" data-be-animate="fadeInUp">
+                    <div class="be-card reveal">
                         <div class="be-card__icon"><i class="fa-solid fa-bolt"></i></div>
                         <h3 class="be-card__title">Quick Response</h3>
                         <p class="be-card__text">Prompt replies to inquiries and practical next steps to move forward.</p>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="be-card reveal-scale stagger-item">
+                <div class="col-lg-6" data-be-animate="fadeInUp">
+                    <div class="be-card reveal">
                         <div class="be-card__icon"><i class="fa-solid fa-eye"></i></div>
                         <h3 class="be-card__title">Transparent Communication</h3>
                         <p class="be-card__text">Clear updates throughout project lifecycle and after commissioning.</p>
@@ -144,15 +144,15 @@ $companyEmail = MAIL_FROM;
     </section>
 
     <!-- CTA -->
-    <section class="be-cta">
+    <section class="be-cta reveal">
         <div class="container text-center">
-            <div class="be-cta__inner reveal-scale">
-                <div class="be-cta__icon reveal-up"><i class="fa-solid fa-phone-volume"></i></div>
-                <h2 class="be-cta__title reveal-up">Ready to Discuss Your Solar Project?</h2>
-                <p class="be-cta__text reveal-up">Our team is ready to help you achieve your solar infrastructure goals.</p>
+            <div class="be-cta__inner" data-be-animate="fadeInUp">
+                <div class="be-cta__icon"><i class="fa-solid fa-phone-volume"></i></div>
+                <h2 class="be-cta__title">Ready to Discuss Your Solar Project?</h2>
+                <p class="be-cta__text">Our team is ready to help you achieve your solar infrastructure goals.</p>
                 <div class="d-flex flex-wrap justify-content-center gap-3 mt-3">
-                    <a href="tel:<?php echo htmlspecialchars($companyPhoneTel, ENT_QUOTES, 'UTF-8'); ?>" class="btn btn-light btn-lg reveal-up"><i class="fa-solid fa-phone me-2"></i><?php echo htmlspecialchars($companyPhoneDisplay, ENT_QUOTES, 'UTF-8'); ?></a>
-                    <a href="#contact-form" class="btn btn-outline-light btn-lg reveal-up">Get Started</a>
+                    <a href="tel:<?php echo htmlspecialchars($companyPhoneTel, ENT_QUOTES, 'UTF-8'); ?>" class="btn btn-light btn-lg"><i class="fa-solid fa-phone me-2"></i><?php echo htmlspecialchars($companyPhoneDisplay, ENT_QUOTES, 'UTF-8'); ?></a>
+                    <a href="#contact-form" class="btn btn-outline-light btn-lg">Get Started</a>
                 </div>
             </div>
         </div>

@@ -52,10 +52,19 @@ $page_keywords = isset($page_keywords) ? $page_keywords : 'solar EPC contractor 
     </style>
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="<?php echo APP_URL; ?>/public/assets/css/style.css?v=1.0">
+    <link rel="stylesheet" href="<?php echo APP_URL; ?>/public/assets/css/style.css?v=<?php echo time(); ?>">
     
-    <!-- Global Animation System CSS -->
-    <link rel="stylesheet" href="<?php echo APP_URL; ?>/public/assets/css/animations-global.css?v=2.0">
+    <!-- Premium Motion System -->
+    <link rel="stylesheet" href="<?php echo APP_URL; ?>/public/assets/css/motion-system.css?v=<?php echo time(); ?>">
+    
+    <!-- BK-Style Transitions (Premium Motion Upgrade) -->
+    <link rel="stylesheet" href="<?php echo APP_URL; ?>/public/assets/css/bk-style-transitions.css?v=<?php echo time(); ?>">
+    
+    <!-- Smooth Modal Animation System -->
+    <link rel="stylesheet" href="<?php echo APP_URL; ?>/public/assets/css/modal-system.css?v=<?php echo time(); ?>">
+    
+    <!-- Global Scroll Reveal Animation -->
+    <link rel="stylesheet" href="<?php echo APP_URL; ?>/public/assets/css/scroll-reveal.css?v=<?php echo time(); ?>">
     
     <!-- Favicon -->
     <link rel="icon" type="image/jpeg" href="<?php echo APP_URL; ?>/public/assets/img/logo.jpeg">

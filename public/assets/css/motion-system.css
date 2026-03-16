@@ -1,0 +1,312 @@
+/* ============================================================
+   BOSE ENTERPRISES - PREMIUM MOTION SYSTEM PATCH
+   Smooth, premium, non-blinking animations
+   ============================================================ */
+
+/* SMOOTH PAGE ENTRANCE */
+main {
+  animation: pageEnter 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* UNIFIED REVEAL ANIMATIONS WITH STAGGER */
+[data-be-animate] {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: revealUp 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  animation-delay: var(--stagger-delay, 0ms);
+}
+
+[data-be-animate="fadeInLeft"] {
+  transform: translateX(-24px);
+  animation: revealLeft 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  animation-delay: var(--stagger-delay, 0ms);
+}
+
+[data-be-animate="fadeInRight"] {
+  transform: translateX(24px);
+  animation: revealRight 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  animation-delay: var(--stagger-delay, 0ms);
+}
+
+[data-be-animate="fadeInDown"] {
+  transform: translateY(-24px);
+  animation: revealDown 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  animation-delay: var(--stagger-delay, 0ms);
+}
+
+@keyframes revealUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes revealLeft {
+  from { opacity: 0; transform: translateX(-24px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes revealRight {
+  from { opacity: 0; transform: translateX(24px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes revealDown {
+  from { opacity: 0; transform: translateY(-24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* PREMIUM CARD HOVER EFFECTS */
+.be-card {
+  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              border-color 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.be-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
+  border-color: rgba(13, 110, 253, 0.15);
+}
+
+.be-card:active {
+  transform: translateY(-2px) scale(0.99);
+}
+
+/* TEAM CARD HOVER */
+.be-team-card {
+  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              border-color 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.be-team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
+  border-color: rgba(13, 110, 253, 0.12);
+}
+
+.be-team-card:active {
+  transform: translateY(-2px);
+}
+
+/* CLIENT CARD HOVER */
+.be-client-card {
+  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              border-color 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.be-client-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.10);
+}
+
+.be-client-card:active {
+  transform: translateY(-2px) scale(0.99);
+}
+
+/* ICON HOVER LIFT */
+.be-card__icon {
+  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.be-card:hover .be-card__icon {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 14px 28px rgba(13, 110, 253, 0.22);
+}
+
+/* CAPABILITY ITEM HOVER */
+.capability-item {
+  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.capability-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(13, 110, 253, 0.10);
+}
+
+.capability-item__icon {
+  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.capability-item:hover .capability-item__icon {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 14px 28px rgba(13, 110, 253, 0.20);
+}
+
+/* PROJECT CARD HOVER */
+.project-card {
+  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              border-color 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(13, 110, 253, 0.10);
+  border-color: rgba(13, 110, 253, 0.10);
+}
+
+/* IMAGE HOVER SCALE */
+.project-card img,
+.capability-item img,
+.be-card--service img,
+.gallery-item img {
+  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.project-card:hover img,
+.capability-item:hover img,
+.be-card--service:hover img,
+.gallery-item:hover img {
+  transform: scale(1.03);
+}
+
+/* GALLERY ITEM HOVER */
+.gallery-item {
+  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.gallery-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
+}
+
+/* BUTTON HOVER LIFT */
+.btn {
+  transition: transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              background-color 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              border-color 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              color 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.btn:active {
+  transform: translateY(1px) scale(0.99);
+}
+
+/* SLIDER BUTTON HOVER */
+.be-slider__btn {
+  transition: transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              border-color 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              background 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.be-slider__btn:hover {
+  transform: translateY(-2px);
+}
+
+.be-slider__btn:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+/* NAV LINK HOVER */
+.nav-link {
+  transition: color 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.nav-link:hover {
+  transform: translateY(-1px);
+}
+
+/* CLIENT LOGO HOVER */
+.be-client-card__logo {
+  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.be-client-card:hover .be-client-card__logo {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(13, 110, 253, 0.18);
+}
+
+/* FOOTER VISIBILITY FIX */
+.footer {
+  position: relative;
+  z-index: 10;
+  margin-top: auto;
+}
+
+/* ENSURE SECTIONS ARE FULLY VISIBLE */
+.be-section {
+  position: relative;
+  z-index: auto;
+}
+
+.be-cta {
+  position: relative;
+  z-index: auto;
+}
+
+/* PREVENT OVERFLOW */
+body {
+  overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+/* SMOOTH SKILL BAR ANIMATION */
+.be-skill__fill {
+  transition: width 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+/* SMOOTH SERVICE CARD TOP BORDER */
+.be-card--service::before {
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.be-card--service:hover::before {
+  transform: scaleX(1);
+}
+
+/* RESPECT MOTION PREFERENCES */
+@media (prefers-reduced-motion: reduce) {
+  main,
+  [data-be-animate],
+  .be-card,
+  .be-team-card,
+  .be-client-card,
+  .project-card,
+  .capability-item,
+  .gallery-item,
+  .btn,
+  .nav-link,
+  .be-slider__btn {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* ENSURE FOOTER ALWAYS VISIBLE ON MOBILE */
+@media (max-width: 768px) {
+  .footer {
+    padding: 3rem 0 2rem;
+    min-height: auto;
+  }
+  
+  .be-cta {
+    margin-bottom: 2rem;
+  }
+}

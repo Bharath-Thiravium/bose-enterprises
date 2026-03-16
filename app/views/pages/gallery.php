@@ -37,35 +37,38 @@ $images = [
     'image33.jpg',
     'image34.jpg',
 ];
-
 ?>
 
 <main class="main-content">
     <!-- Page Hero -->
-    <section class="be-page-hero">
+    <section class="be-page-hero reveal">
         <div class="container">
             <div class="row">
-                <div class="col-lg-9">
-                    <p class="be-kicker reveal-down">Gallery</p>
-                    <h1 class="be-page-hero__title reveal-up">Our Projects</h1>
-                    <p class="be-page-hero__lead reveal-up">Explore our solar infrastructure and project execution work across South India.</p>
+                <div class="col-lg-9" data-be-animate="fadeInDown">
+                    <p class="be-kicker">Gallery</p>
+                    <h1 class="be-page-hero__title">Our Projects</h1>
+                    <p class="be-page-hero__lead">
+                        Explore our solar infrastructure and project execution work across South India.
+                        Click any image to view in full screen.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Gallery Section -->
-    <section class="be-section be-section--white">
+    <section class="be-section be-section--light reveal">
         <div class="container">
             <?php if (!empty($images)): ?>
                 <div class="gallery-grid">
-                    <?php foreach ($images as $index => $image): ?>
-                        <div class="gallery-item reveal-scale stagger-item">
+                    <?php foreach ($images as $image): ?>
+                        <div class="gallery-item reveal" data-be-animate="fadeInUp">
                             <img
                                 src="<?php echo htmlspecialchars($web_path . '/' . rawurlencode($image), ENT_QUOTES, 'UTF-8'); ?>"
                                 alt="Solar Project"
                                 loading="lazy"
-                                style="width: 100%; height: 300px; object-fit: cover;"
+                                style="width: 100%; height: 300px; object-fit: cover; cursor: pointer;"
+                                title="Click to view full size"
                             >
                         </div>
                     <?php endforeach; ?>
@@ -79,15 +82,21 @@ $images = [
     </section>
 
     <!-- CTA -->
-    <section class="be-cta">
+    <section class="be-cta reveal">
         <div class="container text-center">
-            <div class="be-cta__inner reveal-scale">
-                <div class="be-cta__icon reveal-up"><i class="fa-solid fa-images"></i></div>
-                <h2 class="be-cta__title reveal-up">Impressed by Our Work?</h2>
-                <p class="be-cta__text reveal-up">Let's discuss how we can bring your solar project to life with the same quality and precision.</p>
+            <div class="be-cta__inner" data-be-animate="fadeInUp">
+                <div class="be-cta__icon"><i class="fa-solid fa-phone-volume"></i></div>
+                <h2 class="be-cta__title">Interested in Our Work?</h2>
+                <p class="be-cta__text">
+                    Contact us to discuss your solar infrastructure project requirements.
+                </p>
                 <div class="d-flex flex-wrap justify-content-center gap-3 mt-3">
-                    <a href="tel:+919940040082" class="btn btn-light btn-lg reveal-up"><i class="fa-solid fa-phone me-2"></i>+91-99400 40082</a>
-                    <a href="<?php echo APP_URL; ?>?page=contact" class="btn btn-outline-light btn-lg reveal-up">Get in Touch</a>
+                    <a href="tel:+919940040082" class="btn btn-light btn-lg">
+                        <i class="fa-solid fa-phone me-2"></i>+91-99400 40082
+                    </a>
+                    <a href="<?php echo APP_URL; ?>?page=contact" class="btn btn-outline-light btn-lg">
+                        Get in Touch
+                    </a>
                 </div>
             </div>
         </div>
