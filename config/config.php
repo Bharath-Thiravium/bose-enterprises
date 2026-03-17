@@ -4,7 +4,9 @@
 // Detect environment and set APP_URL dynamically
 $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https://' : 'http://';
 $host = $_SERVER['HTTP_HOST'];
-$base_path = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/');
+$script_dir = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/');
+// Strip /public suffix so APP_URL never includes it
+$base_path = preg_replace('#/public$#', '', $script_dir);
 $app_url = $protocol . $host . $base_path;
 
 // App Settings
