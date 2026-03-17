@@ -55,7 +55,7 @@ include __DIR__ . '/../components/partials/header/navbar.php';
             <!-- Mission & Values -->
             <div class="row align-items-center g-4 mb-5">
                 <div class="col-lg-6">
-                    <picture class="about-image-wrapper reveal-popup">
+                    <picture class="about-image">
                         <img src="<?php echo APP_URL; ?>/public/assets/img/about-1.jpg" alt="Solar Infrastructure" loading="lazy" class="about-image">
                     </picture>
                 </div>
