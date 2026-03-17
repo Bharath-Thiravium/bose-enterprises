@@ -44,7 +44,7 @@ include __DIR__ . '/../components/partials/header/navbar.php';
     </section>
 
     <!-- Projects Timeline -->
-    <section class="be-section be-section--light reveal">
+    <section class="be-section">
         <div class="container">
             <div class="be-section__head">
                 <p class="be-kicker">Timeline</p>

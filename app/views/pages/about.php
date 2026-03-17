@@ -20,7 +20,7 @@ include __DIR__ . '/../components/partials/header/navbar.php';
     </section>
 
     <!-- Who We Are -->
-    <section class="be-section be-section--white reveal">
+    <section class="be-section">
         <div class="container">
             <div class="be-section__head">
                 <p class="be-kicker">Who We Are</p>

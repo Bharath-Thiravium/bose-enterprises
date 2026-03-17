@@ -56,7 +56,7 @@ $images = [
     </section>
 
     <!-- Gallery Section -->
-    <section class="be-section be-section--gallery">
+    <section class="be-section">
         <div class="container">
             <?php if (!empty($images)): ?>
                 <div class="gallery-grid">
