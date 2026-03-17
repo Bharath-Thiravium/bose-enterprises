@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
   fixLazyImageFlickering();
   initHeroVideo();
   initPopupScrollAnimations();
+  initMediaCardAnimations();
 });
 
 // ============================================================
@@ -63,8 +64,30 @@ function initScrollAnimations() {
 }
 
 // ============================================================
-// POPUP SCROLL ANIMATIONS
+// MEDIA CARD SCROLL ANIMATIONS
 // ============================================================
+function initMediaCardAnimations() {
+  var mediaCards = document.querySelectorAll('.be-media-card');
+  if (!mediaCards.length) return;
+
+  var mediaObserver = new IntersectionObserver(function (entries) {
+    requestAnimationFrame(function () {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        
+        entry.target.classList.add('active');
+        mediaObserver.unobserve(entry.target);
+      });
+    });
+  }, {
+    threshold: 0.15,
+    rootMargin: '0px 0px -50px 0px'
+  });
+
+  mediaCards.forEach(function (el) {
+    mediaObserver.observe(el);
+  });
+}
 function initPopupScrollAnimations() {
   var popupElements = document.querySelectorAll('.reveal-popup');
   if (!popupElements.length) return;
@@ -82,8 +105,8 @@ function initPopupScrollAnimations() {
       });
     });
   }, {
-    threshold: 0.2,
-    rootMargin: '0px 0px -40px 0px'
+    threshold: 0.15,
+    rootMargin: '0px 0px -50px 0px'
   });
 
   popupElements.forEach(function (el) {

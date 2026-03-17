@@ -4,8 +4,7 @@ $page_description = 'BOSE ENTERPRISES Gallery - View our solar projects and infr
 include __DIR__ . '/../components/partials/head-meta.php';
 include __DIR__ . '/../components/partials/header/navbar.php';
 
-$web_path = APP_URL . '/public/images/gallery';
-
+// Gallery images array - verified to exist in /public/images/gallery/
 $images = [
     'image6.jpg',
     'image7.jpg',
@@ -57,17 +56,17 @@ $images = [
     </section>
 
     <!-- Gallery Section -->
-    <section class="be-section be-section--light reveal">
+    <section class="be-section be-section--gallery">
         <div class="container">
             <?php if (!empty($images)): ?>
                 <div class="gallery-grid">
                     <?php foreach ($images as $image): ?>
                         <div class="gallery-item reveal" data-be-animate="fadeInUp">
                             <img
-                                src="<?php echo htmlspecialchars($web_path . '/' . rawurlencode($image), ENT_QUOTES, 'UTF-8'); ?>"
+                                src="./public/images/gallery/<?php echo htmlspecialchars($image, ENT_QUOTES, 'UTF-8'); ?>"
                                 alt="Solar Project"
-                                loading="lazy"
-                                style="width: 100%; height: 300px; object-fit: cover; cursor: pointer;"
+                                loading="eager"
+                                decoding="async"
                                 title="Click to view full size"
                             >
                         </div>
