@@ -96,17 +96,13 @@ function initPopupScrollAnimations() {
     requestAnimationFrame(function () {
       entries.forEach(function (entry) {
         if (!entry.isIntersecting) return;
-        
-        // Add active class to trigger animation
         entry.target.classList.add('active');
-        
-        // Unobserve after animation triggers (one-time only)
         popupObserver.unobserve(entry.target);
       });
     });
   }, {
-    threshold: 0.15,
-    rootMargin: '0px 0px -50px 0px'
+    threshold: 0.12,
+    rootMargin: '0px 0px -40px 0px'
   });
 
   popupElements.forEach(function (el) {
