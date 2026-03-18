@@ -30,7 +30,7 @@ include __DIR__ . '/../components/partials/header/navbar.php';
 
             <div class="row align-items-center g-4">
                 <div class="col-lg-6" data-be-animate="fadeInLeft">
-                    <div class="be-media-card be-media-card--tall">
+                    <div class="be-media-card">
                         <img src="<?php echo APP_URL; ?>/public/assets/img/about-2.jpg" alt="Solar Infrastructure" style="width: 100%; height: 400px; object-fit: cover; border-radius: 18px;">
                         <div class="be-media-card__caption">
                             <strong>End-to-end delivery</strong>
