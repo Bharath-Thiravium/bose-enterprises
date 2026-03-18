@@ -30,7 +30,7 @@ include __DIR__ . '/../components/partials/header/navbar.php';
 
             <div class="row align-items-center g-4">
                 <div class="col-lg-6" data-be-animate="fadeInLeft">
-                    <div class="be-img-reveal reveal-popup">
+                    <div class="be-img-reveal">
                         <img src="<?php echo APP_URL; ?>/public/assets/img/about-2.jpg" alt="Solar Infrastructure" class="be-img-reveal__img">
                     </div>
                 </div>
