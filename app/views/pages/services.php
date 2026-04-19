@@ -38,13 +38,7 @@ include __DIR__ . '/../components/partials/header/navbar.php';
                     </button>
                 </div>
                 <div class="be-slider__track" data-be-slider-track>
-                    <article class="be-card be-card--service reveal">
-                        <div class="be-card__num">01</div>
-                        <img src="<?php echo APP_URL; ?>/public/assets/img/service-1.jpg" alt="Solar EPC" class="be-card__img" style="width: 100%; height: 200px; object-fit: cover; margin: -1.35rem -1.35rem 1rem -1.35rem; border-radius: 16px 16px 0 0;">
-                        <div class="be-card__icon"><i class="fa-solid fa-solar-panel"></i></div>
-                        <h3 class="be-card__title">Solar EPC &amp; Turnkey Solutions</h3>
-                        <p class="be-card__text">Complete execution from design and procurement through installation, testing, and commissioning for ground-mounted and rooftop systems.</p>
-                    </article>
+                    
                     <article class="be-card be-card--service reveal">
                         <div class="be-card__num">02</div>
                         <img src="<?php echo APP_URL; ?>/public/assets/img/service-2.jpg" alt="Civil Works" class="be-card__img" style="width: 100%; height: 200px; object-fit: cover; margin: -1.35rem -1.35rem 1rem -1.35rem; border-radius: 16px 16px 0 0;">

@@ -34,7 +34,7 @@ $companyEmail = MAIL_FROM;
                         <p class="be-card__text mb-0">
                             BOSE ENTERPRISES<br>
                             South India<br>
-                            <strong>Industry:</strong> Solar EPC &amp; Infrastructure
+                            <strong>Industry:</strong> Solar I&C &amp; Infrastructure
                         </p>
                     </div>
                 </div>

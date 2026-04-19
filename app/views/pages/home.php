@@ -22,8 +22,8 @@ include __DIR__ . '/../components/partials/header/navbar.php';
         <div class="container be-hero__content">
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-xl-7 text-center">
-                    <p class="be-kicker mx-auto">Solar EPC &amp; Infrastructure Services</p>
-                    <h1 class="be-hero__title">Turnkey Solar EPC &amp; Infrastructure Projects</h1>
+                    <p class="be-kicker mx-auto">Solar I&C &amp; Infrastructure Services</p>
+                    <h1 class="be-hero__title"> Solar &amp; Infrastructure Projects</h1>
                     <p class="be-hero__lead mx-auto">BOSE ENTERPRISES delivers engineering, construction, and commissioning of large-scale solar power projects across South India with safety, technical excellence, and on-time delivery.</p>
                     <div class="d-flex flex-wrap gap-3 mt-4 justify-content-center">
                         <a href="<?php echo APP_URL; ?>?page=services" class="btn btn-primary btn-lg">Explore Services</a>
@@ -139,13 +139,7 @@ include __DIR__ . '/../components/partials/header/navbar.php';
                     </button>
                 </div>
                 <div class="be-slider__track" data-be-slider-track>
-                    <article class="be-card be-card--service reveal">
-                        <div class="be-card__num">01</div>
-                        <img src="<?php echo APP_URL; ?>/public/assets/img/service-1.jpg" alt="Solar EPC" class="be-card__img" style="width: 100%; height: 200px; object-fit: cover; margin: -1.35rem -1.35rem 1rem -1.35rem; border-radius: 16px 16px 0 0;">
-                        <div class="be-card__icon"><i class="fa-solid fa-solar-panel"></i></div>
-                        <h3 class="be-card__title">Solar EPC &amp; Turnkey Solutions</h3>
-                        <p class="be-card__text">Design, engineering, procurement, installation, testing, and commissioning for ground-mounted solar farms and rooftop solar systems.</p>
-                    </article>
+                    
                     <article class="be-card be-card--service reveal">
                         <div class="be-card__num">02</div>
                         <img src="<?php echo APP_URL; ?>/public/assets/img/service-2.jpg" alt="Civil Works" class="be-card__img" style="width: 100%; height: 200px; object-fit: cover; margin: -1.35rem -1.35rem 1rem -1.35rem; border-radius: 16px 16px 0 0;">
@@ -260,18 +254,10 @@ include __DIR__ . '/../components/partials/header/navbar.php';
                         <p class="be-team-card__meta">12+ years | B.E. Civil</p>
                     </div>
                 </div>
+              
                 <div class="col-lg-4 col-md-6">
                     <div class="be-team-card reveal">
                         <div class="be-team-card__num">04</div>
-                        <div class="be-team-card__avatar"><i class="fa-solid fa-user-tie"></i></div>
-                        <h3 class="be-team-card__name">Kanagavel Nagamani</h3>
-                        <p class="be-team-card__role">Project Director</p>
-                        <p class="be-team-card__meta">12+ years | B.E. Electrical</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="be-team-card reveal">
-                        <div class="be-team-card__num">05</div>
                         <div class="be-team-card__avatar"><i class="fa-solid fa-user-tie"></i></div>
                         <h3 class="be-team-card__name">Vaira Dasan</h3>
                         <p class="be-team-card__role">Project Manager</p>
@@ -280,7 +266,7 @@ include __DIR__ . '/../components/partials/header/navbar.php';
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="be-team-card reveal">
-                        <div class="be-team-card__num">06</div>
+                        <div class="be-team-card__num">05</div>
                         <div class="be-team-card__avatar"><i class="fa-solid fa-user-tie"></i></div>
                         <h3 class="be-team-card__name">Prabha Karan</h3>
                         <p class="be-team-card__role">Project Manager</p>

@@ -59,19 +59,10 @@ include __DIR__ . '/../components/partials/header/navbar.php';
                         <p class="be-team-card__desc">Specialist in civil infrastructure and project management for solar installations.</p>
                     </div>
                 </div>
+               
                 <div class="col-lg-4 col-md-6" data-be-animate="fadeInUp">
                     <div class="be-team-card be-team-card--detail reveal">
                         <div class="be-team-card__num">04</div>
-                        <div class="be-team-card__avatar"><i class="fa-solid fa-user-tie"></i></div>
-                        <h3 class="be-team-card__name">Kanagavel Nagamani</h3>
-                        <p class="be-team-card__role">Project Director</p>
-                        <p class="be-team-card__meta">12+ years | B.E. Electrical</p>
-                        <p class="be-team-card__desc">Expert in electrical infrastructure and large-scale solar project execution.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6" data-be-animate="fadeInUp">
-                    <div class="be-team-card be-team-card--detail reveal">
-                        <div class="be-team-card__num">05</div>
                         <div class="be-team-card__avatar"><i class="fa-solid fa-user-tie"></i></div>
                         <h3 class="be-team-card__name">Vaira Dasan</h3>
                         <p class="be-team-card__role">Project Manager</p>
@@ -81,7 +72,7 @@ include __DIR__ . '/../components/partials/header/navbar.php';
                 </div>
                 <div class="col-lg-4 col-md-6" data-be-animate="fadeInUp">
                     <div class="be-team-card be-team-card--detail reveal">
-                        <div class="be-team-card__num">06</div>
+                        <div class="be-team-card__num">05</div>
                         <div class="be-team-card__avatar"><i class="fa-solid fa-user-tie"></i></div>
                         <h3 class="be-team-card__name">Prabha Karan</h3>
                         <p class="be-team-card__role">Project Manager</p>
@@ -157,7 +148,7 @@ include __DIR__ . '/../components/partials/header/navbar.php';
                 <h2 class="be-cta__title">Work With Our Expert Team</h2>
                 <p class="be-cta__text">Let our experienced professionals handle your solar infrastructure project.</p>
                 <div class="d-flex flex-wrap justify-content-center gap-3 mt-3">
-                    <a href="tel:+9172001 86027" class="btn btn-light btn-lg"><i class="fa-solid fa-phone me-2"></i>+91-72001 86027</a>
+                    <a href="tel:+919940040082" class="btn btn-light btn-lg"><i class="fa-solid fa-phone me-2"></i>+91-72001 86027</a>
                     <a href="<?php echo APP_URL; ?>?page=contact" class="btn btn-outline-light btn-lg">Contact Us Today</a>
                 </div>
             </div>
