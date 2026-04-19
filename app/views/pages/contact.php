@@ -4,8 +4,8 @@ $page_description = 'Get in touch with BOSE ENTERPRISES for your solar EPC and i
 include __DIR__ . '/../components/partials/head-meta.php';
 include __DIR__ . '/../components/partials/header/navbar.php';
 
-$companyPhoneDisplay = '+91-99400 40082 & +91-99400 40088';
-$companyPhoneTel = '+919940040082';
+$companyPhoneDisplay = '91-72001 86018 & +91-72001 86027';
+$companyPhoneTel = '+91-72001 86018';
 $companyEmail = MAIL_FROM;
 ?>
 

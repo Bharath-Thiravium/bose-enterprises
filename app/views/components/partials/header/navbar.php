@@ -3,8 +3,8 @@
 $currentPage = $_GET['page'] ?? 'home';
 $companyName = 'BOSE ENTERPRISES';
 $companyTagline = 'Solar Installation and Commisioning Contractor ';
-$companyPhoneDisplay = '+91-99400 40082';
-$companyPhoneTel = '+919940040082';
+$companyPhoneDisplay = '+91-72001 86018 ';
+$companyPhoneTel = '+91-72001 86018 ';
 $companyEmail = MAIL_FROM;
 
 $navItems = [

@@ -2,8 +2,8 @@
 // Footer Component
 $companyName = 'BOSE ENTERPRISES';
 $companyTagline = 'Solar Installation and Commisioning Contractor  Services';
-$companyPhoneDisplay = '+91-99400 40082 & +91-99400 40088';
-$companyPhoneTel = '+919940040082';
+$companyPhoneDisplay = '+91-72001 86018 & +91-72001 86027';
+$companyPhoneTel = '+91-7200186018';
 $companyEmail = MAIL_FROM;
 $companyLocation = 'South India';
 $services = [

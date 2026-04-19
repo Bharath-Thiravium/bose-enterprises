@@ -149,7 +149,7 @@ include __DIR__ . '/../components/partials/header/navbar.php';
                 <h2 class="be-cta__title">Ready to Start Your Solar Project?</h2>
                 <p class="be-cta__text">Contact our team to discuss your solar infrastructure requirements.</p>
                 <div class="d-flex flex-wrap justify-content-center gap-3 mt-3">
-                    <a href="tel:+915550000000" class="btn btn-light btn-lg"><i class="fa-solid fa-phone me-2"></i>+91 (555) 000-0000</a>
+                    <a href="tel:+9172001 86018" class="btn btn-light btn-lg"><i class="fa-solid fa-phone me-2"></i>+91- 72001 86018</a>
                     <a href="<?php echo APP_URL; ?>?page=contact" class="btn btn-outline-light btn-lg">Get in Touch</a>
                 </div>
             </div>

@@ -344,7 +344,7 @@ include __DIR__ . '/../components/partials/header/navbar.php';
                 <h2 class="be-cta__title">Ready to Start Your Solar Project?</h2>
                 <p class="be-cta__text">Call us to discuss scope, timelines, and execution needs. We'll respond quickly with clear next steps.</p>
                 <div class="d-flex flex-wrap justify-content-center gap-3 mt-3">
-                    <a href="tel:+919940040082" class="btn btn-light btn-lg"><i class="fa-solid fa-phone me-2"></i>+91-99400 40082</a>
+                    <a href="tel:+9172001 86018" class="btn btn-light btn-lg"><i class="fa-solid fa-phone me-2"></i>+91-72001 86018</a>
                     <a href="<?php echo APP_URL; ?>?page=contact" class="btn btn-outline-light btn-lg">Send a Message</a>
                 </div>
             </div>
