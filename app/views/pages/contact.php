@@ -24,39 +24,63 @@ $companyEmail = MAIL_FROM;
     </section>
 
     <!-- Contact Cards -->
-    <section class="be-section be-section--white reveal">
-        <div class="container">
-            <div class="row g-4" data-be-stagger="120">
-                <div class="col-lg-4" data-be-animate="fadeInUp">
+   <section class="be-section be-section--white reveal">
+    <div class="container">
+        <div class="row g-4" data-be-stagger="120">
+
+            <!-- LOCATION -->
+            <div class="col-lg-4" data-be-animate="fadeInUp">
+                <a href="https://www.google.com/maps/place/Athena+solutions/@9.9814754,78.1433403,918m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3b00c7ea5f368929:0x5695eb00ff07d955!8m2!3d9.9814754!4d78.1433403!16s%2Fg%2F11m5s49bss?entry=ttu&g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D"
+                   target="_blank"
+                   class="location-link">
+
                     <div class="be-card be-card--contact reveal">
-                        <div class="be-card__icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="be-card__icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+
                         <h3 class="be-card__title">Location</h3>
+
                         <p class="be-card__text mb-0">
                             BOSE ENTERPRISES<br>
-                            South India<br>
-                            <strong>Industry:</strong> Solar I&C &amp; Infrastructure
+                            Plot no 81, Poriyalar Nagar 4th Street, Tiruppalai (PO), Madurai - 625014<br>
+                            <strong>Industry:</strong> Solar I&amp;C & Infrastructure
                         </p>
                     </div>
-                </div>
-                <div class="col-lg-4" data-be-animate="fadeInUp">
-                    <div class="be-card be-card--contact reveal">
-                        <div class="be-card__icon"><i class="fa-solid fa-phone"></i></div>
-                        <h3 class="be-card__title">Phone</h3>
-                        <p class="be-card__text mb-2"><a href="tel:<?php echo htmlspecialchars($companyPhoneTel, ENT_QUOTES, 'UTF-8'); ?>"><?php echo htmlspecialchars($companyPhoneDisplay, ENT_QUOTES, 'UTF-8'); ?></a></p>
-                        <p class="be-card__text mb-0">Available during business hours.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4" data-be-animate="fadeInUp">
-                    <div class="be-card be-card--contact reveal">
-                        <div class="be-card__icon"><i class="fa-solid fa-envelope"></i></div>
-                        <h3 class="be-card__title">Email</h3>
-                        <p class="be-card__text mb-0"><a href="mailto:<?php echo htmlspecialchars($companyEmail, ENT_QUOTES, 'UTF-8'); ?>"><?php echo htmlspecialchars($companyEmail, ENT_QUOTES, 'UTF-8'); ?></a></p>
-                    </div>
+
+                </a>
+            </div>
+
+            <!-- PHONE -->
+            <div class="col-lg-4" data-be-animate="fadeInUp">
+                <div class="be-card be-card--contact reveal">
+                    <div class="be-card__icon"><i class="fa-solid fa-phone"></i></div>
+                    <h3 class="be-card__title">Phone</h3>
+                    <p class="be-card__text mb-2">
+                        <a href="tel:<?php echo htmlspecialchars($companyPhoneTel, ENT_QUOTES, 'UTF-8'); ?>">
+                            <?php echo htmlspecialchars($companyPhoneDisplay, ENT_QUOTES, 'UTF-8'); ?>
+                        </a>
+                    </p>
+                    <p class="be-card__text mb-0">Available during business hours.</p>
                 </div>
             </div>
-        </div>
-    </section>
 
+            <!-- EMAIL -->
+            <div class="col-lg-4" data-be-animate="fadeInUp">
+                <div class="be-card be-card--contact reveal">
+                    <div class="be-card__icon"><i class="fa-solid fa-envelope"></i></div>
+                    <h3 class="be-card__title">Email</h3>
+                    <p class="be-card__text mb-0">
+                        <a href="mailto:<?php echo htmlspecialchars($companyEmail, ENT_QUOTES, 'UTF-8'); ?>">
+                            <?php echo htmlspecialchars($companyEmail, ENT_QUOTES, 'UTF-8'); ?>
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
     <!-- Contact Form -->
     <section class="be-section be-section--light reveal" id="contact-form">
         <div class="container">

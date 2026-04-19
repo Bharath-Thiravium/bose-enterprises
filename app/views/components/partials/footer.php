@@ -5,9 +5,9 @@ $companyTagline = 'Solar Installation and Commisioning Contractor  Services';
 $companyPhoneDisplay = '+91-72001 86018 & +91-72001 86027';
 $companyPhoneTel = '+91-7200186018';
 $companyEmail = MAIL_FROM;
-$companyLocation = 'South India';
+$companyLocation = 'Plot no 81, Poriyalar Nagar 4th Street, Tiruppalai (PO), Madurai - 625014';
 $services = [
-    'Solar EPC & Turnkey Solutions',
+    
     'Solar Farm Civil Works',
     'Electrical Installation Works',
     'AC Side Electrical Works',
@@ -58,9 +58,11 @@ $services = [
             <div class="col-lg-3 col-md-6">
                 <h6 class="footer-title">Contact</h6>
                 <ul class="list-unstyled footer-contact">
-                    <li>
-                        <i class="fa-solid fa-location-dot me-2"></i>
-                        <span><?php echo htmlspecialchars($companyLocation, ENT_QUOTES, 'UTF-8'); ?></span>
+                    <li class="d-flex align-items-start">
+                        <i class="fa-solid fa-location-dot me-2 mt-1"></i>
+                        <a href="https://www.google.com/maps/place/Athena+solutions/@9.9829579,78.1428185,427m/data=!3m1!1e3!4m6!3m5!1s0x3b00c7ea5f368929:0x5695eb00ff07d955!8m2!3d9.9814754!4d78.1433403!16s%2Fg%2F11m5s49bss?entry=ttu&g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D<?php echo urlencode($companyLocation); ?>" target="_blank" style="text-decoration: none; color: inherit;">
+                            <span><?php echo htmlspecialchars($companyLocation, ENT_QUOTES, 'UTF-8'); ?></span>
+                        </a>
                     </li>
                     <li>
                         <i class="fa-solid fa-phone me-2"></i>
