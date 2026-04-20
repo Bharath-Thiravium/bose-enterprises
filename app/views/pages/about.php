@@ -40,7 +40,7 @@ include __DIR__ . '/../components/partials/header/navbar.php';
                         <div class="be-snapshot">
                             <div class="be-snapshot__item"><span>Established</span><strong>2019</strong></div>
                             <div class="be-snapshot__item"><span>Industry</span><strong>Solar EPC &amp; Infrastructure</strong></div>
-                            <div class="be-snapshot__item"><span>Location</span><strong>South India</strong></div>
+                            <div class="be-snapshot__item"><span>Location</span><strong>Plot no 81, Poriyalar Nagar 4th Street, Tiruppalai (PO), Madurai - 625014</strong></div>
                         </div>
                         <p class="mb-0 mt-3">With a dedicated team of experienced professionals, we execute solar EPC projects with a focus on quality, safety, and predictable timelines.</p>
                     </div>
