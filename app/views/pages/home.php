@@ -90,7 +90,7 @@ include __DIR__ . '/../components/partials/header/navbar.php';
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="be-stat reveal">
-                        <div class="be-stat__value">Solar I&C</div>
+                        <div class="be-stat__value">Solar EPC</div>
                         <div class="be-stat__label">Core expertise</div>
                     </div>
                 </div>
