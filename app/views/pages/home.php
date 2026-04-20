@@ -90,7 +90,7 @@ include __DIR__ . '/../components/partials/header/navbar.php';
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="be-stat reveal">
-                        <div class="be-stat__value">Solar EPC</div>
+                        <div class="be-stat__value">Solar I&C</div>
                         <div class="be-stat__label">Core expertise</div>
                     </div>
                 </div>
@@ -102,8 +102,8 @@ include __DIR__ . '/../components/partials/header/navbar.php';
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="be-stat reveal">
-                        <div class="be-stat__value">Plot16/17, NS nagar</div>
-                        <div class="be-stat__label">Dindigul - 624005</div>
+                        <div class="be-stat__value"> Plot no 81, Poriyalar Nagar 4th Street, Tiruppalai (PO),</div>
+                        <div class="be-stat__label">Madurai - 625014</div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
